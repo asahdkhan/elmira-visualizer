@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-control-statements/recommended",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "react-hooks", "jsx-control-statements"],
+  "rules": {
+    "jsx-control-statements/jsx-jcs-no-undef": 2,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "prettier/prettier": [
+      "error",
+      {},
+      {
+        "usePrettierrc": false
+      },
+      {
+        "fileInfoOptions": {
+          "withNodeModules": true
+        }
+      }
+    ]
+  }
+}
