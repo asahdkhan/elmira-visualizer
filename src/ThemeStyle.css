@@ -1,0 +1,233 @@
+/* eslint-disable  */
+/* // export const styles = {
+// }; */
+
+
+.CreateKitchenSection {
+    border: 2px solid #dad6d5;
+    border-radius: 6px;
+}
+.HeaderSection {
+    border-bottom: 2px solid #dad6d5;
+    min-height: 85px;
+    padding: 0 25px;
+}
+.HeaderRightSide {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.HeaderSectionThird  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid #dad6d5;
+    min-height: 65px;
+    padding: 0 25px;
+    background-color: #dad6d5;
+}
+.FooterSection {
+    border-top: 2px solid #dad6d5;
+    min-height: 65px;
+    padding: 0px 25px;
+    display: grid;
+    height: 100%;
+    align-items: center;
+}
+.FooterSection .MuiTypography-body1 {
+color: #802f2d;
+}
+.VisualizerHeading {
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.CabinetColorSection, .FlooringStyleSection {
+    display: flex;
+    align-items: center;
+}
+.CabinetColorSection {
+    margin-right: 30px;
+}
+.CommonCircle ul li {
+    list-style: none;
+    margin-left: 8px;
+}
+.CommonCircle ul {
+    display: flex;
+    padding: 0;
+    margin-left: 20px;
+}
+.CommonCircle ul li a {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 100%;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+    cursor: pointer;
+    position: relative;
+}
+.CommonCircle ul li a:hover,
+.CommonCircle ul li a.Active {
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.2);
+}
+.VisualizerHeading h6 {
+    margin-top: 10px;
+}
+.CabinetColorSection h6, .FlooringStyleSection h6, .HeaderCenterSide h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+/* .CommonCircle ul li a:hover span, */
+.CommonCircle ul li a.Active span {
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
+.CommonCircle ul li a span {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    font-size: 10px;
+    transform: translate(-50%, 20px);
+    white-space: nowrap;
+}
+.MainKitchenSection img.KitchenImage {
+    width: 100%;
+}
+.MainKitchenSection{
+    display: flex;
+    position: relative;
+}
+.CommonIconBox {
+    position: absolute;
+    cursor: pointer;
+    z-index: 888;
+    background-image: url(assets/images/VisualizerIcon.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 36px;
+    height: 36px;
+}
+.CommonIconBoxLast {
+    position: absolute;
+    cursor: pointer;
+    z-index: 888;
+}
+.Icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+}
+.CommonIconBox.NorthstarIconFirst {
+    top: 40%;
+    left: 28%;
+}
+.CommonIconBox.NorthstarIconSecond {
+    top: 70%;
+    left: 28%;
+}
+.CommonIconBox.NorthstarIconThird {
+    top: 24%;
+    left: 49%;
+}
+.CommonIconBox.NorthstarIconFourth {
+    top: 56%;
+    left: 62%;
+}
+.CommonIconBox.NorthstarIconFifth {
+    top: 30%;
+    right: 17%;
+}
+.CommonIconBoxLast.IconLast {
+    bottom: 13%;
+    right: 8%;
+}
+
+.MuiTooltip-tooltip {
+    color: #54595f;
+    padding: 10px 10px;
+    font-size: 12px;
+    max-width: 250px;
+    line-height: 16px;
+    border-radius: 4px;
+    background-color:  rgba(255, 255, 255, 0.8);
+    font-family: Poppins', 'sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 0!important;
+  }
+  .CustomizeBox {
+    position: absolute;
+    width: 410px;
+    color: #54595f;
+    padding: 10px 10px;
+    font-size: 12px;
+    max-width: 250px;
+    line-height: 16px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 700;
+    text-transform: uppercase;
+    right: 22px;
+    top: 15px;
+    z-index: -88;
+    text-align: center;
+}
+.ModalHeading {
+    display: flex;
+    align-items: center;
+}
+.ModalHeading img {
+    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+}
+.ModalHeading .MuiTypography-body2 {
+    color: #00a8ff;
+    margin-left: 8px;
+}   
+.ApplianceBoxLeft {
+    width: 40%;
+}
+.ApplianceBoxRight {
+    padding: 40px 20px;
+    width: 60%;
+}
+.ModalInfo {
+    text-align: center;
+    padding: 15px 15px;
+    width: calc( 50% - 30px);
+}
+.ModalContentBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 450px;
+    overflow-x: auto;
+}
+
+body::-webkit-scrollbar,
+.ModalContentBox::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track,
+  .ModalContentBox::-webkit-scrollbar-track {
+    background: #f0f0f0;        /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb,
+  .ModalContentBox::-webkit-scrollbar-thumb {
+    background-color: #595959;    /* color of the scroll thumb */
+    border-radius: 0px;       /* roundness of the scroll thumb */
+    border: 3px solid #f0f0f0;  /* creates padding around scroll thumb */
+  }
+  .ApplianceName {
+    max-width: 450px;
+    margin-bottom: 25px;
+}
+
+.ApplianceName .MuiTypography-body1 {
+    font-weight: 600;
+}

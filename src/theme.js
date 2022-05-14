@@ -1,3 +1,4 @@
+/* eslint-disable  */
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
@@ -12,12 +13,48 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ['Lato', 'sans-serif'].join(','),
+    fontFamily: ['Poppins', 'sans-serif'].join(','),
     h1: {
-      fontSize: 28,
-      fontWeight: 700,
-      color: 'blue',
+      fontSize: 26,
+      fontWeight: 500,
+      color: '#54595f',
+      letterSpacing: 3
     },
+    h2: {
+      fontSize: 24,
+      fontWeight: 500,
+      color: '#54595f',
+    },
+    h3: {
+      fontSize: 22,
+      fontWeight: 500,
+      color: '#54595f',
+    },
+    h4: {
+      fontSize: 20,
+      fontWeight: 500,
+      color: '#54595f',
+    },
+    h5: {
+      fontSize: 18,
+      fontWeight: 500,
+      color: '#54595f',
+    },
+    h6: {
+      fontSize: 16,
+      fontWeight: 600,
+      color: '#54595f',
+    },
+    body1: {
+      fontSize: 16,
+      fontWeight: 400,
+      color: '#54595f',
+    },
+    body2: {
+      fontSize: 14,
+      fontWeight: 600,
+      color: '#54595f',
+    }
   },
 });
 

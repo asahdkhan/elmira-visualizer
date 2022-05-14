@@ -1,5 +1,3 @@
-export const styles = {
-  background: {
-    backgroundColor: 'yellow',
-  },
-};
+/* eslint-disable  */
+ export const styles = {
+ };
