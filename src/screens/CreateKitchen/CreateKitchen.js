@@ -25,6 +25,7 @@ const CreateKitchen = () => {
       <Grid item xs={12}>
         <Box className="CreateKitchenSection">
           <Box className="HeaderSection">
+          <Box className="HeaderLeftSide"></Box>
             <Box className="HeaderRightSide">
               <Box className="CabinetColorSection">
                 <Typography variant="h6">CABINET COLOUR</Typography>

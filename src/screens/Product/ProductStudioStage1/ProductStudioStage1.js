@@ -34,17 +34,18 @@ const ProductStudioStage1 = () => {
           </Box>
           <Box className="MainKitchenSection">
             <Box className='ApplianceBoxLeft'>
+            <Box className='ApplianceName'><Typography  variant="h4" textAlign="center">30" 4-Burner Gas Top, Self-Clean</Typography></Box>
               <picture> <img className=""
               src={require('../../../assets/images/30-4-Burner-Gas-Top-Self-Clean.png')} alt="Range"/> </picture>
-              <Box className='ApplianceName'><Typography  variant="body1" textAlign="center">30" 4-Burner Gas Top, Self-Clean</Typography></Box>
+              
             </Box>
             <Box className='ApplianceBoxRight'>
             <Box className='ModalBox'>
               <Box className='ModalHeading'>
               <img className=""
-              src={require('../../../assets/images/VisualizerIcon.png')} alt="Range"/>
+              src={require('../../../assets/images/VisualizerIconSecond.png')} alt="Range"/>
               <Typography variant="h6" textAlign="center">MODEL</Typography>
-              <Typography variant="body2" textAlign="center">SELECT</Typography>
+              <a className='EditButton'>SELECT</a>
               </Box>
               <Box className='ModalContentBox'>
                 <Box className='ModalInfo'>

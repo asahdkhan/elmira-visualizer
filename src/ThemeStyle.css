@@ -9,8 +9,11 @@
 }
 .HeaderSection {
     border-bottom: 2px solid #dad6d5;
-    min-height: 85px;
-    padding: 0 25px;
+    min-height: 75px;
+    padding: 10px 25px 20px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .HeaderRightSide {
     display: flex;
@@ -29,12 +32,22 @@
 .FooterSection {
     border-top: 2px solid #dad6d5;
     min-height: 65px;
-    padding: 0px 25px;
+    padding: 12px 25px;
     display: grid;
     height: 100%;
     align-items: center;
+
 }
-.FooterSection .MuiTypography-body1 {
+.EditButton.RedLink {
+    color: #802f2d;
+    font-weight: 700;
+    margin-left: 30px;
+}
+.HeaderLeftSide .EditButton {
+    font-weight: 700;
+    cursor: pointer;
+}
+.FooterSection .MuiTypography-body1 b {
 color: #802f2d;
 }
 .VisualizerHeading {
@@ -74,6 +87,8 @@ color: #802f2d;
 }
 .VisualizerHeading h6 {
     margin-top: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
 }
 .CabinetColorSection h6, .FlooringStyleSection h6, .HeaderCenterSide h6 {
     font-weight: 600;
@@ -178,6 +193,8 @@ color: #802f2d;
 .ModalHeading {
     display: flex;
     align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
 }
 .ModalHeading img {
     margin-right: 12px;
@@ -205,29 +222,211 @@ color: #802f2d;
     flex-wrap: wrap;
     height: 450px;
     overflow-x: auto;
+    align-items: flex-start;
 }
-
+.ModalContentBoxThird {
+    height: 450px;
+    overflow-x: auto;
+}
+.ModalContentBoxThird .ModalHeading {
+    margin-bottom: 10px;
+}
+.ModalHeading.LoopBox h6 {
+text-transform: uppercase;
+}
 body::-webkit-scrollbar,
-.ModalContentBox::-webkit-scrollbar {
+.ModalContentBox::-webkit-scrollbar,
+.ModalContentBoxThird::-webkit-scrollbar {
     width: 12px;               /* width of the entire scrollbar */
   }
   
   body::-webkit-scrollbar-track,
-  .ModalContentBox::-webkit-scrollbar-track {
+  .ModalContentBox::-webkit-scrollbar-track,
+  .ModalContentBoxThird::-webkit-scrollbar-track {
     background: #f0f0f0;        /* color of the tracking area */
   }
   
   body::-webkit-scrollbar-thumb,
-  .ModalContentBox::-webkit-scrollbar-thumb {
+  .ModalContentBox::-webkit-scrollbar-thumb,
+  .ModalContentBoxThird::-webkit-scrollbar-thumb {
     background-color: #595959;    /* color of the scroll thumb */
     border-radius: 0px;       /* roundness of the scroll thumb */
     border: 3px solid #f0f0f0;  /* creates padding around scroll thumb */
   }
   .ApplianceName {
     max-width: 450px;
-    margin-bottom: 25px;
+    margin-top: 25px;
+}
+.ApplianceName h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.ApplianceName .MuiTypography-body2 {
+    font-size: 10px;
+    font-weight: 900;
+    color: #00a8ff;
 }
 
 .ApplianceName .MuiTypography-body1 {
     font-weight: 600;
+}
+.ModalPricing {
+    margin-bottom: 20px;
+    padding-left: 48px;
+}
+.ModalPricing h3 {
+    font-weight: 600;
+    color: #00a8ff;
+}
+.ModalPricing .MuiTypography-body1 {
+    font-weight: 600;
+}
+.EditButton {
+    color: #00a8ff;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.ModalContentBoxSecond .CabinetColors {
+    margin-left: 18px;
+}
+.ModalContentBoxSecond .CommonCircle ul li {
+    margin-left: 12px;
+}
+.ModalDetailInfo {
+    margin-left: 5px;
+}
+.CommonButton {
+
+}
+.MuiButtonBase-root {
+    background-color: #802f2d;
+    font-weight: 600;
+}
+.MuiButtonBase-root:hover{
+    background-color:#00a8ff;
+}
+.ViewButton {
+    min-height: 60px;
+    max-width: 220px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-right: 40px;
+}
+.FooterSectionSecond {
+    display: flex;
+    justify-content: center;
+}
+/* .FooterLeftSide {
+    padding-left: 50px;
+} */
+.ProductApplianceBox ul {
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.ProductApplianceBox ul li:first-child {
+    border-left: none;
+}
+.ProductApplianceBox ul li {
+    list-style: none;
+    border-left: 1px solid #dad6d5;
+    padding: 5px 20px;
+    width: calc(20% - 41px);
+    text-align: center;
+    cursor: pointer;
+}
+.ProductApplianceBox ul li:hover p {
+    color: #802f2d;
+    
+}
+.RedColor {
+    color: #802f2d;
+}
+.PricingBox {
+    background: #fbf9f9;
+    border-radius: 6px;
+    margin-top: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.SkyBlueBg {
+    background-color:#74d2e7;
+}
+.PricingHeaderBox {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+    border-radius: 6px 6px 0px 0px;
+}
+.PricingHeaderBox p {
+    color: #fff;
+    text-transform: uppercase;
+}
+.PricingContentBox ul li {
+    list-style: none;
+}
+.PricingContentBox ul {
+    padding: 0;
+    margin: 0;
+}
+.PricingContentBox ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px 15px 0px;
+}
+.PricingContentBox {
+    padding: 15px 15px;
+}
+.ProductInfo {
+    width: calc( 100% - 100px);
+}
+.ProductInfo .EditButton {
+    margin-left: 0px;
+}
+.ProductInfo .MuiTypography-body2,
+.ProductInfo a {
+font-weight: 500;
+}
+.PricingFooterBox {
+    padding: 5px 15px 15px 15px;
+}
+.PricingFooterBox.SkyBlueColor .MuiTypography-root,
+.PricingFooterBox.RedColor .MuiTypography-root {
+ 
+    font-weight: 600;
+}
+.PricingFooterBox.SkyBlueColor  .MuiTypography-root {
+    color: #74d2e7;
+}
+.PricingFooterBox.RedColor  .MuiTypography-root {
+    color: #802f2d;
+}
+.PricingFooterBox span{
+    margin-right: 15px;
+}
+.CommonButton.EditBtn {
+    height: 30px;
+    background-color: #00a8ff;
+}
+.CommonButton.EditBtn:hover{
+    background-color: #802f2d;
+}
+.CommonButton.AddBtn {
+    height: 30px;
+    background-color: #c92129;
+}
+.CommonButton.AddBtn:hover{
+    background-color: #00a8ff;
+}
+.PricingContainerBox {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.RedBg {
+    background-color: #802f2d;
 }
