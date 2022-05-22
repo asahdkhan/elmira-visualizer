@@ -174,8 +174,9 @@ const ProductStudioStage4 = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       className='PricingContainerBox'
+      spacing={5}
     >
-      <Grid item xs={4}>
+      <Grid item  xs={12} sm={12} md={4} lg={4} xl={4}>
             <Box className='PricingBox'>
               <Box className='PricingHeaderBox SkyBlueBg'>
               <Typography variant="body1" textAlign="center">RANGE</Typography>
@@ -298,7 +299,7 @@ const ProductStudioStage4 = () => {
               </Box>
               </Box>            
       </Grid>
-      <Grid item xs={4}>
+      <Grid item  xs={12} sm={12} md={4} lg={4} xl={4}>
       <Box className='PricingBox'>
               <Box className='PricingHeaderBox RedBg'>
               <Typography variant="body1" textAlign="center">REFRIGERATOR</Typography>
@@ -376,7 +377,7 @@ const ProductStudioStage4 = () => {
               </Box>
               </Box>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item  xs={12} sm={12} md={4} lg={4} xl={4}>
       <Box className='PricingBox'>
               <Box className='PricingHeaderBox RedBg'>
               <Typography variant="body1" textAlign="center">WALL OVEN</Typography>
@@ -445,7 +446,7 @@ const ProductStudioStage4 = () => {
               </Box>
               </Box>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item  xs={12} sm={12} md={4} lg={4} xl={4}>
       <Box className='PricingBox'>
               <Box className='PricingHeaderBox RedBg'>
               <Typography variant="body1" textAlign="center">MICROWAVE</Typography>
@@ -486,7 +487,7 @@ const ProductStudioStage4 = () => {
               </Box>
               </Box>
       </Grid>
-      <Grid item xs={4}>
+      <Grid item  xs={12} sm={12} md={4} lg={4} xl={4}>
       <Box className='PricingBox'>
               <Box className='PricingHeaderBox RedBg'>
               <Typography variant="body1" textAlign="center">Dishwasher / Panel</Typography>
@@ -537,14 +538,23 @@ const ProductStudioStage4 = () => {
       justifyContent="flex-start"
       alignItems="flex-start"
       className='PricingTotalBox'
+      marginBottom={5}
+      spacing={5}
     >
-      <Grid item xs={5}>
+      <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
         <Box className='PricingTotalInfo SkyBlueBg'>
         <Typography variant="h3" textAlign="center"> APPLIANCE TOTAL $9,345 </Typography>
         <Typography variant="body2" textAlign="center">(excludes freight, delivery, and applicable taxes)</Typography>
         </Box>
       </Grid>
-      <Grid item xs={5}></Grid>
+      <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+        <a>
+      <Box className='PricingTotalInfo WaterBlueBg'>
+        <Typography variant="h3" textAlign="center"> CONTACT US FOR YOUR TOTAL COST </Typography>
+        <Typography variant="body2" textAlign="center">(Elmira appliances plus freight, delivery, and applicable taxes)</Typography>
+        </Box>
+        </a>
+      </Grid>
       </Grid>
       </Grid>
     </Grid>
