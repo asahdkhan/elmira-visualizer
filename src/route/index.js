@@ -1,9 +1,7 @@
-/* eslint-disable  */
 import React, { memo } from 'react';
 import { useRoutes } from 'react-router';
-import PageNotFound from '../components/PageNotFound/PageNotFound';
+import PageNotFound from '../components/PageNotFound';
 import CreateKitchen from '../screens/CreateKitchen';
-import Product from '../screens/Product';
 import ProductStudioStage1 from '../screens/Product/ProductStudioStage1';
 import ProductStudioStage2 from '../screens/Product/ProductStudioStage2';
 import ProductStudioStage3 from '../screens/Product/ProductStudioStage3';
@@ -20,11 +18,6 @@ let appRoutes = [
   {
     path: 'northstar',
     element: <CreateKitchen />,
-    children: [...childrenRoutes],
-  },
-  {
-    path: 'northstar/product-studio',
-    element: <Product />,
     children: [...childrenRoutes],
   },
   { path: 'heritage', element: <></> },

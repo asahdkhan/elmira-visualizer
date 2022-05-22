@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import { ThemeProvider } from '@emotion/react';
 import theme from './theme';
+import MainStyles from './main.styles';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  </React.StrictMode>,
+  <ThemeProvider theme={theme}>
+    <MainStyles />
+    <App />
+  </ThemeProvider>,
 );

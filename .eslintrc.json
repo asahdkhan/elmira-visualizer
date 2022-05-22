@@ -20,6 +20,7 @@
   "plugins": ["react", "react-hooks", "jsx-control-statements"],
   "rules": {
     "jsx-control-statements/jsx-jcs-no-undef": 2,
+    "react/jsx-no-undef": [2, { "allowGlobals": true }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
     "prettier/prettier": [

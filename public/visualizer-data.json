@@ -1,0 +1,293 @@
+{
+  "kitchen": [
+    {
+      "name": "northstar",
+      "src": "",
+      "defaultAppliancesSrc": "",
+      "configuratorIcon": [
+        {
+          "id": "range",
+          "title": "Configure your Microwave",
+          "positioning": "NorthstarIconFirst"
+        },
+        {
+          "id": "range",
+          "title": "Configure your Dishwasher",
+          "positioning": "NorthstarIconSecond"
+        },
+        {
+          "id": "range",
+          "title": "Configure your Rangehood & Splashback",
+          "positioning": "NorthstarIconThird"
+        },
+        {
+          "id": "range",
+          "title": "Configure your Range",
+          "positioning": "NorthstarIconFourth"
+        },
+        {
+          "id": "range",
+          "title": "Configure your Refrigerator",
+          "positioning": "NorthstarIconFifth"
+        }
+      ],
+      "cabinetColour": [
+        {
+          "name": "Dorian Gray",
+          "icon": "northstar-30-30-dorian-gray-icon.jpg",
+          "src": "northstar-30-30-dorian-gray-cabinets.png",
+          "default": true
+        },
+        {
+          "name": "White",
+          "icon": "northstar-30-30-high-reflective-white-icon.jpg",
+          "src": "northstar-30-30-high-reflective-white-cabinets.png"
+        },
+        {
+          "name": "Iron",
+          "icon": "northstar-30-30-iron-one-icon.jpg",
+          "src": "northstar-30-30-iron-one-cabinets.png"
+        },
+        {
+          "name": "Naval",
+          "icon": "northstar-30-30-naval-icon.jpg",
+          "src": "northstar-30-30-naval-cabinets.png"
+        },
+        {
+          "name": "Smoky Blue",
+          "icon": "northstar-30-30-smoky-blue-icon.jpg",
+          "src": "northstar-30-30-smoky-blue-cabinets.png"
+        },
+        {
+          "name": "Wood",
+          "icon": "northstar-30-30-wood-icon.jpg",
+          "src": "northstar-30-30-wood-cabinets.png"
+        }
+      ],
+      "flooringStyle": [
+        {
+          "name": "Floor1",
+          "default": true,
+          "icon": "https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg",
+          "src": "wood-floor-1.png"
+        },
+        {
+          "name": "Floor2",
+          "icon": "https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg",
+          "src": "wood-floor-2.png"
+        }
+      ],
+      "appliances": [
+        {
+          "name": "range",
+          "styles": [
+            {
+              "id": "30-4-burner-electric-self",
+              "title": "30\" 4-Burner Electric Top, Self-Clean",
+              "src": "./",
+              "options": ["colours", "trim", "oven"],
+              "nestedOptions": { "oven": ["electric-self-convection"] }
+            },
+            {
+              "id": "30-4-burner-gas-self",
+              "title": "30\" 4-Burner Gas Top, Self-Clean",
+              "src": "./",
+              "options": ["gas-type", "colours", "trim", "oven"]
+            },
+            {
+              "id": "30-6-burner-gas",
+              "title": "36\" 6-Burner Gas Top",
+              "src": "./",
+              "options": ["gas-type", "colours", "trim"]
+            }
+          ],
+          "modelOptions": [
+            {
+              "id": "gas-type",
+              "text": "Gas Type",
+              "opt": [
+                {
+                  "parentkey": "gas-type",
+                  "id": "natural-gas",
+                  "title": "Natural Gas",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "gas-type",
+                  "id": "liquid-propane",
+                  "title": "Liquid Propane",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            },
+            {
+              "id": "colours",
+              "text": "Choose Colors",
+              "opt": [
+                {
+                  "parentkey": "colours",
+                  "id": "textured-black",
+                  "title": "Textured Black",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "bisque",
+                  "title": "Bisque",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "candy-red",
+                  "title": "Candy Red",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "robins-egg-blue",
+                  "title": "Robin's Egg Blue",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "mint-green",
+                  "title": "Mint Green",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            },
+            {
+              "id": "trim",
+              "text": "Choose Trim",
+              "opt": [
+                {
+                  "parentkey": "trim",
+                  "id": "chrome",
+                  "title": "Chrome",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "trim",
+                  "id": "painted",
+                  "title": "Painted",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            },
+            {
+              "id": "oven",
+              "text": "Choose Oven",
+              "opt": [
+                {
+                  "parentkey": "oven",
+                  "id": "electric-self-convection",
+                  "title": "Electric self-cleaning true convection oven",
+                  "populate": ["cord-type", "warmer"],
+                  "src": "",
+                  "usa": 400,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "oven",
+                  "id": "gas-self",
+                  "title": "Gas self-cleaning oven",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            },
+            {
+              "id": "cord-type",
+              "text": "Cord Type",
+              "if": "electric-self-convection",
+              "opt": [
+                {
+                  "parentkey": "cord-type",
+                  "id": "4-prong",
+                  "title": "4-Prong",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "cord-type",
+                  "id": "3-prong",
+                  "title": "4-Prong ",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            },
+            {
+              "id": "warmer",
+              "text": "Warmer",
+              "if": "electric-self-convection",
+              "opt": [
+                {
+                  "parentkey": "warmer",
+                  "id": "yes",
+                  "title": "Yes",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                },
+                {
+                  "parentkey": "warmer",
+                  "id": "no",
+                  "title": "No",
+                  "src": "",
+                  "usa": 0,
+                  "canada": 0
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

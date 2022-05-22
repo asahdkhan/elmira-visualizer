@@ -1,13 +1,16 @@
 import React from 'react';
 import { HashRouter } from 'react-router-dom';
+import AppDataProvider from './contexts/appDataContext';
 
 import Routes from './route';
 
 function App() {
   return (
-    <HashRouter>
-      <Routes />
-    </HashRouter>
+    <AppDataProvider>
+      <HashRouter>
+        <Routes />
+      </HashRouter>
+    </AppDataProvider>
   );
 }
 
