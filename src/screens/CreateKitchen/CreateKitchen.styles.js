@@ -7,7 +7,4 @@ export const styles = {
     left: 0,
     width: '100%',
   },
-  VisualizerHeading: {
-    backgroundColor: 'red'
-  }
 };
