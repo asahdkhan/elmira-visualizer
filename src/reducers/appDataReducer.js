@@ -1,7 +1,10 @@
 export const initialState = {
   data: null,
   applianceData: null,
-  configuredData: {},
+  configuredData: {
+    kitchen: {},
+    appliance: {},
+  },
 };
 
 const appDataReducer = (state, { type, data }) => {
@@ -10,6 +13,13 @@ const appDataReducer = (state, { type, data }) => {
       return { ...state, data };
     case 'APPLIANCE_DATA':
       return { ...state, applianceData: data };
+    case 'CONFIGURED_DATA':
+      return {
+        ...state,
+        configuredData: {
+          [data.applianceName]: data.configuredData,
+        },
+      };
     case 'RESET':
       return initialState;
     default:

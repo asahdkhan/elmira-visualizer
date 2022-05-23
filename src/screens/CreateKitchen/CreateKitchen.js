@@ -3,8 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Grid, Typography, Box, Tooltip } from '@mui/material';
 import { useAppData } from '../../hooks/useAppData';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router';
-import { styles as classes } from './CreateKitchen.styles';
-import '../../ThemeStyle.css';
+// import { styles as classes } from './CreateKitchen.styles';
 
 const CreateKitchen = () => {
   const { appDataState, fetchInitialData } = useAppData();
@@ -138,38 +137,23 @@ const CreateKitchen = () => {
                 </Box>
               </Box>
               <Box className="MainKitchenSection">
-                <Box sx={classes.parentImageBox}>
+                <Box className="parentKitchenImageBox width100">
                   {kitchen.cabinetSrc && (
                     <img
-                      className="KitchenImage"
-                      style={{
-                        position: 'relative',
-                        top: 0,
-                        left: 0,
-                      }}
+                      className="firstChildImageBox width100"
                       src={require(`../../assets/cabinets/${kitchen.cabinetSrc}`)}
                       alt="Cabinet"
                     />
                   )}
                   {kitchen.flooringSrc && (
                     <img
-                      className="KitchenImage"
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                      }}
+                      className="childImageBox width100"
                       src={require(`../../assets/floors/${kitchen.flooringSrc}`)}
                       alt="Floor"
                     />
                   )}
                   <img
-                    className="KitchenImage"
-                    style={{
-                      position: 'absolute',
-                      top: 0,
-                      left: 0,
-                    }}
+                    className="childImageBox"
                     src={require(`../../assets/cabinets/all-appliances/northstar-30-30-all-appliances-bisque.png`)}
                     alt="Appliance"
                   />

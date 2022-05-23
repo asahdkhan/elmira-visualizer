@@ -32,5 +32,27 @@ export const useAppData = () => {
     [appDataDispatch],
   );
 
-  return { appDataState, fetchInitialData, selectedApplianceData };
+  const genrateApplianceImage = useCallback(
+    (applianceName, appliance) => {
+      let imagesSet = [];
+      for (var key of Object.keys(appliance)) {
+        console.log(key + ' -> ' + appliance[key]?.modelSrc);
+        if (appliance[key]?.modelSrc) {
+          imagesSet.push(appliance[key]?.modelSrc);
+        }
+      }
+      appDataDispatch({
+        type: 'CONFIGURED_DATA',
+        data: { applianceName, configuredData: { ...appliance, imagesSet } },
+      });
+    },
+    [appDataDispatch],
+  );
+
+  return {
+    appDataState,
+    fetchInitialData,
+    selectedApplianceData,
+    genrateApplianceImage,
+  };
 };

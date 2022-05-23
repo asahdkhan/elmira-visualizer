@@ -8,26 +8,27 @@ import { useNavigate, useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
 
 const ProductStudioStage1 = () => {
-  const { selectedApplianceData, appDataState } = useAppData();
+  const { selectedApplianceData, genrateApplianceImage, appDataState } =
+    useAppData();
   const [appliance, setAppliance] = useState({});
   // Internal state
   const [modelOptions, setModelOptions] = useState(null);
-  const [populateOptionsKey, setPopulateOptionsKey] = useState({
-    key: '',
-    populate: [],
-  });
 
   // const navigate = useNavigate();
-  const { appliances } = useParams();
+  const { appliances: applianceName } = useParams();
 
-  const { data, applianceData } = appDataState;
+  const { data, applianceData, configuredData } = appDataState;
   const modelStylesData = applianceData?.styles;
   const modelOptionsData = applianceData?.modelOptions;
 
   // load selected appliances data from JSON
   useEffect(() => {
-    selectedApplianceData(appliances, data);
+    selectedApplianceData(applianceName, data);
   }, [data]);
+
+  useEffect(() => {
+    genrateApplianceImage(applianceName, appliance);
+  }, [appliance]);
 
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
@@ -77,7 +78,33 @@ const ProductStudioStage1 = () => {
     }
   };
 
-  console.log('applianceData', appliance);
+  const loadConfiguredImage = () => {
+    const cAppliance = configuredData?.[applianceName];
+    if (applianceData?.baseModelSrc) {
+      console.log('baseModelSrc', applianceData?.baseModelSrc);
+      return (
+        <>
+          <img
+            className="firstChildImageBox"
+            src={require(`../../../assets/${applianceData?.baseModelSrc}`)}
+            alt="Range"
+          />
+          {cAppliance?.imagesSet?.length > 0 &&
+            cAppliance?.imagesSet.map((src) => (
+              <img
+                key={src}
+                className="childImageBox"
+                src={require(`../../../assets/${src}`)}
+                alt="Range"
+              />
+            ))}
+        </>
+      );
+    }
+    return <></>;
+  };
+
+  console.log('applianceData', configuredData);
 
   return (
     <StyledEngineProvider injectFirst>
@@ -118,12 +145,8 @@ const ProductStudioStage1 = () => {
                     30" 4-Burner Gas Top, Self-Clean
                   </Typography>
                 </Box>
-                <picture>
-                  <img
-                    className=""
-                    src={require('../../../assets/images/30-4-Burner-Gas-Top-Self-Clean.png')}
-                    alt="Range"
-                  />
+                <picture className="parentApplianceImageBox">
+                  {loadConfiguredImage()}
                 </picture>
               </Box>
               <Box className="ApplianceBoxRight">

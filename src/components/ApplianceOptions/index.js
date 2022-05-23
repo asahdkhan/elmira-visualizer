@@ -31,11 +31,14 @@ export default function ApplianceOptions({
         className="ModalInfo"
         onClick={() => setSelection(selectionId, item)}
       >
-        <img
-          className=""
-          src={require('../../assets/images/30-4-Burner-Gas-Top-Self-Clean-small.png')}
-          alt="Range"
-        />
+        {item.src && (
+          <img
+            className=""
+            style={{ width: 80, height: 80 }}
+            src={require(`../../assets/${item.src}`)}
+            alt="Range"
+          />
+        )}
         <Typography variant="body2" textAlign="center">
           {item?.title}
         </Typography>
