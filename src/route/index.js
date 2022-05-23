@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { memo } from 'react';
 import { useRoutes } from 'react-router';
 import PageNotFound from '../components/PageNotFound';

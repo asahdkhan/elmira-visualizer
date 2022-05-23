@@ -1,5 +1,8 @@
 export const styles = {
-  background: {
-    backgroundColor: 'orange',
-  },
+  HeaderCenterSide: {
+    '& h6': {
+        fontWeight: "600",
+        textTransform: "uppercase"
+      }
+    }
 };

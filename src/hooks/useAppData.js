@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useCallback, useContext } from 'react';
 import { AppDataContext } from '../contexts/appDataContext';
 

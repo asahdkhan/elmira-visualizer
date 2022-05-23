@@ -2,7 +2,7 @@
 import { Grid, Typography, Box, Tooltip } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { StyledEngineProvider } from '@mui/material/styles';
-import '../../../ThemeStyle.css';
+// import '../../../ThemeStyle.css';
 import { useAppData } from '../../../hooks/useAppData';
 import { useNavigate, useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';

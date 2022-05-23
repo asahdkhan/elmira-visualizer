@@ -1,3 +1,4 @@
+/* eslint-disable */
 export const initialState = {
   data: null,
   applianceData: null,

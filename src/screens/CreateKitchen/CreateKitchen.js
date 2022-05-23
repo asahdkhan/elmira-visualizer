@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import React, { useEffect, useState } from 'react';
 import { Grid, Typography, Box, Tooltip } from '@mui/material';
@@ -35,6 +36,7 @@ const CreateKitchen = () => {
   // console.log('appDataState', kitchen);
 
   const cabinetColour = () => {
+    // const classes = useStyle();
     return (
       <ul>
         {data?.cabinetColour?.map((item) => (

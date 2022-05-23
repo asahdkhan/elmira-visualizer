@@ -2,7 +2,7 @@
 import { Grid, Typography, Box, Tooltip } from '@mui/material';
 import React from 'react';
 import { StyledEngineProvider } from '@mui/material/styles';
-import '../../../ThemeStyle.css';
+// import '../../../ThemeStyle.css';
 const ProductStudioStage2 = () => {
   return (
     <StyledEngineProvider injectFirst>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { createContext, useReducer } from 'react';
 import PropTypes from 'prop-types';
 import appDataReducer, { initialState } from '../reducers/appDataReducer';
