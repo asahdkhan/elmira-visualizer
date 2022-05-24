@@ -145,9 +145,11 @@ const ProductStudioStage1 = () => {
                     30" 4-Burner Gas Top, Self-Clean
                   </Typography>
                 </Box>
-                <picture className="parentApplianceImageBox">
-                  {loadConfiguredImage()}
-                </picture>
+                <Box className="parentApplianceContainer">
+                  <picture className="parentApplianceImageBox">
+                    {loadConfiguredImage()}
+                  </picture>
+                </Box>
               </Box>
               <Box className="ApplianceBoxRight">
                 <ApplianceOptions

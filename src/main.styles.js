@@ -15,23 +15,25 @@ const MainStyles = () => {
         },
         '.parentKitchenImageBox': {
           position: 'relative',
-          top: 0,
-          left: 0,
+          top: '0',
+          left: '0',
+          display: 'flex',
         },
         '.parentApplianceImageBox': {
           position: 'absolute',
-          top: 0,
-          left: 0,
+          top: '0',
+          left: '0',
         },
         '.firstChildImageBox': {
           position: 'relative',
-          top: 0,
-          left: 0,
+          top: '0',
+          left: '0',
         },
         '.childImageBox': {
           position: 'absolute',
-          top: 0,
-          left: 0,
+          top: '0',
+          left: '0',
+        },
         '.VisualizerHeading': {
           marginTop: '50px',
           marginBottom: '40px',
@@ -78,7 +80,7 @@ const MainStyles = () => {
           fontWeight: '700',
           cursor: 'pointer',
         },
-        '.MuiTooltip-tooltip': {
+        '.MuiTooltip-popper .MuiTooltip-tooltip': {
           color: '#54595f',
           padding: '10px 10px',
           fontSize: '12px',
@@ -89,7 +91,7 @@ const MainStyles = () => {
           fontFamily: "Poppins', 'sans-serif",
           fontWeight: '700',
           textTransform: 'uppercase',
-          marginBottom: '0!important',
+          marginBottom: '10px',
         },
         '.HeaderRightSide': {
           display: 'flex',
@@ -149,12 +151,13 @@ const MainStyles = () => {
           fontWeight: '600',
           textTransform: 'uppercase',
         },
-        '.MainKitchenSection img.KitchenImage': {
+        '.MainKitchenSection .parentKitchenImageBox img': {
           width: '100%',
         },
         '.MainKitchenSection': {
           display: 'flex',
           position: 'relative',
+          minHeight: '550px',
         },
         '.CommonIconBox': {
           position: 'absolute',
@@ -258,12 +261,26 @@ const MainStyles = () => {
         '.ModalInfo': {
           textAlign: 'center',
           padding: '15px 15px',
-          width: 'calc( 50% - 30px)',
+          // width: 'calc( 50% - 30px)',
+          maxWidth: 'calc( 29% - 30px)',
+          // minWidth: 'calc( 29% - 30px)',
+        },
+        '.ModalBox': {
+          paddingLeft: '35px',
+        },
+        '.ModalInfo img': {
+          cursor: 'pointer',
+        },
+        '.ModalInfo .MuiTypography-body2': {
+          maxWidth: '180px',
+          cursor: 'pointer',
         },
         '.ModalContentBox': {
           display: 'flex',
           flexWrap: 'wrap',
-          height: '450px',
+          // height: '450px',
+          // minHeight: '260px',
+          maxHeight: '270px',
           overflowX: 'auto',
           alignItems: 'flex-start',
         },
@@ -274,7 +291,7 @@ const MainStyles = () => {
         '.ModalContentBoxThird .ModalHeading': {
           marginBottom: '10px',
         },
-        '.ModalHeading.LoopBox h6': {
+        '.ModalHeading h6': {
           textTransform: 'uppercase',
         },
         '.ModalContentBoxThird::-webkit-scrollbar': {
@@ -480,6 +497,29 @@ const MainStyles = () => {
         },
         '.PricingTotalInfo h3': {
           fontWeight: '600',
+        },
+        '.parentApplianceContainer': {
+          position: 'relative',
+          maxWidth: '450px',
+          margin: '20px 0px',
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+        },
+        '.parentApplianceContainer .parentApplianceImageBox': {
+          left: '50%',
+          transform: 'translate(-50%, 0px)',
+        },
+        '.ApplianceBoxRight .MuiButtonBase-root.MuiAccordionSummary-root': {
+          backgroundColor: 'transparent',
+          fontWeight: '600',
+          margin: '0px 0px',
+        },
+        '.ApplianceBoxRight .MuiAccordion-root::before': {
+          display: 'none',
+        },
+        '.ApplianceBoxRight .MuiAccordionSummary-content': {
+          margin: '0px 0px',
         },
       }}
     />

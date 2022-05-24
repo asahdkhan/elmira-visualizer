@@ -39,12 +39,12 @@
           "default": true
         },
         {
-          "name": "White",
+          "name": "High Reflective White",
           "icon": "northstar-30-30-high-reflective-white-icon.jpg",
           "src": "northstar-30-30-high-reflective-white-cabinets.png"
         },
         {
-          "name": "Iron",
+          "name": "Iron One",
           "icon": "northstar-30-30-iron-one-icon.jpg",
           "src": "northstar-30-30-iron-one-cabinets.png"
         },
@@ -59,21 +59,21 @@
           "src": "northstar-30-30-smoky-blue-cabinets.png"
         },
         {
-          "name": "Wood",
+          "name": "Wood Grain",
           "icon": "northstar-30-30-wood-icon.jpg",
           "src": "northstar-30-30-wood-cabinets.png"
         }
       ],
       "flooringStyle": [
         {
-          "name": "Floor1",
+          "name": "Dark Floor",
           "default": true,
-          "icon": "https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg",
+          "icon": "dark-floor.jpg",
           "src": "wood-floor-1.png"
         },
         {
-          "name": "Floor2",
-          "icon": "https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg",
+          "name": "Wood Floor",
+          "icon": "wood-floor.jpg",
           "src": "wood-floor-2.png"
         }
       ],
@@ -113,16 +113,16 @@
                 {
                   "parentkey": "gas-type",
                   "id": "natural-gas",
-                  "title": "Natural Gas",
-                  "src": "appliances/range/options/no-image.png",
+                  "title": "",
+                  "src": "appliances/range/gastype/natural-gas.jpg",
                   "usa": 0,
                   "canada": 0
                 },
                 {
                   "parentkey": "gas-type",
                   "id": "liquid-propane",
-                  "title": "Liquid Propane",
-                  "src": "appliances/range/options/no-image.png",
+                  "title": "",
+                  "src": "appliances/range/gastype/liquid-propane.jpg",
                   "usa": 0,
                   "canada": 0
                 }
@@ -136,7 +136,7 @@
                   "parentkey": "colours",
                   "id": "textured-black",
                   "title": "Textured Black",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/textured-black.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
                   "usa": 0,
                   "canada": 0
@@ -145,7 +145,7 @@
                   "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/bisque.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-bisque.png",
                   "usa": 0,
                   "canada": 0
@@ -154,7 +154,7 @@
                   "parentkey": "colours",
                   "id": "candy-red",
                   "title": "Candy Red",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/candy-red.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
                   "usa": 0,
                   "canada": 0
@@ -163,7 +163,7 @@
                   "parentkey": "colours",
                   "id": "tropical-blue",
                   "title": "Tropical Blue",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/tropical-blue.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-tropical-blue.png",
                   "usa": 0,
                   "canada": 0
@@ -172,7 +172,7 @@
                   "parentkey": "colours",
                   "id": "white",
                   "title": "White",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/white.png",
                   "modelSrc": "",
                   "usa": 0,
                   "canada": 0
@@ -181,7 +181,7 @@
                   "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/buttercup-yellow.png",
                   "modelSrc": "",
                   "usa": 0,
                   "canada": 0
@@ -190,7 +190,7 @@
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
                   "title": "Robin's Egg Blue",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/robbin-egg-blue.png",
                   "modelSrc": "",
                   "usa": 0,
                   "canada": 0
@@ -199,7 +199,7 @@
                   "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/colortype/mint-green.png",
                   "modelSrc": "",
                   "usa": 0,
                   "canada": 0
@@ -214,7 +214,7 @@
                   "parentkey": "trim",
                   "id": "chrome",
                   "title": "Chrome",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/trimtype/chrome.png",
                   "modelSrc": "appliances/range/trim/northstar-30-chrome-model.png",
                   "usa": 0,
                   "canada": 0
@@ -223,7 +223,7 @@
                   "parentkey": "trim",
                   "id": "painted",
                   "title": "Painted",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/trimtype/painted.png",
                   "modelSrc": "",
                   "usa": 0,
                   "canada": 0
@@ -239,7 +239,7 @@
                   "id": "electric-self-convection",
                   "title": "Electric self-cleaning true convection oven",
                   "populate": ["cord-type", "warmer"],
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/oventype/oven.png",
                   "usa": 400,
                   "canada": 0
                 },
@@ -247,7 +247,7 @@
                   "parentkey": "oven",
                   "id": "gas-self",
                   "title": "Gas self-cleaning oven",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/oventype/oven.png",
                   "usa": 0,
                   "canada": 0
                 }
@@ -261,16 +261,16 @@
                 {
                   "parentkey": "cord-type",
                   "id": "4-prong",
-                  "title": "4-Prong",
-                  "src": "appliances/range/options/no-image.png",
+                  "title": "",
+                  "src": "appliances/range/cordtype/prong-4.jpg",
                   "usa": 0,
                   "canada": 0
                 },
                 {
                   "parentkey": "cord-type",
                   "id": "3-prong",
-                  "title": "4-Prong ",
-                  "src": "appliances/range/options/no-image.png",
+                  "title": "",
+                  "src": "appliances/range/cordtype/prong-3.jpg",
                   "usa": 0,
                   "canada": 0
                 }
@@ -285,7 +285,7 @@
                   "parentkey": "warmer",
                   "id": "yes",
                   "title": "Yes",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/warmer/yes.jpg",
                   "usa": 0,
                   "canada": 0
                 },
@@ -293,7 +293,7 @@
                   "parentkey": "warmer",
                   "id": "no",
                   "title": "No",
-                  "src": "appliances/range/options/no-image.png",
+                  "src": "appliances/range/warmer/no.jpg",
                   "usa": 0,
                   "canada": 0
                 }

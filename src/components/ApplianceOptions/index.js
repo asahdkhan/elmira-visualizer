@@ -35,7 +35,7 @@ export default function ApplianceOptions({
         {item.src && (
           <img
             className=""
-            style={{ width: 80, height: 80 }}
+            // style={{ width: 80, height: 80 }}
             src={require(`../../assets/${item.src}`)}
             alt="Range"
           />
