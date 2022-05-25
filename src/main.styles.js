@@ -247,7 +247,7 @@ const MainStyles = () => {
         '.ModalHeading': {
           display: 'flex',
           alignItems: 'center',
-          marginBottom: '25px',
+          // marginBottom: '25px',
           width: '100%',
         },
         '.ModalHeading img': {
@@ -277,7 +277,7 @@ const MainStyles = () => {
           transform: 'scale(1.1)',
         },
         '.ModalBox': {
-          paddingLeft: '35px',
+          paddingLeft: '50px',
         },
         '.ModalInfo img': {
           cursor: 'pointer',
@@ -534,6 +534,9 @@ const MainStyles = () => {
         },
         '.ApplianceBoxRight .MuiAccordionSummary-content': {
           margin: '0px 0px',
+        },
+        '.ApplianceBoxRight .MuiAccordionDetails-root': {
+          padding: '0px',
         },
       }}
     />
