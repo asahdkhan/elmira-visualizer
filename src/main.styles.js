@@ -87,11 +87,17 @@ const MainStyles = () => {
           maxWidth: '250px',
           lineHeight: '16px',
           borderRadius: '4px',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backgroundColor: 'rgba(241, 242, 242, 0.9)',
           fontFamily: "Poppins', 'sans-serif",
           fontWeight: '700',
           textTransform: 'uppercase',
           marginBottom: '10px',
+        },
+        '.MuiTooltip-popper .MuiTooltip-arrow': {
+          Color: 'rgba(241, 242, 242, 0.9)!important',
+        },
+        '.MuiTooltip-popper .MuiTooltip-arrow::before': {
+          backgroundColor: 'rgba(241, 242, 242, 0.9)!important',
         },
         '.HeaderRightSide': {
           display: 'flex',
@@ -163,7 +169,9 @@ const MainStyles = () => {
           position: 'absolute',
           cursor: 'pointer',
           zIndex: '888',
-          backgroundImage: 'url(assets/images/VisualizerIcon.png)',
+          backgroundImage: `url(
+            ${require(`./assets/images/VisualizerIcon.png`)}
+          )`,
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
           width: '36px',
@@ -212,7 +220,7 @@ const MainStyles = () => {
           maxWidth: '250px',
           lineHeight: '16px',
           borderRadius: '4px',
-          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          backgroundColor: 'rgba(241, 242, 242, 0.7)',
           fontWeight: '700',
           textTransform: 'uppercase',
           right: '22px',
@@ -264,6 +272,9 @@ const MainStyles = () => {
           // width: 'calc( 50% - 30px)',
           maxWidth: 'calc( 29% - 30px)',
           // minWidth: 'calc( 29% - 30px)',
+        },
+        '.ModalInfo img.Active': {
+          transform: 'scale(1.1)',
         },
         '.ModalBox': {
           paddingLeft: '35px',
@@ -509,6 +520,9 @@ const MainStyles = () => {
         '.parentApplianceContainer .parentApplianceImageBox': {
           left: '50%',
           transform: 'translate(-50%, 0px)',
+        },
+        '.parentApplianceImageBox img:nth-child(2)': {
+          zIndex: '99',
         },
         '.ApplianceBoxRight .MuiButtonBase-root.MuiAccordionSummary-root': {
           backgroundColor: 'transparent',

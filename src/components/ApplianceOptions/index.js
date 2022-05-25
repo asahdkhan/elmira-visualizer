@@ -8,6 +8,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   Typography,
+  Tooltip,
   Box,
 } from '@mui/material';
 
@@ -33,15 +34,17 @@ export default function ApplianceOptions({
         onClick={() => setSelection(selectionId, item)}
       >
         {item.src && (
-          <img
-            className=""
-            // style={{ width: 80, height: 80 }}
-            src={require(`../../assets/${item.src}`)}
-            alt="Range"
-          />
+          <Tooltip placement="top" arrow title={item?.title || ''}>
+            <img
+              className=""
+              // style={{ width: 80, height: 80 }}
+              src={require(`../../assets/${item.src}`)}
+              alt="Range"
+            />
+          </Tooltip>
         )}
         <Typography variant="body2" textAlign="center">
-          {item?.title}
+          {item?.usa}
         </Typography>
       </Box>
     ));

@@ -41,7 +41,7 @@ const CreateKitchen = () => {
       <ul>
         {data?.cabinetColour?.map((item) => (
           <li key={item?.name}>
-            <Tooltip placement="top" title={item?.name || ''}>
+            <Tooltip placement="top" arrow title={item?.name || ''}>
               <a
                 className={kitchen.cabinetSrc === item.src && `Active`}
                 style={{
@@ -65,12 +65,12 @@ const CreateKitchen = () => {
       <ul>
         {data?.flooringStyle?.map((item) => (
           <li key={item?.name}>
-            <Tooltip placement="top" title={item?.name || ''}>
+            <Tooltip placement="top" arrow title={item?.name || ''}>
               <a
                 className={kitchen.flooringSrc === item.src && `Active`}
                 style={{
                   backgroundImage: `url(
-                    ${item?.icon}
+                    ${require(`../../assets/floors/icon-ball/${item?.icon}`)}
                   )`,
                 }}
                 onClick={() =>
@@ -94,7 +94,7 @@ const CreateKitchen = () => {
         className={`CommonIconBox ${item.positioning}`}
         onClick={() => navigate(`./${item.id}/stage-1`)}
       >
-        <Tooltip placement="top-start" title={item.title}>
+        <Tooltip placement="top-start" arrow title={item.title}>
           <Box className="Icon"></Box>
         </Tooltip>
       </Box>
@@ -159,12 +159,17 @@ const CreateKitchen = () => {
                     src={require(`../../assets/cabinets/all-appliances/northstar-30-30-all-appliances-bisque.png`)}
                     alt="Appliance"
                   />
+                  <img
+                    className="childImageBox"
+                    src={require(`../../assets/cabinets/patch/dorian-gray-patch.png`)}
+                    alt="Appliance"
+                  />
                 </Box>
                 {configuratorIcon()}
                 <Box component="span" className="CommonIconBoxLast IconLast">
                   <img
                     className=""
-                    src="https://elmirastg.wpengine.com/wp-content/uploads/2022/05/VisualizerIcon.png"
+                    src={require(`../../assets/images/VisualizerIcon.png`)}
                     alt="Visualizer Icon"
                   />
                   <Box component="div" className="CustomizeBox">
