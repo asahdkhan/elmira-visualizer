@@ -140,10 +140,19 @@
               "opt": [
                 {
                   "parentkey": "colours",
-                  "id": "textured-black",
-                  "title": "Textured Black",
-                  "src": "appliances/colortype/textured-black.png",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
+                  "id": "candy-red",
+                  "title": "Candy Red",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-buttercup-yellow.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -151,17 +160,26 @@
                   "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
-                  "src": "appliances/colortype/bisque.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-bisque.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "parentkey": "colours",
-                  "id": "candy-red",
-                  "title": "Candy Red",
-                  "src": "appliances/colortype/candy-red.png",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
+                  "id": "mint-green",
+                  "title": "Mint Green",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-mint-green.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "robins-egg-blue",
+                  "title": "Robins Egg Blue",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-robins-egg-blue.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -169,7 +187,7 @@
                   "parentkey": "colours",
                   "id": "tropical-blue",
                   "title": "Tropical Blue",
-                  "src": "appliances/colortype/tropical-blue.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-tropical-blue.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -178,35 +196,17 @@
                   "parentkey": "colours",
                   "id": "white",
                   "title": "White",
-                  "src": "appliances/colortype/white.png",
-                  "modelSrc": "",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-white.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "parentkey": "colours",
-                  "id": "buttercup-yellow",
-                  "title": "Buttercup Yellow",
-                  "src": "appliances/colortype/buttercup-yellow.png",
-                  "modelSrc": "",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "robins-egg-blue",
-                  "title": "Robin's Egg Blue",
-                  "src": "appliances/colortype/robbin-egg-blue.png",
-                  "modelSrc": "",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "mint-green",
-                  "title": "Mint Green",
-                  "src": "appliances/colortype/mint-green.png",
-                  "modelSrc": "",
+                  "id": "textured-black",
+                  "title": "Textured Black",
+                  "src": "appliances/colortype/colorImg.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
                   "usa": "$0",
                   "canada": "$0"
                 }
@@ -320,7 +320,7 @@
                   "parentkey": "colours",
                   "id": "textured-black",
                   "title": "Textured Black",
-                  "src": "appliances/colortype/textured-black.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-textured-black.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -329,7 +329,7 @@
                   "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
-                  "src": "appliances/colortype/bisque.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-bisque.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -338,7 +338,7 @@
                   "parentkey": "colours",
                   "id": "candy-red",
                   "title": "Candy Red",
-                  "src": "appliances/colortype/candy-red.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-candy-red.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -347,7 +347,7 @@
                   "parentkey": "colours",
                   "id": "tropical-blue",
                   "title": "Tropical Blue",
-                  "src": "appliances/colortype/tropical-blue.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -356,7 +356,7 @@
                   "parentkey": "colours",
                   "id": "white",
                   "title": "White",
-                  "src": "appliances/colortype/white.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-white.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -365,7 +365,7 @@
                   "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
-                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-buttercup-yellow.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -373,8 +373,8 @@
                 {
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
-                  "title": "Robin's Egg Blue",
-                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "title": "Robins Egg Blue",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -383,7 +383,7 @@
                   "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
-                  "src": "appliances/colortype/mint-green.png",
+                  "src": "appliances/colortype/colorImg.png",
                   "modelSrc": "appliances/microwave/microwave-mint-green.png",
                   "usa": "$0",
                   "canada": "$0"

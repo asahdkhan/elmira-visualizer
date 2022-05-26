@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import * as React from 'react';

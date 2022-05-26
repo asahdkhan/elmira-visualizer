@@ -23,6 +23,7 @@ const MainStyles = () => {
           position: 'absolute',
           top: '0',
           left: '0',
+          backgroundRepeat: 'no-repeat',
         },
         '.firstChildImageBox': {
           position: 'relative',
@@ -261,6 +262,7 @@ const MainStyles = () => {
         },
         '.ApplianceBoxLeft': {
           width: '40%',
+          overflow: 'hidden',
         },
         '.ApplianceBoxRight': {
           padding: '40px 20px',
@@ -305,6 +307,7 @@ const MainStyles = () => {
         },
         '.ModalHeading h6': {
           textTransform: 'uppercase',
+          marginRight: '5px',
         },
         '.ModalContentBoxThird::-webkit-scrollbar': {
           width: '12px',
@@ -538,6 +541,38 @@ const MainStyles = () => {
         },
         '.ApplianceBoxRight .MuiAccordionDetails-root': {
           padding: '0px',
+        },
+        '.ModalInfo img[aria-label="Textured Black"]': {
+          backgroundColor: '#2B2D2D',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Bisque"]': {
+          backgroundColor: '#FBEACC',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Candy Red"]': {
+          backgroundColor: '#BD3436',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Tropical Blue"]': {
+          backgroundColor: '#88D5EE',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="White"]': {
+          backgroundColor: '#F1F2F2',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Buttercup Yellow"]': {
+          backgroundColor: '#F6EEAF',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Robins Egg Blue"]': {
+          backgroundColor: '#85D1D1',
+          borderRadius: '100%',
+        },
+        '.ModalInfo img[aria-label="Mint Green"]': {
+          backgroundColor: '#BFE0C1',
+          borderRadius: '100%',
         },
       }}
     />
