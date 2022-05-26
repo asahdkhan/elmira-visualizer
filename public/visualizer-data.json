@@ -6,17 +6,17 @@
       "defaultAppliancesSrc": "",
       "configuratorIcon": [
         {
-          "id": "range",
+          "id": "microwave",
           "title": "Configure your Microwave",
           "positioning": "NorthstarIconFirst"
         },
         {
-          "id": "range",
+          "id": "dishwasher",
           "title": "Configure your Dishwasher",
           "positioning": "NorthstarIconSecond"
         },
         {
-          "id": "range",
+          "id": "rangehood",
           "title": "Configure your Rangehood & Splashback",
           "positioning": "NorthstarIconThird"
         },
@@ -26,7 +26,7 @@
           "positioning": "NorthstarIconFourth"
         },
         {
-          "id": "range",
+          "id": "refrigerator",
           "title": "Configure your Refrigerator",
           "positioning": "NorthstarIconFifth"
         }
@@ -34,47 +34,53 @@
       "cabinetColour": [
         {
           "name": "Dorian Gray",
-          "icon": "northstar-30-30-dorian-gray-icon.jpg",
-          "src": "northstar-30-30-dorian-gray-cabinets.png",
+          "icon": "cabinets/icon-ball/northstar-30-30-dorian-gray-icon.jpg",
+          "src": "cabinets/northstar-30-30-dorian-gray-cabinets.png",
+          "patch": "cabinets/patch/dorian-gray-patch.png",
           "default": true
         },
         {
           "name": "High Reflective White",
-          "icon": "northstar-30-30-high-reflective-white-icon.jpg",
-          "src": "northstar-30-30-high-reflective-white-cabinets.png"
+          "icon": "cabinets/icon-ball/northstar-30-30-high-reflective-white-icon.jpg",
+          "src": "cabinets/northstar-30-30-high-reflective-white-cabinets.png",
+          "patch": "cabinets/patch/high-reflective-white-patch.png"
         },
         {
           "name": "Iron One",
-          "icon": "northstar-30-30-iron-one-icon.jpg",
-          "src": "northstar-30-30-iron-one-cabinets.png"
+          "icon": "cabinets/icon-ball/northstar-30-30-iron-one-icon.jpg",
+          "src": "cabinets/northstar-30-30-iron-one-cabinets.png",
+          "patch": "cabinets/patch/iron-one-patch.png"
         },
         {
           "name": "Naval",
-          "icon": "northstar-30-30-naval-icon.jpg",
-          "src": "northstar-30-30-naval-cabinets.png"
+          "icon": "cabinets/icon-ball/northstar-30-30-naval-icon.jpg",
+          "src": "cabinets/northstar-30-30-naval-cabinets.png",
+          "patch": "cabinets/patch/naval-patch.png"
         },
         {
           "name": "Smoky Blue",
-          "icon": "northstar-30-30-smoky-blue-icon.jpg",
-          "src": "northstar-30-30-smoky-blue-cabinets.png"
+          "icon": "cabinets/icon-ball/northstar-30-30-smoky-blue-icon.jpg",
+          "src": "cabinets/northstar-30-30-smoky-blue-cabinets.png",
+          "patch": "cabinets/patch/smoky-blue-patch.png"
         },
         {
           "name": "Wood Grain",
-          "icon": "northstar-30-30-wood-icon.jpg",
-          "src": "northstar-30-30-wood-cabinets.png"
+          "icon": "cabinets/icon-ball/northstar-30-30-wood-icon.jpg",
+          "src": "cabinets/northstar-30-30-wood-cabinets.png",
+          "patch": "cabinets/patch/wood-cabinets-patch.png"
         }
       ],
       "flooringStyle": [
         {
           "name": "Dark Floor",
-          "default": true,
-          "icon": "dark-floor.jpg",
-          "src": "wood-floor-1.png"
+          "icon": "floors/icon-ball/dark-floor.jpg",
+          "src": "floors/wood-floor-1.png",
+          "default": true
         },
         {
           "name": "Wood Floor",
-          "icon": "wood-floor.jpg",
-          "src": "wood-floor-2.png"
+          "icon": "floors/icon-ball/wood-floor.jpg",
+          "src": "floors/wood-floor-2.png"
         }
       ],
       "appliances": [
@@ -136,7 +142,7 @@
                   "parentkey": "colours",
                   "id": "textured-black",
                   "title": "Textured Black",
-                  "src": "appliances/range/colortype/textured-black.png",
+                  "src": "appliances/colortype/textured-black.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -145,7 +151,7 @@
                   "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
-                  "src": "appliances/range/colortype/bisque.png",
+                  "src": "appliances/colortype/bisque.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-bisque.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -154,7 +160,7 @@
                   "parentkey": "colours",
                   "id": "candy-red",
                   "title": "Candy Red",
-                  "src": "appliances/range/colortype/candy-red.png",
+                  "src": "appliances/colortype/candy-red.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -163,7 +169,7 @@
                   "parentkey": "colours",
                   "id": "tropical-blue",
                   "title": "Tropical Blue",
-                  "src": "appliances/range/colortype/tropical-blue.png",
+                  "src": "appliances/colortype/tropical-blue.png",
                   "modelSrc": "appliances/range/colours/northstar-30-base-model-tropical-blue.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -172,7 +178,7 @@
                   "parentkey": "colours",
                   "id": "white",
                   "title": "White",
-                  "src": "appliances/range/colortype/white.png",
+                  "src": "appliances/colortype/white.png",
                   "modelSrc": "",
                   "usa": "$0",
                   "canada": "$0"
@@ -181,7 +187,7 @@
                   "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
-                  "src": "appliances/range/colortype/buttercup-yellow.png",
+                  "src": "appliances/colortype/buttercup-yellow.png",
                   "modelSrc": "",
                   "usa": "$0",
                   "canada": "$0"
@@ -190,7 +196,7 @@
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
                   "title": "Robin's Egg Blue",
-                  "src": "appliances/range/colortype/robbin-egg-blue.png",
+                  "src": "appliances/colortype/robbin-egg-blue.png",
                   "modelSrc": "",
                   "usa": "$0",
                   "canada": "$0"
@@ -199,7 +205,7 @@
                   "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
-                  "src": "appliances/range/colortype/mint-green.png",
+                  "src": "appliances/colortype/mint-green.png",
                   "modelSrc": "",
                   "usa": "$0",
                   "canada": "$0"
@@ -294,6 +300,91 @@
                   "id": "no",
                   "title": "No",
                   "src": "appliances/range/warmer/no.jpg",
+                  "usa": "$0",
+                  "canada": "$0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "microwave",
+          "bg": "appliances/microwave/northstar-microwave-bg.jpg",
+          "baseModelSrc": "appliances/microwave/microwave-bisque.png",
+          "modelOptions": [
+            {
+              "id": "colours",
+              "text": "Choose Colors",
+              "opt": [
+                {
+                  "parentkey": "colours",
+                  "id": "textured-black",
+                  "title": "Textured Black",
+                  "src": "appliances/colortype/textured-black.png",
+                  "modelSrc": "appliances/microwave/microwave-textured-black.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "bisque",
+                  "title": "Bisque",
+                  "src": "appliances/colortype/bisque.png",
+                  "modelSrc": "appliances/microwave/microwave-bisque.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "candy-red",
+                  "title": "Candy Red",
+                  "src": "appliances/colortype/candy-red.png",
+                  "modelSrc": "appliances/microwave/microwave-candy-red.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "appliances/colortype/tropical-blue.png",
+                  "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "appliances/colortype/white.png",
+                  "modelSrc": "appliances/microwave/microwave-white.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "modelSrc": "appliances/microwave/microwave-buttercup-yellow.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "robins-egg-blue",
+                  "title": "Robin's Egg Blue",
+                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "mint-green",
+                  "title": "Mint Green",
+                  "src": "appliances/colortype/mint-green.png",
+                  "modelSrc": "appliances/microwave/microwave-mint-green.png",
                   "usa": "$0",
                   "canada": "$0"
                 }

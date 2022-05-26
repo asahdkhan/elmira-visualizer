@@ -11,6 +11,9 @@ const CreateKitchen = () => {
   const [kitchen, setKitchen] = useState({
     cabinetSrc: '',
     flooringSrc: '',
+    appliancesSrc:
+      'cabinets/all-appliances/northstar-30-30-all-appliances-bisque.png',
+    patchSrc: '',
   });
   const navigate = useNavigate();
   const params = useParams();
@@ -26,12 +29,34 @@ const CreateKitchen = () => {
   useEffect(() => {
     const defaultCabinet = data?.cabinetColour?.find((item) => item.default);
     if (defaultCabinet) {
-      setKitchen({
+      setKitchen((prevState) => ({
+        ...prevState,
         cabinetSrc: defaultCabinet.src,
-        flooringSrc: 'wood-floor-1.png',
-      });
+        patchSrc: defaultCabinet.patch,
+      }));
+    } else {
+      setKitchen((prevState) => ({
+        ...prevState,
+        cabinetSrc: data?.cabinetColour[0].src,
+        patchSrc: data?.cabinetColour[0].patch,
+      }));
     }
   }, [data?.cabinetColour, setKitchen]);
+
+  useEffect(() => {
+    const defaultFlooring = data?.flooringStyle?.find((item) => item.default);
+    if (defaultFlooring) {
+      setKitchen((prevState) => ({
+        ...prevState,
+        flooringSrc: defaultFlooring.src,
+      }));
+    } else {
+      setKitchen((prevState) => ({
+        ...prevState,
+        flooringSrc: data?.flooringStyle[0].src,
+      }));
+    }
+  }, [data?.flooringStyle, setKitchen]);
 
   // console.log('appDataState', kitchen);
 
@@ -46,10 +71,16 @@ const CreateKitchen = () => {
                 className={kitchen.cabinetSrc === item.src && `Active`}
                 style={{
                   backgroundImage: `url(
-                    ${require(`../../assets/cabinets/icon-ball/${item?.icon}`)}
+                    ${require(`../../assets/${item?.icon}`)}
                   )`,
                 }}
-                onClick={() => setKitchen({ ...kitchen, cabinetSrc: item.src })}
+                onClick={() =>
+                  setKitchen({
+                    ...kitchen,
+                    cabinetSrc: item.src,
+                    patchSrc: item.patch,
+                  })
+                }
               >
                 <span>{item?.name || ''}</span>
               </a>
@@ -70,7 +101,7 @@ const CreateKitchen = () => {
                 className={kitchen.flooringSrc === item.src && `Active`}
                 style={{
                   backgroundImage: `url(
-                    ${require(`../../assets/floors/icon-ball/${item?.icon}`)}
+                    ${require(`../../assets/${item?.icon}`)}
                   )`,
                 }}
                 onClick={() =>
@@ -143,27 +174,31 @@ const CreateKitchen = () => {
                   {kitchen.cabinetSrc && (
                     <img
                       className="firstChildImageBox width100"
-                      src={require(`../../assets/cabinets/${kitchen.cabinetSrc}`)}
+                      src={require(`../../assets/${kitchen.cabinetSrc}`)}
                       alt="Cabinet"
                     />
                   )}
                   {kitchen.flooringSrc && (
                     <img
                       className="childImageBox width100"
-                      src={require(`../../assets/floors/${kitchen.flooringSrc}`)}
+                      src={require(`../../assets/${kitchen.flooringSrc}`)}
                       alt="Floor"
                     />
                   )}
-                  <img
-                    className="childImageBox"
-                    src={require(`../../assets/cabinets/all-appliances/northstar-30-30-all-appliances-bisque.png`)}
-                    alt="Appliance"
-                  />
-                  <img
-                    className="childImageBox"
-                    src={require(`../../assets/cabinets/patch/dorian-gray-patch.png`)}
-                    alt="Appliance"
-                  />
+                  {kitchen.appliancesSrc && (
+                    <img
+                      className="childImageBox"
+                      src={require(`../../assets/${kitchen.appliancesSrc}`)}
+                      alt="Appliance"
+                    />
+                  )}
+                  {kitchen.patchSrc && (
+                    <img
+                      className="childImageBox"
+                      src={require(`../../assets/${kitchen.patchSrc}`)}
+                      alt="Patch"
+                    />
+                  )}
                 </Box>
                 {configuratorIcon()}
                 <Box component="span" className="CommonIconBoxLast IconLast">

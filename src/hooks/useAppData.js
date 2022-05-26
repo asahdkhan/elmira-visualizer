@@ -50,6 +50,13 @@ export const useAppData = () => {
     [appDataDispatch],
   );
 
+  // const resetImagesSet = useCallback(() => {
+  //   appDataDispatch({
+  //     type: 'RESET_IMAGE',
+  //     data: { applianceName, configuredData: { ...appliance, imagesSet } },
+  //   });
+  // }, [appDataDispatch]);
+
   return {
     appDataState,
     fetchInitialData,

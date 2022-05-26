@@ -1,34 +1,46 @@
-/* eslint-disable  */
-import { Grid, Typography, Box, Tooltip } from '@mui/material';
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
+import { Grid, Typography, Box } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { StyledEngineProvider } from '@mui/material/styles';
 // import '../../../ThemeStyle.css';
 import { useAppData } from '../../../hooks/useAppData';
-import { useNavigate, useParams } from 'react-router';
+import { useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
 
 const ProductStudioStage1 = () => {
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
     useAppData();
-  const [appliance, setAppliance] = useState({});
   // Internal state
+  const [appliance, setAppliance] = useState({});
   const [modelOptions, setModelOptions] = useState(null);
 
-  // const navigate = useNavigate();
   const { appliances: applianceName } = useParams();
 
   const { data, applianceData, configuredData } = appDataState;
   const modelStylesData = applianceData?.styles;
   const modelOptionsData = applianceData?.modelOptions;
 
+  // clear internal state on params change
+  useEffect(() => {
+    setAppliance({});
+    setModelOptions(null);
+  }, [applianceName]);
+
+  // in case of no model style
+  useEffect(() => {
+    if (!modelStylesData && modelOptionsData) {
+      setModelOptions(modelOptionsData);
+    }
+  }, [applianceData, modelStylesData, modelOptionsData]);
+
   // load selected appliances data from JSON
   useEffect(() => {
     selectedApplianceData(applianceName, data);
-  }, [data]);
+  }, [data, selectedApplianceData, applianceName]);
 
   useEffect(() => {
     genrateApplianceImage(applianceName, appliance);
-  }, [appliance]);
+  }, [appliance, applianceName, genrateApplianceImage]);
 
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
@@ -70,7 +82,6 @@ const ProductStudioStage1 = () => {
       appliance[key]?.id !== selectedOption?.id
     ) {
       updatedOptionsData = modelOptions.filter((mO) => !mO.if);
-      console.log('remomve exist data');
     }
 
     if (updatedOptionsData?.length > 0) {
@@ -78,10 +89,10 @@ const ProductStudioStage1 = () => {
     }
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
     const cAppliance = configuredData?.[applianceName];
     if (applianceData?.baseModelSrc) {
-      console.log('baseModelSrc', applianceData?.baseModelSrc);
       return (
         <>
           <img
@@ -104,71 +115,81 @@ const ProductStudioStage1 = () => {
     return <></>;
   };
 
-  console.log('applianceData', configuredData);
+  console.log('applianceData', appDataState);
 
   return (
-    <StyledEngineProvider injectFirst>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        maxWidth="xl"
-        marginLeft="auto"
-        marginRight="auto"
-      >
-        <Grid item xs={12}>
-          <Box className="VisualizerHeading">
-            <Typography variant="h1" textAlign="center">
-              ELMIRA DESIGN LOFT
-            </Typography>
-            <Typography variant="h6" textAlign="center">
-              HERITAGE COLLECTION
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Box className="CreateKitchenSection">
-            <Box className="HeaderSectionThird">
-              <Box className="HeaderCenterSide">
-                <Box className="CabinetColorSection">
-                  <Typography variant="h6">
-                    SELECT MODEL THEN COLOUR AND ADDITIONAL OPTIONS WILL OPEN
-                  </Typography>
-                </Box>
-              </Box>
-            </Box>
-            <Box className="MainKitchenSection">
-              <Box className="ApplianceBoxLeft">
-                <Box className="ApplianceName">
-                  <Typography variant="h4" textAlign="center">
-                    30" 4-Burner Gas Top, Self-Clean
-                  </Typography>
-                </Box>
-                <Box className="parentApplianceContainer">
-                  <picture className="parentApplianceImageBox">
-                    {loadConfiguredImage()}
-                  </picture>
-                </Box>
-              </Box>
-              <Box className="ApplianceBoxRight">
-                <ApplianceOptions
-                  modelStylesData={modelStylesData}
-                  onModelSelection={onModelSelection}
-                  onOptionSelection={onOptionSelection}
-                  modelOptions={modelOptions}
-                />
-              </Box>
-            </Box>
-            <Box className="FooterSection">
-              <Typography variant="body1" textAlign="center">
-                <b>* Explore details</b> ON TRIMS, TRIVETS, AND OTHER FEATURES.
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      maxWidth="xl"
+      marginLeft="auto"
+      marginRight="auto"
+    >
+      <Grid item xs={12}>
+        <Box className="VisualizerHeading">
+          <Typography variant="h1" textAlign="center">
+            ELMIRA DESIGN LOFT
+          </Typography>
+          <Typography variant="h6" textAlign="center">
+            HERITAGE COLLECTION
+          </Typography>
+        </Box>
       </Grid>
-    </StyledEngineProvider>
+      <Grid item xs={12}>
+        <Box className="CreateKitchenSection">
+          <Box className="HeaderSectionThird">
+            <Box className="HeaderCenterSide">
+              <Box className="CabinetColorSection">
+                <Typography variant="h6">
+                  SELECT MODEL THEN COLOUR AND ADDITIONAL OPTIONS WILL OPEN
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box className="MainKitchenSection">
+            <Box className="ApplianceBoxLeft">
+              <Box className="ApplianceName">
+                <Typography variant="h4" textAlign="center">
+                  30" 4-Burner Gas Top, Self-Clean
+                </Typography>
+              </Box>
+              <Box className="parentApplianceContainer">
+                <picture
+                  className="parentApplianceImageBox"
+                  style={
+                    applianceData?.bg
+                      ? {
+                          backgroundImage: `url(
+                    ${require(`../../../assets/${applianceData?.bg}`)}
+                  )`,
+                        }
+                      : {}
+                  }
+                >
+                  {loadConfiguredImage()}
+                </picture>
+              </Box>
+            </Box>
+            <Box className="ApplianceBoxRight">
+              <ApplianceOptions
+                modelStylesData={modelStylesData}
+                onModelSelection={onModelSelection}
+                onOptionSelection={onOptionSelection}
+                modelOptions={modelOptions}
+                selectedOptions={appliance}
+              />
+            </Box>
+          </Box>
+          <Box className="FooterSection">
+            <Typography variant="body1" textAlign="center">
+              <b>* Explore details</b> ON TRIMS, TRIVETS, AND OTHER FEATURES.
+            </Typography>
+          </Box>
+        </Box>
+      </Grid>
+    </Grid>
   );
 };
 

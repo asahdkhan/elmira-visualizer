@@ -9,7 +9,10 @@ import ProductStudioStage3 from '../screens/Product/ProductStudioStage3';
 import ProductStudioStage4 from '../screens/Product/ProductStudioStage4';
 
 const childrenRoutes = [
-  { path: ':appliances/stage-1', element: <ProductStudioStage1 /> },
+  {
+    path: ':appliances/stage-1',
+    element: <ProductStudioStage1 />,
+  },
   { path: ':appliances/stage-2', element: <ProductStudioStage2 /> },
   { path: ':appliances/stage-3', element: <ProductStudioStage3 /> },
   { path: ':appliances/stage-4', element: <ProductStudioStage4 /> },

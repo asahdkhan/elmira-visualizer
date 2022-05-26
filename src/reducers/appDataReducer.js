@@ -2,10 +2,7 @@
 export const initialState = {
   data: null,
   applianceData: null,
-  configuredData: {
-    kitchen: {},
-    appliance: {},
-  },
+  configuredData: {},
 };
 
 const appDataReducer = (state, { type, data }) => {
@@ -18,6 +15,7 @@ const appDataReducer = (state, { type, data }) => {
       return {
         ...state,
         configuredData: {
+          ...state.configuredData,
           [data.applianceName]: data.configuredData,
         },
       };

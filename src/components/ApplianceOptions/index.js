@@ -1,8 +1,7 @@
-/* eslint-disable */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import * as React from 'react';
-import { styles as classes } from './ApplianceOptions.styles';
+// import { styles as classes } from './ApplianceOptions.styles';
 import {
   Accordion,
   AccordionSummary,
@@ -11,12 +10,14 @@ import {
   Tooltip,
   Box,
 } from '@mui/material';
+import PropTypes from 'prop-types';
 
 export default function ApplianceOptions({
   modelStylesData,
   modelOptions,
   onModelSelection,
   onOptionSelection,
+  selectedOptions,
 }) {
   const [expanded, setExpanded] = React.useState('panel1');
 
@@ -36,7 +37,9 @@ export default function ApplianceOptions({
         {item.src && (
           <Tooltip placement="top" arrow title={item?.title || ''}>
             <img
-              className=""
+              className={
+                selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
+              }
               // style={{ width: 80, height: 80 }}
               src={require(`../../assets/${item.src}`)}
               alt="Range"
@@ -44,7 +47,7 @@ export default function ApplianceOptions({
           </Tooltip>
         )}
         <Typography variant="body2" textAlign="center">
-          {item?.usa}
+          {selectionId === 'style' ? item?.title : item?.usa}
         </Typography>
       </Box>
     ));
@@ -52,7 +55,8 @@ export default function ApplianceOptions({
 
   const loadOptions = () => {
     return modelOptions?.map((o, index) => {
-      const panel = `panel${index + 2}`;
+      const panelIndex = modelStylesData ? 2 : 1;
+      const panel = `panel${index + panelIndex}`;
       return (
         <Accordion
           key={o.id}
@@ -72,7 +76,16 @@ export default function ApplianceOptions({
               <Typography variant="h6" textAlign="center">
                 {o.text}
               </Typography>
-              <a className="EditButton">SELECT</a>
+              <Typography
+                variant="body1"
+                textAlign="center"
+                className="ModalDetailInfo"
+              >
+                <span>-</span> {selectedOptions[o.id]?.title}
+              </Typography>
+              <a className="EditButton">
+                {selectedOptions[o.id]?.id ? 'CHANGE' : 'SELECT'}
+              </a>
             </Box>
           </AccordionSummary>
           <AccordionDetails>
@@ -89,35 +102,54 @@ export default function ApplianceOptions({
 
   return (
     <div>
-      <Accordion
-        disableGutters
-        elevation={0}
-        square
-        expanded={expanded === 'panel1'}
-        onChange={handleChange('panel1')}
-      >
-        <AccordionSummary>
-          <Box className="ModalHeading">
-            <img
-              className=""
-              src={require('../../assets/images/VisualizerIconSecond.png')}
-              alt="Range"
-            />
-            <Typography variant="h6" textAlign="center">
-              MODEL
-            </Typography>
-            <a className="EditButton">SELECT</a>
-          </Box>
-        </AccordionSummary>
-        <AccordionDetails>
-          <Box className="ModalBox">
-            <Box className="ModalContentBox">
-              {loadNestedOptions(modelStylesData, onModelSelection, 'style')}
+      {modelStylesData && (
+        <Accordion
+          disableGutters
+          elevation={0}
+          square
+          expanded={expanded === 'panel1'}
+          onChange={handleChange('panel1')}
+        >
+          <AccordionSummary>
+            <Box className="ModalHeading">
+              <img
+                className=""
+                src={require('../../assets/images/VisualizerIconSecond.png')}
+                alt="Range"
+              />
+              <Typography variant="h6" textAlign="center">
+                MODEL
+              </Typography>
+              <Typography
+                variant="body1"
+                textAlign="center"
+                className="ModalDetailInfo"
+              >
+                <span>-</span> {selectedOptions['style']?.title}
+              </Typography>
+              <a className="EditButton">
+                {selectedOptions['style']?.id ? 'CHANGE' : 'SELECT'}
+              </a>
             </Box>
-          </Box>
-        </AccordionDetails>
-      </Accordion>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Box className="ModalBox">
+              <Box className="ModalContentBox">
+                {loadNestedOptions(modelStylesData, onModelSelection, 'style')}
+              </Box>
+            </Box>
+          </AccordionDetails>
+        </Accordion>
+      )}
       {loadOptions()}
     </div>
   );
 }
+
+ApplianceOptions.propTypes = {
+  modelStylesData: PropTypes.array,
+  modelOptions: PropTypes.array,
+  onModelSelection: PropTypes.func.isRequired,
+  onOptionSelection: PropTypes.func.isRequired,
+  selectedOptions: PropTypes.object.isRequired,
+};
