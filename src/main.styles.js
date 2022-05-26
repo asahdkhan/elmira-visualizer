@@ -281,6 +281,7 @@ const MainStyles = () => {
         },
         '.ModalInfo img': {
           cursor: 'pointer',
+          borderRadius: '6px',
         },
         '.ModalInfo .MuiTypography-body2': {
           maxWidth: '180px',
