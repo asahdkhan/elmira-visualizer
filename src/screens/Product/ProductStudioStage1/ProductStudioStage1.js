@@ -1,4 +1,3 @@
-/* eslint-disable */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import { Grid, Typography, Box } from '@mui/material';
@@ -27,17 +26,22 @@ const ProductStudioStage1 = () => {
     setModelOptions(null);
   }, [applianceName]);
 
-  // in case of no model style
-  useEffect(() => {
-    if (!modelStylesData && modelOptionsData) {
-      setModelOptions(modelOptionsData);
-    }
-  }, [applianceData, modelStylesData, modelOptionsData]);
-
   // load selected appliances data from JSON
   useEffect(() => {
     selectedApplianceData(applianceName, data);
   }, [data, selectedApplianceData, applianceName]);
+
+  // in case of no model style
+  //optimize
+  useEffect(() => {
+    if (
+      applianceData?.name === applianceName &&
+      modelOptionsData &&
+      !modelStylesData
+    ) {
+      setModelOptions(modelOptionsData);
+    }
+  }, [applianceData, applianceName, modelStylesData, modelOptionsData]);
 
   useEffect(() => {
     genrateApplianceImage(applianceName, appliance);
@@ -45,9 +49,10 @@ const ProductStudioStage1 = () => {
 
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
-    setAppliance({ ...appliance, [key]: selectedStyle });
+    setAppliance({ [key]: selectedStyle });
     const populateOptions = modelOptionsData.reduce((acc, item) => {
       if (selectedStyle?.options?.indexOf(item.id) !== -1) {
+        // only shows required nested options from multiple options
         const nestedOptions = selectedStyle?.nestedOptions;
         if (nestedOptions && item.id in nestedOptions) {
           const updatedItem = {
@@ -78,11 +83,15 @@ const ProductStudioStage1 = () => {
         ...modelOptions,
         ...modelOptionsData.filter((mO) => mO.if === selectedOption?.id),
       ];
-    } else if (
-      appliance[key]?.parentkey === selectedOption?.parentkey &&
-      appliance[key]?.id !== selectedOption?.id
-    ) {
-      updatedOptionsData = modelOptions.filter((mO) => !mO.if);
+    } else if (selectedOption?.removeAssociated) {
+      console.log(
+        'key--',
+        appliance[key]?.parentkey,
+        selectedOption?.removeAssociated,
+      );
+      updatedOptionsData = modelOptions.filter(
+        (mO) => mO.if !== selectedOption?.removeAssociated,
+      );
     }
 
     if (updatedOptionsData?.length > 0) {
@@ -116,7 +125,7 @@ const ProductStudioStage1 = () => {
     return <></>;
   };
 
-  console.log('applianceData', appDataState);
+  console.log('applianceData', applianceData);
 
   return (
     <Grid

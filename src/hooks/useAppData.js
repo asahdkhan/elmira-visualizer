@@ -37,9 +37,15 @@ export const useAppData = () => {
     (applianceName, appliance) => {
       let imagesSet = [];
       for (var key of Object.keys(appliance)) {
-        console.log(key + ' -> ' + appliance[key]?.modelSrc);
         if (appliance[key]?.modelSrc) {
-          imagesSet.push(appliance[key]?.modelSrc);
+          if (typeof appliance[key]?.modelSrc === 'object') {
+            const modelId = appliance['style']?.id;
+            const modelSrc =
+              appliance[key] && appliance[key]?.modelSrc[modelId];
+            imagesSet.push(modelSrc);
+          } else {
+            imagesSet.push(appliance[key]?.modelSrc);
+          }
         }
       }
       appDataDispatch({
