@@ -164,7 +164,7 @@ const MainStyles = () => {
         '.MainKitchenSection': {
           display: 'flex',
           position: 'relative',
-          minHeight: '550px',
+          minHeight: '590px',
         },
         '.CommonIconBox': {
           position: 'absolute',
