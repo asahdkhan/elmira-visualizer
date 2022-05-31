@@ -500,12 +500,14 @@
               "id": "1950",
               "title": "Model 1950 30\" 18.5 cubic foot with Bottom Freezer",
               "src": "appliances/fridge/models/northerstar-30-model-1950-thumbnail.png",
+              "modelSrc": "appliances/fridge/colours/1950/fridge-1950-bisque.png",
               "options": ["colours", "hinge", "ice-maker"]
             },
             {
               "id": "1952",
               "title": "Model 1952 30\" 18.2 cubic foot with Top Freezer",
               "src": "appliances/fridge/models/northerstar-30-model-1952-thumbnail.png",
+              "modelSrc": "appliances/fridge/colours/1952/fridge-1952-bisque.png",
               "options": ["colours", "hinge", "ice-maker"]
             }
           ],
@@ -648,6 +650,170 @@
                 },
                 {
                   "parentkey": "ice-maker",
+                  "id": "no",
+                  "title": "No",
+                  "src": "",
+                  "usa": "$0",
+                  "canada": "$0"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "rangehood",
+          "baseModelSrc": "appliances/range-hood/colours/1961/range-hood-1961-bisque.png",
+          "styles": [
+            {
+              "id": "1961",
+              "title": "1961 30\" Recirculating",
+              "src": "appliances/range-hood/models/northstar-30-range-hood-1961-bisque-thumbnail.png",
+              "modelSrc": "appliances/range-hood/colours/1961/range-hood-1961-bisque.png",
+              "options": ["colours", "splashback", "duck-cover-kit"]
+            },
+            {
+              "id": "1962",
+              "title": "1962 30\" Outside-Vent",
+              "src": "appliances/range-hood/models/northstar-30-range-hood-1962-bisque-thumbnail.png",
+              "modelSrc": "appliances/range-hood/colours/1962/range-hood-1962-bisque.png",
+              "options": ["colours", "splashback", "duck-cover-kit"]
+            }
+          ],
+          "modelOptions": [
+            {
+              "id": "colours",
+              "text": "Choose Colors",
+              "opt": [
+                {
+                  "parentkey": "colours",
+                  "id": "textured-black",
+                  "title": "Textured Black",
+                  "src": "appliances/colortype/textured-black.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-textured-black.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-textured-black.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "bisque",
+                  "title": "Bisque",
+                  "src": "appliances/colortype/bisque.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-bisque.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-bisque.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "candy-red",
+                  "title": "Candy Red",
+                  "src": "appliances/colortype/candy-red.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-candy-red.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-candy-red.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "appliances/colortype/tropical-blue.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-tropical-blue.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-tropical-blue.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "appliances/colortype/white.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-white.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-white.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-buttercup-yellow.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-buttercup-yellow.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "robins-egg-blue",
+                  "title": "Robins Egg Blue",
+                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-robbins-egg-blue.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1961-robbins-egg-blue.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "mint-green",
+                  "title": "Mint Green",
+                  "src": "appliances/colortype/mint-green.png",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-mint-green.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-mint-green.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                }
+              ]
+            },
+            {
+              "id": "splashback",
+              "text": "Splashback",
+              "opt": [
+                {
+                  "id": "no-splashback",
+                  "title": "No Splashback",
+                  "src": "",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback",
+                  "title": "30\" Splashback",
+                  "src": "",
+                  "usa": "$199",
+                  "canada": "$0"
+                }
+              ]
+            },
+            {
+              "id": "duck-cover-kit",
+              "text": "Duck Cover Kit",
+              "opt": [
+                {
+                  "id": "yes",
+                  "title": "Yes",
+                  "src": "",
+                  "usa": "$600",
+                  "canada": "$0"
+                },
+                {
                   "id": "no",
                   "title": "No",
                   "src": "",

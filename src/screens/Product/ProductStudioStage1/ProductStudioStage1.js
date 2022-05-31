@@ -103,27 +103,30 @@ const ProductStudioStage1 = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
     const cAppliance = configuredData?.[applianceName];
-    if (applianceData?.baseModelSrc) {
-      return (
-        <>
+    return (
+      <>
+        {applianceData?.baseModelSrc && !appliance?.colours && (
           <img
             className="firstChildImageBox"
             src={require(`../../../assets/${applianceData?.baseModelSrc}`)}
             alt="Range"
           />
-          {cAppliance?.imagesSet?.length > 0 &&
-            cAppliance?.imagesSet.map((src) => (
-              <img
-                key={src}
-                className="childImageBox"
-                src={require(`../../../assets/${src}`)}
-                alt="Range"
-              />
-            ))}
-        </>
-      );
-    }
-    return <></>;
+        )}
+        {cAppliance?.imagesSet?.length > 0 &&
+          cAppliance?.imagesSet.map((src, index) => (
+            <img
+              key={src}
+              className={
+                appliance.colours && index == 0
+                  ? 'firstChildImageBox'
+                  : 'childImageBox '
+              }
+              src={require(`../../../assets/${src}`)}
+              alt="Range"
+            />
+          ))}
+      </>
+    );
   };
 
   console.log('applianceData', applianceData);
