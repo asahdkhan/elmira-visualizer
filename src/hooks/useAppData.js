@@ -42,21 +42,12 @@ export const useAppData = () => {
             const modelId = appliance['style']?.id;
             const modelSrc =
               appliance[key] && appliance[key]?.modelSrc[modelId];
-            if (key === 'colours') {
-              imagesSet = [modelSrc, ...imagesSet];
-            } else {
-              imagesSet = [...imagesSet, modelSrc];
-            }
+            imagesSet = [...imagesSet, modelSrc];
           } else {
-            if (key === 'colours') {
-              imagesSet = [appliance[key]?.modelSrc, ...imagesSet];
-            } else {
-              imagesSet = [...imagesSet, appliance[key]?.modelSrc];
-            }
+            imagesSet = [...imagesSet, appliance[key]?.modelSrc];
           }
         }
       }
-      console.log('imagesSet', appliance, imagesSet);
       appDataDispatch({
         type: 'CONFIGURED_DATA',
         data: { applianceName, configuredData: { ...appliance, imagesSet } },

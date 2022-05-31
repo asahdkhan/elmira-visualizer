@@ -7,10 +7,12 @@ import React, { useEffect, useState } from 'react';
 import { useAppData } from '../../../hooks/useAppData';
 import { useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
+import zIndex from '@mui/material/styles/zIndex';
 
 const ProductStudioStage1 = () => {
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
     useAppData();
+
   // Internal state
   const [appliance, setAppliance] = useState({});
   const [modelOptions, setModelOptions] = useState(null);
@@ -20,7 +22,7 @@ const ProductStudioStage1 = () => {
   const { data, applianceData, configuredData } = appDataState;
   const modelStylesData = applianceData?.styles;
   const modelOptionsData = applianceData?.modelOptions;
-
+  const configuredApplianceData = configuredData?.[applianceName];
   // clear internal state on params change
   useEffect(() => {
     setAppliance({});
@@ -46,6 +48,7 @@ const ProductStudioStage1 = () => {
 
   useEffect(() => {
     genrateApplianceImage(applianceName, appliance);
+    console.log('genrateApplianceImage');
   }, [appliance, applianceName, genrateApplianceImage]);
 
   // on model i.e style selection, load the relevant other options
@@ -102,25 +105,34 @@ const ProductStudioStage1 = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
-    const cAppliance = configuredData?.[applianceName];
+    let parentImg = '';
+    let childImg = [];
+    if (applianceData?.baseModelSrc) {
+      parentImg = applianceData?.baseModelSrc;
+      childImg = configuredApplianceData?.imagesSet;
+    } else {
+      const [p, ...c] = configuredApplianceData?.imagesSet || [];
+      if (!p) {
+        parentImg = applianceData?.defaultModelSrc;
+      } else {
+        parentImg = p;
+      }
+      childImg = c;
+    }
     return (
       <>
-        {applianceData?.baseModelSrc && !appliance?.colours && (
+        {parentImg && (
           <img
             className="firstChildImageBox"
-            src={require(`../../../assets/${applianceData?.baseModelSrc}`)}
+            src={require(`../../../assets/${parentImg}`)}
             alt="Range"
           />
         )}
-        {cAppliance?.imagesSet?.length > 0 &&
-          cAppliance?.imagesSet.map((src, index) => (
+        {childImg?.length > 0 &&
+          childImg?.map((src, i) => (
             <img
               key={src}
-              className={
-                appliance.colours && index == 0
-                  ? 'firstChildImageBox'
-                  : 'childImageBox '
-              }
+              className={'childImageBox'}
               src={require(`../../../assets/${src}`)}
               alt="Range"
             />
@@ -129,7 +141,18 @@ const ProductStudioStage1 = () => {
     );
   };
 
-  console.log('applianceData', applianceData);
+  console.log('configuredData', configuredApplianceData);
+
+  const fetchbackgroundImg = () => {
+    let backgroundImg = null;
+    if (configuredApplianceData?.style?.bg) {
+      backgroundImg = configuredApplianceData?.style?.bg;
+    } else if (applianceData?.bg) {
+      backgroundImg = applianceData?.bg;
+    }
+    console.log('fetchbackgroundImg', backgroundImg);
+    return backgroundImg;
+  };
 
   return (
     <Grid
@@ -166,17 +189,17 @@ const ProductStudioStage1 = () => {
             <Box className="ApplianceBoxLeft">
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
-                  30" 4-Burner Gas Top, Self-Clean
+                  {`Configure your ${applianceName}`}
                 </Typography>
               </Box>
               <Box className="parentApplianceContainer">
                 <picture
                   className="parentApplianceImageBox"
                   style={
-                    applianceData?.bg
+                    fetchbackgroundImg()
                       ? {
                           backgroundImage: `url(
-                    ${require(`../../../assets/${applianceData?.bg}`)}
+                    ${require(`../../../assets/${fetchbackgroundImg()}`)}
                   )`,
                         }
                       : {}
