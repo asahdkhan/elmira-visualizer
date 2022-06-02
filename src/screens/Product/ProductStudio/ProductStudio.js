@@ -47,9 +47,12 @@ const ProductStudioStage1 = () => {
   }, [applianceData, applianceName, modelStylesData, modelOptionsData]);
 
   useEffect(() => {
-    genrateApplianceImage(applianceName, appliance);
-    console.log('genrateApplianceImage');
-  }, [appliance, applianceName, genrateApplianceImage]);
+    genrateApplianceImage(
+      applianceName,
+      appliance,
+      applianceData?.configureOrder,
+    );
+  }, [applianceData, appliance, applianceName, genrateApplianceImage]);
 
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
@@ -80,6 +83,7 @@ const ProductStudioStage1 = () => {
   // - populate/ remove the relevant model option if exist
   const onOptionSelection = (key, selectedOption) => {
     setAppliance({ ...appliance, [key]: selectedOption });
+    const updatedSelection = { ...appliance, [key]: selectedOption };
 
     let updatedOptionsData = [];
     if (!appliance[key]?.populate && selectedOption?.populate) {
@@ -88,14 +92,18 @@ const ProductStudioStage1 = () => {
         ...modelOptionsData.filter((mO) => mO.if === selectedOption?.id),
       ];
     } else if (selectedOption?.removeAssociated) {
-      console.log(
-        'key--',
-        appliance[key]?.parentkey,
-        selectedOption?.removeAssociated,
-      );
-      updatedOptionsData = modelOptions.filter(
-        (mO) => mO.if !== selectedOption?.removeAssociated,
-      );
+      // console.log(
+      //   'key--',
+      //   appliance[key]?.parentkey,
+      //   selectedOption?.removeAssociated,
+      // );
+      updatedOptionsData = modelOptions.filter((mO) => {
+        if (mO.if === selectedOption?.removeAssociated) {
+          delete updatedSelection[mO.id];
+        }
+        return mO.if !== selectedOption?.removeAssociated;
+      });
+      setAppliance(updatedSelection);
     }
 
     if (updatedOptionsData?.length > 0) {
@@ -105,13 +113,17 @@ const ProductStudioStage1 = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
+    const imagesSet = configuredApplianceData?.imagesSet?.filter(
+      (element) => element !== undefined,
+    );
+
     let parentImg = '';
     let childImg = [];
     if (applianceData?.baseModelSrc) {
       parentImg = applianceData?.baseModelSrc;
-      childImg = configuredApplianceData?.imagesSet;
+      childImg = imagesSet;
     } else {
-      const [p, ...c] = configuredApplianceData?.imagesSet || [];
+      const [p, ...c] = imagesSet || [];
       if (!p) {
         parentImg = applianceData?.defaultModelSrc;
       } else {
@@ -141,7 +153,7 @@ const ProductStudioStage1 = () => {
     );
   };
 
-  console.log('configuredData', configuredApplianceData);
+  // console.log('configuredData', configuredApplianceData);
 
   const fetchbackgroundImg = () => {
     let backgroundImg = null;
@@ -150,7 +162,6 @@ const ProductStudioStage1 = () => {
     } else if (applianceData?.bg) {
       backgroundImg = applianceData?.bg;
     }
-    console.log('fetchbackgroundImg', backgroundImg);
     return backgroundImg;
   };
 
@@ -194,7 +205,11 @@ const ProductStudioStage1 = () => {
               </Box>
               <Box className="parentApplianceContainer">
                 <picture
-                  className="parentApplianceImageBox"
+                  className={
+                    applianceName === 'rangehood'
+                      ? 'parentApplianceImageBox'
+                      : 'parentApplianceImageBox-apply'
+                  }
                   style={
                     fetchbackgroundImg()
                       ? {

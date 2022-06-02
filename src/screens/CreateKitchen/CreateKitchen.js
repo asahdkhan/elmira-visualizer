@@ -123,7 +123,7 @@ const CreateKitchen = () => {
         key={item.positioning}
         component="span"
         className={`CommonIconBox ${item.positioning}`}
-        onClick={() => navigate(`./${item.id}/stage-1`)}
+        onClick={() => navigate(`./${item.id}/product-studio`)}
       >
         <Tooltip placement="top-start" arrow title={item.title}>
           <Box className="Icon"></Box>

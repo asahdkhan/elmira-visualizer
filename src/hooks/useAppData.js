@@ -34,20 +34,28 @@ export const useAppData = () => {
   );
 
   const genrateApplianceImage = useCallback(
-    (applianceName, appliance) => {
+    (applianceName, appliance, configureOrder) => {
       let imagesSet = [];
       for (var key of Object.keys(appliance)) {
+        let modelSrc = appliance[key]?.modelSrc;
         if (appliance[key]?.modelSrc) {
           if (typeof appliance[key]?.modelSrc === 'object') {
             const modelId = appliance['style']?.id;
-            const modelSrc =
-              appliance[key] && appliance[key]?.modelSrc[modelId];
-            imagesSet = [...imagesSet, modelSrc];
+            modelSrc = appliance[key] && appliance[key]?.modelSrc[modelId];
+          }
+          if (applianceName === 'rangehood') {
+            // console.log('applianceName', key, configureOrder);
+            configureOrder?.forEach((e, i) => {
+              if (e === key) {
+                imagesSet[i] = modelSrc;
+              }
+            });
           } else {
-            imagesSet = [...imagesSet, appliance[key]?.modelSrc];
+            imagesSet = [...imagesSet, modelSrc];
           }
         }
       }
+
       appDataDispatch({
         type: 'CONFIGURED_DATA',
         data: { applianceName, configuredData: { ...appliance, imagesSet } },

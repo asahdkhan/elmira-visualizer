@@ -25,6 +25,12 @@ const MainStyles = () => {
           left: '0',
           backgroundRepeat: 'no-repeat',
         },
+        '.parentApplianceImageBox-apply': {
+          position: 'absolute',
+          top: '0',
+          left: '0',
+          backgroundRepeat: 'no-repeat',
+        },
         '.firstChildImageBox': {
           position: 'relative',
           top: '0',
@@ -525,7 +531,11 @@ const MainStyles = () => {
           left: '50%',
           transform: 'translate(-50%, 0px)',
         },
-        '.parentApplianceImageBox img:nth-child(2)': {
+        '.parentApplianceContainer .parentApplianceImageBox-apply': {
+          left: '50%',
+          transform: 'translate(-50%, 0px)',
+        },
+        '.parentApplianceImageBox-apply img:nth-child(2)': {
           zIndex: '99',
         },
         '.ApplianceBoxRight .MuiButtonBase-root.MuiAccordionSummary-root': {

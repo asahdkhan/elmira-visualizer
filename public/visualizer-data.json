@@ -709,6 +709,7 @@
           "name": "rangehood",
           "defaultModelSrc": "appliances/range-hood/colours/1961/range-hood-1961-bisque.png",
           "bg": "appliances/range-hood/colours/northstar-range-hood-bg.jpg",
+          "configureOrder": ["splashback-colors", "style", "colours"],
           "styles": [
             {
               "id": "1961",
@@ -875,6 +876,7 @@
                   "id": "splashback-colors-textured-black",
                   "title": "Textured Black",
                   "src": "appliances/colortype/textured-black.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-textured-black.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -882,6 +884,7 @@
                   "id": "splashback-colors-bisque",
                   "title": "Bisque",
                   "src": "appliances/colortype/bisque.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-bisque.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -889,6 +892,7 @@
                   "id": "splashback-colors-candy-red",
                   "title": "Candy Red",
                   "src": "appliances/colortype/candy-red.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-candy-red.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -896,6 +900,7 @@
                   "id": "splashback-colors-tropical-blue",
                   "title": "Tropical Blue",
                   "src": "appliances/colortype/tropical-blue.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-tropical-blue.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -903,6 +908,7 @@
                   "id": "splashback-colors-white",
                   "title": "White",
                   "src": "appliances/colortype/white.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-white.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -910,6 +916,7 @@
                   "id": "splashback-colors-buttercup-yellow",
                   "title": "Buttercup Yellow",
                   "src": "appliances/colortype/buttercup-yellow.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-buttercup-yellow.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -917,6 +924,7 @@
                   "id": "splashback-colors-robins-egg-blue",
                   "title": "Robins Egg Blue",
                   "src": "appliances/colortype/robbin-egg-blue.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-robbins-egg-blue.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -924,6 +932,7 @@
                   "id": "splashback-colors-mint-green",
                   "title": "Mint Green",
                   "src": "appliances/colortype/mint-green.png",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-mint-green.png",
                   "usa": "$0",
                   "canada": "$0"
                 }

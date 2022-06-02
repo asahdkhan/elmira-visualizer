@@ -22,7 +22,7 @@ export default function ApplianceOptions({
 }) {
   const [expanded, setExpanded] = React.useState('panel1');
 
-  console.log('modelOptions', modelOptions);
+  // console.log('modelOptions', modelOptions);
 
   const handleChange = (panel) => (event, newExpanded) => {
     setExpanded(newExpanded ? panel : false);
