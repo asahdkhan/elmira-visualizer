@@ -170,7 +170,7 @@ const ProductStudioStage1 = () => {
             ELMIRA DESIGN LOFT
           </Typography>
           <Typography variant="h6" textAlign="center">
-            HERITAGE COLLECTION
+            NORTHSTAR COLLECTION
           </Typography>
         </Box>
       </Grid>

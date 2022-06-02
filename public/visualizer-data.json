@@ -129,14 +129,14 @@
                   "id": "liquid-propane",
                   "title": "Liquid Propane",
                   "src": "appliances/range/gastype/liquid-propane.jpg",
-                  "usa": "$0",
+                  "usa": "$100",
                   "canada": "$0"
                 }
               ]
             },
             {
               "id": "colours",
-              "text": "Choose Colors",
+              "text": "Colors",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -214,7 +214,7 @@
             },
             {
               "id": "trim",
-              "text": "Choose Trim",
+              "text": "Trim",
               "opt": [
                 {
                   "parentkey": "trim",
@@ -238,7 +238,7 @@
             },
             {
               "id": "oven",
-              "text": "Choose Oven",
+              "text": "Oven",
               "opt": [
                 {
                   "parentkey": "oven",
@@ -315,7 +315,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Choose Colors",
+              "text": "Colors",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -414,7 +414,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Choose Colors",
+              "text": "Colors",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -535,7 +535,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Choose Colors",
+              "text": "Colors",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -736,7 +736,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Choose Colors",
+              "text": "Colors",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -823,7 +823,7 @@
                   "src": "appliances/colortype/robbin-egg-blue.png",
                   "modelSrc": {
                     "1961": "appliances/range-hood/colours/1961/range-hood-1961-robbins-egg-blue.png",
-                    "1962": "appliances/range-hood/colours/1962/range-hood-1961-robbins-egg-blue.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-robbins-egg-blue.png",
                     "1963": "appliances/range-hood/colours/1963/range-hood-1963-robbins-egg-blue.png"
                   },
                   "usa": "$0",
@@ -852,14 +852,79 @@
                   "id": "no-splashback",
                   "title": "No Splashback",
                   "src": "appliances/other/no.jpg",
+                  "removeAssociated": "yes-splashback",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
-                  "id": "splashback",
+                  "id": "yes-splashback",
                   "title": "30\" Splashback",
                   "src": "appliances/other/yes.jpg",
-                  "usa": "$199",
+                  "populate": ["splashback-colors"],
+                  "usa": { "1961": "$199", "1962": "$199", "1963": "$269" },
+                  "canada": ["$0"]
+                }
+              ]
+            },
+            {
+              "id": "splashback-colors",
+              "text": "Splashback Colors",
+              "if": "yes-splashback",
+              "opt": [
+                {
+                  "id": "splashback-colors-textured-black",
+                  "title": "Textured Black",
+                  "src": "appliances/colortype/textured-black.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-bisque",
+                  "title": "Bisque",
+                  "src": "appliances/colortype/bisque.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-candy-red",
+                  "title": "Candy Red",
+                  "src": "appliances/colortype/candy-red.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "appliances/colortype/tropical-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-white",
+                  "title": "White",
+                  "src": "appliances/colortype/white.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-robins-egg-blue",
+                  "title": "Robins Egg Blue",
+                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-mint-green",
+                  "title": "Mint Green",
+                  "src": "appliances/colortype/mint-green.png",
+                  "usa": "$0",
                   "canada": "$0"
                 }
               ]

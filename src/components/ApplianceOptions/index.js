@@ -29,29 +29,41 @@ export default function ApplianceOptions({
   };
 
   const loadNestedOptions = (optionData, setSelection, selectionId) => {
-    return optionData?.map((item) => (
-      <Box
-        key={item.id}
-        className="ModalInfo"
-        onClick={() => setSelection(selectionId, item)}
-      >
-        {item.src && (
-          <Tooltip placement="top" arrow title={item?.title || ''}>
-            <img
-              className={
-                selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
-              }
-              // style={{ width: 80, height: 80 }}
-              src={require(`../../assets/${item.src}`)}
-              alt="Range"
-            />
-          </Tooltip>
-        )}
-        <Typography variant="body2" textAlign="center">
-          {selectionId === 'style' ? item?.title : item?.usa}
-        </Typography>
-      </Box>
-    ));
+    return optionData?.map((item) => {
+      // for (var key of Object.keys(item)) {
+      //   if (Array.isArray(item[key])) {
+      //     console.log('object', key);
+      //   }
+      // }
+
+      if (typeof item?.usa === 'object') {
+        item = { ...item, usa: item?.usa[selectedOptions?.style?.id] };
+      }
+
+      return (
+        <Box
+          key={item.id}
+          className="ModalInfo"
+          onClick={() => setSelection(selectionId, item)}
+        >
+          {item.src && (
+            <Tooltip placement="top" arrow title={item?.title || ''}>
+              <img
+                className={
+                  selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
+                }
+                // style={{ width: 80, height: 80 }}
+                src={require(`../../assets/${item.src}`)}
+                alt="Range"
+              />
+            </Tooltip>
+          )}
+          <Typography variant="body2" textAlign="center">
+            {selectionId === 'style' ? item?.title : item?.usa}
+          </Typography>
+        </Box>
+      );
+    });
   };
 
   const loadOptions = () => {
