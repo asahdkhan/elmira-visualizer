@@ -1,7 +1,6 @@
-/* eslint-disable */
 import React, { memo } from 'react';
-import { useRoutes } from 'react-router';
-import PageNotFound from '../components/PageNotFound';
+import { Navigate, useRoutes } from 'react-router';
+// import PageNotFound from '../components/PageNotFound';
 import CreateKitchen from '../screens/CreateKitchen';
 import ProductStudio from '../screens/Product/ProductStudio';
 import ProductStudioStage2 from '../screens/Product/ProductStudioStage2';
@@ -28,7 +27,10 @@ let appRoutes = [
 ];
 
 const Routes = () => {
-  return useRoutes([...appRoutes, { path: '*', element: <PageNotFound /> }]);
+  return useRoutes([
+    ...appRoutes,
+    { path: '*', element: <Navigate to="/northstar" replace /> },
+  ]);
 };
 
 export default memo(Routes);
