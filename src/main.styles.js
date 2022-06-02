@@ -77,6 +77,7 @@ const MainStyles = () => {
           minHeight: '65px',
           padding: '0 25px',
           backgroundColor: '#dad6d5',
+          position: 'relative',
         },
         '.EditButton.RedLink': {
           color: '#802f2d',
@@ -375,6 +376,11 @@ const MainStyles = () => {
         },
         '.ModalContentBoxSecond .CommonCircle ul li': {
           marginLeft: '12px',
+        },
+        '.BackButton': {
+          position: 'absolute',
+          left: '50px',
+          fontSize: '20px',
         },
         '.ModalDetailInfo': {
           marginLeft: '5px',

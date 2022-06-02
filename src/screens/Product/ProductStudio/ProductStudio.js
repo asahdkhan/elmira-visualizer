@@ -190,6 +190,9 @@ const ProductStudioStage1 = () => {
           <Box className="HeaderSectionThird">
             <Box className="HeaderCenterSide">
               <Box className="CabinetColorSection">
+                <Box variant="body1" component="" className="BackButton">
+                  &#8592; Back
+                </Box>
                 <Typography variant="h6">
                   SELECT MODEL THEN COLOUR AND ADDITIONAL OPTIONS WILL OPEN
                 </Typography>
