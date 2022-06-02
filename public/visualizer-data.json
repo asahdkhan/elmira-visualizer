@@ -136,7 +136,7 @@
             },
             {
               "id": "colours",
-              "text": "Colors",
+              "text": "Colour",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -315,7 +315,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Colors",
+              "text": "Colour",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -414,7 +414,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Colors",
+              "text": "Colour",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -535,7 +535,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Colors",
+              "text": "Colour",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -737,7 +737,7 @@
           "modelOptions": [
             {
               "id": "colours",
-              "text": "Colors",
+              "text": "Colour",
               "opt": [
                 {
                   "parentkey": "colours",
@@ -869,7 +869,7 @@
             },
             {
               "id": "splashback-colors",
-              "text": "Splashback Colors",
+              "text": "Splashback Colours",
               "if": "yes-splashback",
               "opt": [
                 {
