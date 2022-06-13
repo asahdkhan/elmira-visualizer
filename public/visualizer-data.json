@@ -306,6 +306,159 @@
                 }
               ]
             }
+          ],
+          "pricing": [
+            {
+              "modelName": "Model 1947-C",
+              "onSelection": {
+                "style": "30-6-burner-gas",
+                "gas-type": "natural-gas"
+              },
+              "usa": "$8495",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1947-CLP",
+              "onSelection": {
+                "style": "30-6-burner-gas",
+                "gas-type": "liquid-propane"
+              },
+              "usa": "$8595",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1954-C",
+              "onSelection": {
+                "style": "30-4-burner-electric-self",
+                "trim": "chrome",
+                "oven": "electric-self-convection",
+                "cord-type": ["3-prong", "4-prong"]
+              },
+              "usa": "$8595",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1955-C",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "natural-gas",
+                "trim": "chrome",
+                "oven": "electric-self-convection"
+              },
+              "usa": "$7295",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1955-CLP",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "liquid-propane",
+                "trim": "chrome",
+                "oven": "electric-self-convection",
+                "cord-type": ["3-prong", "4-prong"]
+              },
+              "usa": "$7395",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1956",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "natural-gas",
+                "trim": "chrome",
+                "oven": "gas-self"
+              },
+              "usa": "$7695",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1956LP",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "liquid-propane",
+                "trim": "chrome",
+                "oven": "gas-self"
+              },
+              "usa": "$7795",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1947P-C",
+              "onSelection": {
+                "style": "30-6-burner-gas",
+                "gas-type": "natural-gas",
+                "trim": ["chrome", "painted"]
+              },
+              "usa": "$8495",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1947P-CLP",
+              "onSelection": {
+                "style": "30-4-burner-gas",
+                "gas-type": "liquid-propane",
+                "trim": ["chrome", "painted"]
+              },
+              "usa": "$8595",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1954P-C",
+              "onSelection": {
+                "style": "30-4-burner-electric-self",
+                "trim": "painted",
+                "oven": "electric-self-convection",
+                "cord-type": ["3-prong", "4-prong"]
+              },
+              "usa": "$6595",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1955P-C",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "natural-gas",
+                "trim": "painted",
+                "oven": "electric-self-convection",
+                "cord-type": ["3-prong", "4-prong"]
+              },
+              "usa": "$7295",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1955P-CLP",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "liquid-propane",
+                "trim": "painted",
+                "oven": "electric-self-convection",
+                "cord-type": ["3-prong", "4-prong"]
+              },
+              "usa": "$7395",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1956P",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "natural-gas",
+                "trim": "painted",
+                "oven": "gas-self"
+              },
+              "usa": "$7695",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1956PLP",
+              "onSelection": {
+                "style": "30-4-burner-gas-self",
+                "gas-type": "liquid-propane",
+                "trim": "painted",
+                "oven": "gas-self"
+              },
+              "usa": "$7795",
+              "canada": ""
+            }
           ]
         },
         {
@@ -390,6 +543,14 @@
                   "canada": "$0"
                 }
               ]
+            }
+          ],
+          "pricing": [
+            {
+              "modelName": "Model 1953",
+              "onSelection": {},
+              "usa": "$795",
+              "canada": ""
             }
           ]
         },
@@ -490,6 +651,20 @@
                 }
               ]
             }
+          ],
+          "pricing": [
+            {
+              "modelName": "Model 1957",
+              "onSelection": {},
+              "usa": "$395",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1957DW",
+              "onSelection": { "style": "complete-dishwasher" },
+              "usa": "$2995",
+              "canada": ""
+            }
           ]
         },
         {
@@ -541,7 +716,7 @@
                   "parentkey": "colours",
                   "id": "textured-black",
                   "title": "Textured Black",
-                  "src": "appliances/colortype/textured-black.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-textured-black.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-textured-black.png",
@@ -702,6 +877,68 @@
                   "canada": "$0"
                 }
               ]
+            }
+          ],
+          "pricing": [
+            {
+              "modelName": "Model 1950",
+              "onSelection": { "style": "1950" },
+              "usa": "$4795",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1950-LH",
+              "onSelection": { "style": "1950", "hinge": "left" },
+              "usa": "$4845",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1950-ICE",
+              "onSelection": { "style": "1950", "ice-maker": "yes" },
+              "usa": "$5045",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1951",
+              "onSelection": { "style": "1951" },
+              "usa": "$3995",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1951-LH",
+              "onSelection": { "style": "1951", "hinge": "left" },
+              "usa": "$4045",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1952",
+              "onSelection": { "style": "1952" },
+              "usa": "$3995",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1952-LH",
+              "onSelection": { "style": "1952", "hinge": "left" },
+              "usa": "$4045",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1952-ICE",
+              "onSelection": { "style": "1952", "ice-maker": "yes" },
+              "usa": "$4245",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1958",
+              "onSelection": { "style": "1958" },
+              "usa": "$7295",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1959",
+              "onSelection": { "style": "1959" },
+              "usa": "$7295",
+              "canada": ""
             }
           ]
         },
@@ -957,6 +1194,53 @@
                   "canada": "$0"
                 }
               ]
+            }
+          ],
+          "pricing": [
+            {
+              "modelName": "Model 1961 30",
+              "onSelection": { "style": "1961" },
+              "usa": "$1895",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1962 30",
+              "onSelection": { "style": "1962" },
+              "usa": "$1995",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1963 36",
+              "onSelection": { "style": "1963" },
+              "usa": "$2395",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1944 30",
+              "onSelection": {
+                "style": "1961",
+                "splashback": "yes-splashback"
+              },
+              "usa": "$2094",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1944 30",
+              "onSelection": {
+                "style": "1962",
+                "splashback": "yes-splashback"
+              },
+              "usa": "$2194",
+              "canada": ""
+            },
+            {
+              "modelName": "Model 1944 36",
+              "onSelection": {
+                "style": "1963",
+                "splashback": "yes-splashback"
+              },
+              "usa": "$2664",
+              "canada": ""
             }
           ]
         }

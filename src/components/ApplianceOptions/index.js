@@ -48,14 +48,18 @@ export default function ApplianceOptions({
         >
           {item.src && (
             <Tooltip placement="top" arrow title={item?.title || ''}>
-              <img
-                className={
-                  selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
-                }
-                // style={{ width: 80, height: 80 }}
-                src={require(`../../assets/${item.src}`)}
-                alt="Range"
-              />
+              {item.src == 'css' ? (
+                <div className={item.id} />
+              ) : (
+                <img
+                  className={
+                    selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
+                  }
+                  // style={{ width: 80, height: 80 }}
+                  src={require(`../../assets/${item.src}`)}
+                  alt={item.title}
+                />
+              )}
             </Tooltip>
           )}
           <Typography variant="body2" textAlign="center">

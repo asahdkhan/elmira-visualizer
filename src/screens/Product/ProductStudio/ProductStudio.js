@@ -1,13 +1,11 @@
-/* eslint-disable */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import { Grid, Typography, Box } from '@mui/material';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 // import '../../../ThemeStyle.css';
 import { useAppData } from '../../../hooks/useAppData';
-import { useParams } from 'react-router';
+import { useNavigate, useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
-import zIndex from '@mui/material/styles/zIndex';
 
 const ProductStudioStage1 = () => {
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
@@ -16,8 +14,10 @@ const ProductStudioStage1 = () => {
   // Internal state
   const [appliance, setAppliance] = useState({});
   const [modelOptions, setModelOptions] = useState(null);
+  const [modelPricing, setModelPricing] = useState({});
 
   const { appliances: applianceName } = useParams();
+  const navigate = useNavigate();
 
   const { data, applianceData, configuredData } = appDataState;
   const modelStylesData = applianceData?.styles;
@@ -25,7 +25,6 @@ const ProductStudioStage1 = () => {
   const configuredApplianceData = configuredData?.[applianceName];
   // clear internal state on params change
   useEffect(() => {
-    setAppliance({});
     setModelOptions(null);
   }, [applianceName]);
 
@@ -54,9 +53,43 @@ const ProductStudioStage1 = () => {
     );
   }, [applianceData, appliance, applianceName, genrateApplianceImage]);
 
+  const fetchModelNameWthPricing = useCallback(() => {
+    let pricingObj = {};
+    if (applianceData?.pricing) {
+      for (var obj of applianceData.pricing) {
+        const onSelection = obj?.onSelection;
+        const keys = Object.keys(onSelection);
+        if (keys.length > 0) {
+          let match = [];
+          for (var key of keys) {
+            if (Array.isArray(obj?.onSelection?.[key])) {
+              const valSelection = !!obj?.onSelection?.[key]?.find(
+                (val) => val == appliance?.[key]?.id,
+              );
+              match = [...match, valSelection];
+            } else {
+              match = [
+                ...match,
+                obj?.onSelection?.[key] == appliance?.[key]?.id,
+              ];
+            }
+          }
+          pricingObj = match.every(Boolean) ? { ...obj } : pricingObj;
+        } else {
+          pricingObj = { ...obj };
+        }
+      }
+    }
+    return pricingObj;
+  }, [appliance, applianceData]);
+
+  useEffect(() => {
+    setModelPricing(fetchModelNameWthPricing());
+  }, [fetchModelNameWthPricing]);
+
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
-    setAppliance({ [key]: selectedStyle });
+    setAppliance({ [key]: selectedStyle, ...modelPricing });
     const populateOptions = modelOptionsData.reduce((acc, item) => {
       if (selectedStyle?.options?.indexOf(item.id) !== -1) {
         // only shows required nested options from multiple options
@@ -141,7 +174,7 @@ const ProductStudioStage1 = () => {
           />
         )}
         {childImg?.length > 0 &&
-          childImg?.map((src, i) => (
+          childImg?.map((src) => (
             <img
               key={src}
               className={'childImageBox'}
@@ -153,7 +186,7 @@ const ProductStudioStage1 = () => {
     );
   };
 
-  // console.log('configuredData', configuredApplianceData);
+  // console.log('configuredData', configuredData);
 
   const fetchbackgroundImg = () => {
     let backgroundImg = null;
@@ -190,7 +223,12 @@ const ProductStudioStage1 = () => {
           <Box className="HeaderSectionThird">
             <Box className="HeaderCenterSide">
               <Box className="CabinetColorSection">
-                <Box variant="body1" component="" className="BackButton">
+                <Box
+                  variant="body1"
+                  component=""
+                  onClick={() => navigate('../')}
+                  className="BackButton"
+                >
                   &#8592; Back
                 </Box>
                 <Typography variant="h6">
@@ -203,7 +241,9 @@ const ProductStudioStage1 = () => {
             <Box className="ApplianceBoxLeft">
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
-                  {`Configure your ${applianceName}`}
+                  {Object.keys(modelPricing).length > 0
+                    ? `${modelPricing?.modelName} (${modelPricing?.usa})`
+                    : `Configure your ${applianceName}`}
                 </Typography>
               </Box>
               <Box className="parentApplianceContainer">

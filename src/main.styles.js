@@ -6,6 +6,11 @@ const MainStyles = () => {
   return (
     <GlobalStyles
       styles={{
+        '.textured-black': {
+          width: 40,
+          height: 40,
+          backgroundColor: 'black',
+        },
         '.createKitchenSection': {
           border: '2px solid #dad6d5',
           borderRadius: '6px',
@@ -381,6 +386,7 @@ const MainStyles = () => {
           position: 'absolute',
           left: '50px',
           fontSize: '20px',
+          cursor: 'pointer',
         },
         '.ModalDetailInfo': {
           marginLeft: '5px',
