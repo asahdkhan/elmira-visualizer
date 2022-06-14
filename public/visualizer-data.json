@@ -731,7 +731,7 @@
                   "parentkey": "colours",
                   "id": "white",
                   "title": "White",
-                  "src": "appliances/colortype/white.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-white.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-white.png",
@@ -746,7 +746,7 @@
                   "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
-                  "src": "appliances/colortype/bisque.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-bisque.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-bisque.png",
@@ -761,7 +761,7 @@
                   "parentkey": "colours",
                   "id": "candy-red",
                   "title": "Candy Red",
-                  "src": "appliances/colortype/candy-red.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-candy-red.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-candy-red.png",
@@ -776,7 +776,7 @@
                   "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
-                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-buttercup-yellow.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-buttercup-yellow.png",
@@ -791,7 +791,7 @@
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
                   "title": "Robins Egg Blue",
-                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-robbin-egg-blue.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-robbin-egg-blue.png",
@@ -806,7 +806,7 @@
                   "parentkey": "colours",
                   "id": "tropical-blue",
                   "title": "Tropical Blue",
-                  "src": "appliances/colortype/tropical-blue.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-tropical-blue.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-tropical-blue.png",
@@ -821,7 +821,7 @@
                   "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
-                  "src": "appliances/colortype/mint-green.png",
+                  "src": "css",
                   "modelSrc": {
                     "1950": "appliances/fridge/colours/1950/fridge-1950-mint-green.png",
                     "1951": "appliances/fridge/colours/1951/fridge-1951-mint-green.png",

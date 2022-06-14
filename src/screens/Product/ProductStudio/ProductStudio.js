@@ -283,6 +283,9 @@ const ProductStudioStage1 = () => {
               <Button className="CommonButton SaveBtn" variant="contained">
                 Save First
               </Button>
+              <Button className="CommonButton SaveBtn" variant="contained">
+                VIEW YOUR DREAM KITCHEN
+              </Button>
             </Box>
             <Typography variant="body1" textAlign="center">
               <b>* Explore details</b> ON TRIMS, TRIVETS, AND OTHER FEATURES.
