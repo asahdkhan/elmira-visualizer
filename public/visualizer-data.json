@@ -140,19 +140,19 @@
               "opt": [
                 {
                   "parentkey": "colours",
-                  "id": "candy-red",
-                  "title": "Candy Red",
+                  "id": "textured-black",
+                  "title": "Textured Black",
                   "src": "css",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "parentkey": "colours",
-                  "id": "buttercup-yellow",
-                  "title": "Buttercup Yellow",
+                  "id": "white",
+                  "title": "White",
                   "src": "css",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-buttercup-yellow.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-white.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -167,10 +167,19 @@
                 },
                 {
                   "parentkey": "colours",
-                  "id": "mint-green",
-                  "title": "Mint Green",
+                  "id": "candy-red",
+                  "title": "Candy Red",
                   "src": "css",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-mint-green.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-candy-red.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "buttercup-yellow",
+                  "title": "Buttercup Yellow",
+                  "src": "css",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-buttercup-yellow.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -194,19 +203,10 @@
                 },
                 {
                   "parentkey": "colours",
-                  "id": "white",
-                  "title": "White",
+                  "id": "mint-green",
+                  "title": "Mint Green",
                   "src": "css",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-white.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "textured-black",
-                  "title": "Textured Black",
-                  "src": "css",
-                  "modelSrc": "appliances/range/colours/northstar-30-base-model-textured-black.png",
+                  "modelSrc": "appliances/range/colours/northstar-30-base-model-mint-green.png",
                   "usa": "$0",
                   "canada": "$0"
                 }
@@ -481,6 +481,15 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "css",
+                  "modelSrc": "appliances/microwave/microwave-white.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
                   "src": "css",
@@ -499,24 +508,6 @@
                 },
                 {
                   "parentkey": "colours",
-                  "id": "tropical-blue",
-                  "title": "Tropical Blue",
-                  "src": "css",
-                  "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "white",
-                  "title": "White",
-                  "src": "css",
-                  "modelSrc": "appliances/microwave/microwave-white.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
                   "src": "css",
@@ -528,6 +519,15 @@
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
                   "title": "Robins Egg Blue",
+                  "src": "css",
+                  "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
                   "src": "css",
                   "modelSrc": "appliances/microwave/microwave-robbin-egg-blue.png",
                   "usa": "$0",
@@ -588,6 +588,15 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "css",
+                  "modelSrc": "appliances/dishwasher/northstar-dishwasher-white.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
                   "src": "css",
@@ -606,24 +615,6 @@
                 },
                 {
                   "parentkey": "colours",
-                  "id": "tropical-blue",
-                  "title": "Tropical Blue",
-                  "src": "css",
-                  "modelSrc": "appliances/dishwasher/northstar-dishwasher-robbin-egg-blue.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "white",
-                  "title": "White",
-                  "src": "css",
-                  "modelSrc": "appliances/dishwasher/northstar-dishwasher-white.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
                   "id": "buttercup-yellow",
                   "title": "Buttercup Yellow",
                   "src": "css",
@@ -635,6 +626,15 @@
                   "parentkey": "colours",
                   "id": "robins-egg-blue",
                   "title": "Robins Egg Blue",
+                  "src": "css",
+                  "modelSrc": "appliances/dishwasher/northstar-dishwasher-robbin-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
                   "src": "css",
                   "modelSrc": "appliances/dishwasher/northstar-dishwasher-robbin-egg-blue.png",
                   "usa": "$0",
@@ -729,6 +729,21 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "appliances/colortype/white.png",
+                  "modelSrc": {
+                    "1950": "appliances/fridge/colours/1950/fridge-1950-white.png",
+                    "1951": "appliances/fridge/colours/1951/fridge-1951-white.png",
+                    "1952": "appliances/fridge/colours/1952/fridge-1952-white.png",
+                    "1958": "appliances/fridge/colours/1958/fridge-1958-white.png",
+                    "1959": "appliances/fridge/colours/1959/fridge-1959-white.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
                   "src": "appliances/colortype/bisque.png",
@@ -753,36 +768,6 @@
                     "1952": "appliances/fridge/colours/1952/fridge-1952-candy-red.png",
                     "1958": "appliances/fridge/colours/1958/fridge-1958-candy-red.png",
                     "1959": "appliances/fridge/colours/1959/fridge-1959-candy-red.png"
-                  },
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "tropical-blue",
-                  "title": "Tropical Blue",
-                  "src": "appliances/colortype/tropical-blue.png",
-                  "modelSrc": {
-                    "1950": "appliances/fridge/colours/1950/fridge-1950-tropical-blue.png",
-                    "1951": "appliances/fridge/colours/1951/fridge-1951-tropical-blue.png",
-                    "1952": "appliances/fridge/colours/1952/fridge-1952-tropical-blue.png",
-                    "1958": "appliances/fridge/colours/1958/fridge-1958-tropical-blue.png",
-                    "1959": "appliances/fridge/colours/1959/fridge-1959-tropical-blue.png"
-                  },
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "white",
-                  "title": "White",
-                  "src": "appliances/colortype/white.png",
-                  "modelSrc": {
-                    "1950": "appliances/fridge/colours/1950/fridge-1950-white.png",
-                    "1951": "appliances/fridge/colours/1951/fridge-1951-white.png",
-                    "1952": "appliances/fridge/colours/1952/fridge-1952-white.png",
-                    "1958": "appliances/fridge/colours/1958/fridge-1958-white.png",
-                    "1959": "appliances/fridge/colours/1959/fridge-1959-white.png"
                   },
                   "usa": "$0",
                   "canada": "$0"
@@ -819,6 +804,21 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "appliances/colortype/tropical-blue.png",
+                  "modelSrc": {
+                    "1950": "appliances/fridge/colours/1950/fridge-1950-tropical-blue.png",
+                    "1951": "appliances/fridge/colours/1951/fridge-1951-tropical-blue.png",
+                    "1952": "appliances/fridge/colours/1952/fridge-1952-tropical-blue.png",
+                    "1958": "appliances/fridge/colours/1958/fridge-1958-tropical-blue.png",
+                    "1959": "appliances/fridge/colours/1959/fridge-1959-tropical-blue.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
                   "src": "appliances/colortype/mint-green.png",
@@ -842,7 +842,7 @@
                   "parentkey": "hinge",
                   "id": "right",
                   "title": "Right (standard)",
-                  "src": "appliances/fridge/hinge/fridge-hinge-right.png",
+                  "src": "css",
                   "usa": "$0",
                   "canada": "$0"
                 },
@@ -850,7 +850,7 @@
                   "parentkey": "hinge",
                   "id": "left",
                   "title": "Left (handle on right)",
-                  "src": "appliances/fridge/hinge/fridge-hinge-left.png",
+                  "src": "css",
                   "usa": "$50",
                   "canada": "$0"
                 }
@@ -864,7 +864,7 @@
                   "parentkey": "ice-maker",
                   "id": "yes",
                   "title": "Yes",
-                  "src": "appliances/other/yes.jpg",
+                  "src": "css",
                   "usa": "$250",
                   "canada": "$0"
                 },
@@ -872,7 +872,7 @@
                   "parentkey": "ice-maker",
                   "id": "no",
                   "title": "No",
-                  "src": "appliances/other/no.jpg",
+                  "src": "css",
                   "usa": "$0",
                   "canada": "$0"
                 }
@@ -991,6 +991,19 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "white",
+                  "title": "White",
+                  "src": "css",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-white.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-white.png",
+                    "1963": "appliances/range-hood/colours/1963/range-hood-1963-white.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "bisque",
                   "title": "Bisque",
                   "src": "css",
@@ -1011,32 +1024,6 @@
                     "1961": "appliances/range-hood/colours/1961/range-hood-1961-candy-red.png",
                     "1962": "appliances/range-hood/colours/1962/range-hood-1962-candy-red.png",
                     "1963": "appliances/range-hood/colours/1963/range-hood-1963-candy-red.png"
-                  },
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "tropical-blue",
-                  "title": "Tropical Blue",
-                  "src": "css",
-                  "modelSrc": {
-                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-tropical-blue.png",
-                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-tropical-blue.png",
-                    "1963": "appliances/range-hood/colours/1963/range-hood-1963-tropical-blue.png"
-                  },
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "parentkey": "colours",
-                  "id": "white",
-                  "title": "White",
-                  "src": "css",
-                  "modelSrc": {
-                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-white.png",
-                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-white.png",
-                    "1963": "appliances/range-hood/colours/1963/range-hood-1963-white.png"
                   },
                   "usa": "$0",
                   "canada": "$0"
@@ -1069,6 +1056,19 @@
                 },
                 {
                   "parentkey": "colours",
+                  "id": "tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "css",
+                  "modelSrc": {
+                    "1961": "appliances/range-hood/colours/1961/range-hood-1961-tropical-blue.png",
+                    "1962": "appliances/range-hood/colours/1962/range-hood-1962-tropical-blue.png",
+                    "1963": "appliances/range-hood/colours/1963/range-hood-1963-tropical-blue.png"
+                  },
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "parentkey": "colours",
                   "id": "mint-green",
                   "title": "Mint Green",
                   "src": "css",
@@ -1087,20 +1087,20 @@
               "text": "Splashback",
               "opt": [
                 {
-                  "id": "no-splashback",
-                  "title": "No Splashback",
-                  "src": "appliances/other/no.jpg",
-                  "removeAssociated": "yes-splashback",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
                   "id": "yes-splashback",
                   "title": "30\" Splashback",
-                  "src": "appliances/other/yes.jpg",
+                  "src": "css",
                   "populate": ["splashback-colors"],
                   "usa": { "1961": "$199", "1962": "$199", "1963": "$269" },
                   "canada": ["$0"]
+                },
+                {
+                  "id": "no-splashback",
+                  "title": "No Splashback",
+                  "src": "css",
+                  "removeAssociated": "yes-splashback",
+                  "usa": "$0",
+                  "canada": "$0"
                 }
               ]
             },
@@ -1112,15 +1112,23 @@
                 {
                   "id": "splashback-colors-textured-black",
                   "title": "Textured Black",
-                  "src": "appliances/colortype/textured-black.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-textured-black.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-white",
+                  "title": "White",
+                  "src": "css",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-white.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "id": "splashback-colors-bisque",
                   "title": "Bisque",
-                  "src": "appliances/colortype/bisque.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-bisque.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -1128,31 +1136,15 @@
                 {
                   "id": "splashback-colors-candy-red",
                   "title": "Candy Red",
-                  "src": "appliances/colortype/candy-red.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-candy-red.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "id": "splashback-colors-tropical-blue",
-                  "title": "Tropical Blue",
-                  "src": "appliances/colortype/tropical-blue.png",
-                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-tropical-blue.png",
-                  "usa": "$0",
-                  "canada": "$0"
-                },
-                {
-                  "id": "splashback-colors-white",
-                  "title": "White",
-                  "src": "appliances/colortype/white.png",
-                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-white.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "id": "splashback-colors-buttercup-yellow",
                   "title": "Buttercup Yellow",
-                  "src": "appliances/colortype/buttercup-yellow.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-buttercup-yellow.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -1160,15 +1152,23 @@
                 {
                   "id": "splashback-colors-robins-egg-blue",
                   "title": "Robins Egg Blue",
-                  "src": "appliances/colortype/robbin-egg-blue.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-robbins-egg-blue.png",
+                  "usa": "$0",
+                  "canada": "$0"
+                },
+                {
+                  "id": "splashback-colors-tropical-blue",
+                  "title": "Tropical Blue",
+                  "src": "css",
+                  "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-tropical-blue.png",
                   "usa": "$0",
                   "canada": "$0"
                 },
                 {
                   "id": "splashback-colors-mint-green",
                   "title": "Mint Green",
-                  "src": "appliances/colortype/mint-green.png",
+                  "src": "css",
                   "modelSrc": "appliances/range-hood/splashback/northstar-30-splashback-mint-green.png",
                   "usa": "$0",
                   "canada": "$0"
@@ -1182,14 +1182,14 @@
                 {
                   "id": "yes",
                   "title": "Yes",
-                  "src": "appliances/other/yes.jpg",
+                  "src": "css",
                   "usa": "$600",
                   "canada": "$0"
                 },
                 {
                   "id": "no",
                   "title": "No",
-                  "src": "appliances/other/no.jpg",
+                  "src": "css",
                   "usa": "$0",
                   "canada": "$0"
                 }

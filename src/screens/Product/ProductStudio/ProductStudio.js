@@ -1,7 +1,7 @@
 /* eslint-disable */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
-import { Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box, Button } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
 // import '../../../ThemeStyle.css';
 import { useAppData } from '../../../hooks/useAppData';
@@ -278,7 +278,12 @@ const ProductStudioStage1 = () => {
               />
             </Box>
           </Box>
-          <Box className="FooterSection">
+          <Box className="FooterSection FooterSectionSecond">
+            <Box className="FooterLeftSide">
+              <Button className="CommonButton SaveBtn" variant="contained">
+                Save First
+              </Button>
+            </Box>
             <Typography variant="body1" textAlign="center">
               <b>* Explore details</b> ON TRIMS, TRIVETS, AND OTHER FEATURES.
             </Typography>
