@@ -3,7 +3,7 @@ import { Grid, Typography, Box, Tooltip, Button } from '@mui/material';
 import React from 'react';
 import { StyledEngineProvider } from '@mui/material/styles';
 // import '../../../ThemeStyle.css';
-const ProductStudioStage4 = () => {
+const DreamKitchen = () => {
   return (
     <StyledEngineProvider injectFirst>
       <Grid
@@ -144,7 +144,7 @@ const ProductStudioStage4 = () => {
             <Box className="MainKitchenSection">
               <img
                 className="KitchenImage"
-                src={require('../../../assets/images/2022-North30-30.png')}
+                src={require('../../assets/images/2022-North30-30.png')}
                 // src="https://elmirastg.wpengine.com/wp-content/uploads/2022/05/2022-North30-30.jpg"
                 alt="Kitchen"
               />
@@ -745,4 +745,4 @@ const ProductStudioStage4 = () => {
   );
 };
 
-export default ProductStudioStage4;
+export default DreamKitchen;

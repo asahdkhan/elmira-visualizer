@@ -6,6 +6,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { useAppData } from '../../../hooks/useAppData';
 import { useNavigate, useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
+import Image from '../../../components/DynamicImages';
 
 const ProductStudioStage1 = () => {
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
@@ -125,11 +126,6 @@ const ProductStudioStage1 = () => {
         ...modelOptionsData.filter((mO) => mO.if === selectedOption?.id),
       ];
     } else if (selectedOption?.removeAssociated) {
-      // console.log(
-      //   'key--',
-      //   appliance[key]?.parentkey,
-      //   selectedOption?.removeAssociated,
-      // );
       updatedOptionsData = modelOptions.filter((mO) => {
         if (mO.if === selectedOption?.removeAssociated) {
           delete updatedSelection[mO.id];
@@ -166,21 +162,10 @@ const ProductStudioStage1 = () => {
     }
     return (
       <>
-        {parentImg && (
-          <img
-            className="firstChildImageBox"
-            src={require(`../../../assets/${parentImg}`)}
-            alt="Range"
-          />
-        )}
+        {parentImg && <Image classes="firstChildImageBox" name={parentImg} />}
         {childImg?.length > 0 &&
           childImg?.map((src) => (
-            <img
-              key={src}
-              className={'childImageBox'}
-              src={require(`../../../assets/${src}`)}
-              alt="Range"
-            />
+            <Image key={src} classes="childImageBox" name={src} />
           ))}
       </>
     );
@@ -214,7 +199,7 @@ const ProductStudioStage1 = () => {
             ELMIRA DESIGN LOFT
           </Typography>
           <Typography variant="h6" textAlign="center">
-            NORTHSTAR COLLECTION
+            {`${data?.name?.toUpperCase()} COLLECTION`}
           </Typography>
         </Box>
       </Grid>

@@ -7,13 +7,10 @@ export const useAppData = () => {
 
   const fetchInitialData = useCallback(
     (kitchen) => {
-      fetch('visualizer-data.json')
+      fetch(`${kitchen}-data.json`)
         .then((res) => res.json())
         .then((data) => {
-          const kitchenData = data?.kitchen?.find(
-            (item) => item.name === kitchen,
-          );
-          appDataDispatch({ type: 'KITCHEN_DATA', data: kitchenData });
+          appDataDispatch({ type: 'KITCHEN_DATA', data });
         })
         .catch((error) => {
           console.log('error', error);

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Grid, Typography, Box, Tooltip } from '@mui/material';
 import { useAppData } from '../../hooks/useAppData';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router';
+import Image from '../../components/DynamicImages';
 // import { styles as classes } from './CreateKitchen.styles';
 
 const CreateKitchen = () => {
@@ -172,41 +173,30 @@ const CreateKitchen = () => {
               <Box className="MainKitchenSection">
                 <Box className="parentKitchenImageBox width100">
                   {kitchen.cabinetSrc && (
-                    <img
-                      className="firstChildImageBox width100"
-                      src={require(`../../assets/${kitchen.cabinetSrc}`)}
-                      alt="Cabinet"
+                    <Image
+                      classes="firstChildImageBox width100"
+                      name={kitchen.cabinetSrc}
                     />
                   )}
                   {kitchen.flooringSrc && (
-                    <img
-                      className="childImageBox width100"
-                      src={require(`../../assets/${kitchen.flooringSrc}`)}
-                      alt="Floor"
+                    <Image
+                      classes="childImageBox width100"
+                      name={kitchen.flooringSrc}
                     />
                   )}
                   {kitchen.appliancesSrc && (
-                    <img
-                      className="childImageBox"
-                      src={require(`../../assets/${kitchen.appliancesSrc}`)}
-                      alt="Appliance"
+                    <Image
+                      classes="childImageBox"
+                      name={kitchen.appliancesSrc}
                     />
                   )}
                   {kitchen.patchSrc && (
-                    <img
-                      className="childImageBox"
-                      src={require(`../../assets/${kitchen.patchSrc}`)}
-                      alt="Patch"
-                    />
+                    <Image classes="childImageBox" name={kitchen.patchSrc} />
                   )}
                 </Box>
                 {configuratorIcon()}
                 <Box component="span" className="CommonIconBoxLast IconLast">
-                  <img
-                    className=""
-                    src={require(`../../assets/images/VisualizerIcon.png`)}
-                    alt="Visualizer Icon"
-                  />
+                  <Image name="images/VisualizerIcon.png" />
                   <Box component="div" className="CustomizeBox">
                     CUSTOMIZE YOUR NORTHSTAR APPLIANCE
                   </Box>

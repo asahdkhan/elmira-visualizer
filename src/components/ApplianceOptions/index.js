@@ -12,6 +12,7 @@ import {
   Box,
 } from '@mui/material';
 import PropTypes from 'prop-types';
+import Image from '../DynamicImages';
 
 export default function ApplianceOptions({
   modelStylesData,
@@ -51,13 +52,11 @@ export default function ApplianceOptions({
               {item.src == 'css' ? (
                 <div className={item.id} />
               ) : (
-                <img
-                  className={
+                <Image
+                  classes={
                     selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
                   }
-                  // style={{ width: 80, height: 80 }}
-                  src={require(`../../assets/${item.src}`)}
-                  alt={item.title}
+                  name={item.src}
                 />
               )}
             </Tooltip>
@@ -85,11 +84,7 @@ export default function ApplianceOptions({
         >
           <AccordionSummary>
             <Box className="ModalHeading">
-              <img
-                className=""
-                src={require('../../assets/images/VisualizerIconSecond.png')}
-                alt="Range"
-              />
+              <Image classes="" name="images/VisualizerIconSecond.png" />
               <Typography variant="h6" textAlign="center">
                 {o.text}
               </Typography>
@@ -129,11 +124,7 @@ export default function ApplianceOptions({
         >
           <AccordionSummary>
             <Box className="ModalHeading">
-              <img
-                className=""
-                src={require('../../assets/images/VisualizerIconSecond.png')}
-                alt="Range"
-              />
+              <Image classes="" name="images/VisualizerIconSecond.png" />
               <Typography variant="h6" textAlign="center">
                 MODEL
               </Typography>
