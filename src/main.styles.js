@@ -6,6 +6,9 @@ const MainStyles = () => {
   return (
     <GlobalStyles
       styles={{
+        '.Active': {
+          transform: 'scale(1.1)',
+        },
         '.textured-black': {
           width: 40,
           height: 40,
@@ -262,7 +265,7 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/fridge/Hinge/fridge-hinge-left.png`)}
+            ${require(`./assets/appliances/fridge/hinge/fridge-hinge-left.png`)}
           )`,
           backgroundColor: '#dad6d5',
           padding: '10px 10px',
@@ -278,7 +281,7 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/fridge/Hinge/fridge-hinge-right.png`)}
+            ${require(`./assets/appliances/fridge/hinge/fridge-hinge-right.png`)}
           )`,
           backgroundColor: '#dad6d5',
           padding: '10px 10px',
@@ -596,9 +599,6 @@ const MainStyles = () => {
           maxWidth: 'calc( 29% - 30px)',
           // minWidth: 'calc( 29% - 30px)',
         },
-        '.ModalInfo img.Active': {
-          transform: 'scale(1.1)',
-        },
         '.ModalBox': {
           paddingLeft: '50px',
         },
@@ -794,7 +794,7 @@ const MainStyles = () => {
           fontWeight: '500',
         },
         '.PricingFooterBox': {
-          padding: '5px 15px 15px 15px',
+          padding: '5px 0px 15px 15px',
         },
         '.PricingFooterBox.SkyBlueColor .MuiTypography-root': {
           fontWeight: '600',

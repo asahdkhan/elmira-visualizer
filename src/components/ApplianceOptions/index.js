@@ -50,7 +50,11 @@ export default function ApplianceOptions({
           {item.src && (
             <Tooltip placement="top" arrow title={item?.title || ''}>
               {item.src == 'css' ? (
-                <div className={item.id} />
+                <div
+                  className={`${item.id} ${
+                    selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
+                  }`}
+                />
               ) : (
                 <Image
                   classes={
@@ -62,7 +66,7 @@ export default function ApplianceOptions({
             </Tooltip>
           )}
           <Typography variant="body2" textAlign="center">
-            {selectionId === 'style' ? item?.title : item?.usa}
+            {selectionId === 'style' ? item?.title : '$' + item?.usa}
           </Typography>
         </Box>
       );

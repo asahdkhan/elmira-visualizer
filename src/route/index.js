@@ -10,6 +10,10 @@ const childrenRoutes = [
     path: ':appliances/product-studio',
     element: <ProductStudio />,
   },
+  {
+    path: 'dream-kitchen',
+    element: <DreamKitchen />,
+  },
 ];
 
 let appRoutes = [
@@ -17,10 +21,6 @@ let appRoutes = [
     path: 'northstar',
     element: <CreateKitchen />,
     children: [...childrenRoutes],
-  },
-  {
-    path: 'northstar/dream-kitchen',
-    element: <DreamKitchen />,
   },
   { path: 'heritage', element: <></> },
 ];

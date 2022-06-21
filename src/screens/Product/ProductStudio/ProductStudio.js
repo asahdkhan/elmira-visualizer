@@ -8,27 +8,38 @@ import { useAppData } from '../../../hooks/useAppData';
 import { useNavigate, useParams } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
 import Image from '../../../components/DynamicImages';
+import { useStorage } from '../../../hooks/useStorage';
+import { Link } from 'react-router-dom';
 
 const ProductStudioStage1 = () => {
+  const navigate = useNavigate();
+  const { appliances: applianceName } = useParams();
+
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
     useAppData();
-
-  // Internal state
-  const [appliance, setAppliance] = useState({});
-  const [modelOptions, setModelOptions] = useState(null);
-  const [modelPricing, setModelPricing] = useState({});
-
-  const { appliances: applianceName } = useParams();
-  const navigate = useNavigate();
 
   const { data, applianceData, configuredData } = appDataState;
   const modelStylesData = applianceData?.styles;
   const modelOptionsData = applianceData?.modelOptions;
   const configuredApplianceData = configuredData?.[applianceName];
+
+  const {
+    appliance,
+    setAppliance,
+    modelOptions,
+    setModelOptions,
+    save,
+    reset,
+    isLocalStorage,
+  } = useStorage(applianceName);
+
+  // Internal state
+  const [modelPricing, setModelPricing] = useState({});
+
   // clear internal state on params change
-  useEffect(() => {
-    setModelOptions(null);
-  }, [applianceName]);
+  // useEffect(() => {
+  //   setModelOptions(null);
+  // }, [applianceName]);
 
   // load selected appliances data from JSON
   useEffect(() => {
@@ -45,7 +56,13 @@ const ProductStudioStage1 = () => {
     ) {
       setModelOptions(modelOptionsData);
     }
-  }, [applianceData, applianceName, modelStylesData, modelOptionsData]);
+  }, [
+    applianceData,
+    applianceName,
+    modelStylesData,
+    modelOptionsData,
+    isLocalStorage,
+  ]);
 
   useEffect(() => {
     genrateApplianceImage(
@@ -91,7 +108,7 @@ const ProductStudioStage1 = () => {
 
   // on model i.e style selection, load the relevant other options
   const onModelSelection = (key, selectedStyle) => {
-    setAppliance({ [key]: selectedStyle, ...modelPricing });
+    setAppliance({ [key]: selectedStyle });
     const populateOptions = modelOptionsData.reduce((acc, item) => {
       if (selectedStyle?.options?.indexOf(item.id) !== -1) {
         // only shows required nested options from multiple options
@@ -117,7 +134,10 @@ const ProductStudioStage1 = () => {
   // - set the selected option data
   // - populate/ remove the relevant model option if exist
   const onOptionSelection = (key, selectedOption) => {
-    setAppliance({ ...appliance, [key]: selectedOption });
+    setAppliance({
+      ...appliance,
+      [key]: selectedOption,
+    });
     const updatedSelection = { ...appliance, [key]: selectedOption };
 
     let updatedOptionsData = [];
@@ -143,10 +163,7 @@ const ProductStudioStage1 = () => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
-    const imagesSet = configuredApplianceData?.imagesSet?.filter(
-      (element) => element !== undefined,
-    );
-
+    const { imagesSet } = configuredApplianceData || {};
     let parentImg = '';
     let childImg = [];
     if (applianceData?.baseModelSrc) {
@@ -161,6 +178,8 @@ const ProductStudioStage1 = () => {
       }
       childImg = c;
     }
+
+    console.log('___', parentImg, childImg);
     return (
       <>
         {parentImg && <Image classes="firstChildImageBox" name={parentImg} />}
@@ -172,7 +191,7 @@ const ProductStudioStage1 = () => {
     );
   };
 
-  // console.log('configuredData', configuredData);
+  // console.log('configuredData', appliance);
 
   const fetchbackgroundImg = () => {
     let backgroundImg = null;
@@ -228,7 +247,7 @@ const ProductStudioStage1 = () => {
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
                   {Object.keys(modelPricing).length > 0
-                    ? `${modelPricing?.modelName} (${modelPricing?.usa})`
+                    ? `${modelPricing?.modelName} ($${modelPricing?.usa})`
                     : `Configure your ${applianceName}`}
                 </Typography>
               </Box>
@@ -265,12 +284,31 @@ const ProductStudioStage1 = () => {
           </Box>
           <Box className="FooterSection FooterSectionSecond">
             <Box className="FooterLeftSide">
-              <Button className="CommonButton SaveBtn" variant="contained">
+              <Button
+                onClick={() => save(modelPricing)}
+                className="CommonButton SaveBtn"
+                variant="contained"
+              >
                 Save First
               </Button>
-              <Button className="CommonButton SaveBtn" variant="contained">
-                VIEW YOUR DREAM KITCHEN
+              <Button
+                onClick={reset}
+                className="CommonButton SaveBtn"
+                variant="contained"
+                disabled={!isLocalStorage}
+                sx={{ ml: 2, mr: 2 }}
+              >
+                Reset
               </Button>
+              <Link style={{ textDecoration: 'none' }} to="../dream-kitchen">
+                <Button
+                  className="CommonButton SaveBtn"
+                  variant="contained"
+                  disabled={!isLocalStorage}
+                >
+                  VIEW YOUR DREAM KITCHEN
+                </Button>
+              </Link>
             </Box>
             <Typography variant="body1" textAlign="center">
               <b>* Explore details</b> ON TRIMS, TRIVETS, AND OTHER FEATURES.

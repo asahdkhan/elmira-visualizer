@@ -20,6 +20,7 @@ const CreateKitchen = () => {
   const params = useParams();
   const location = useLocation();
   const parentPath = location.pathname.split('/')[1];
+  const endPath = location.pathname.split('/')[2];
 
   useEffect(() => {
     fetchInitialData(parentPath);
@@ -147,7 +148,9 @@ const CreateKitchen = () => {
           <Grid item xs={12}>
             <Box className="VisualizerHeading">
               <Typography variant="h1" textAlign="center">
-                LET’S CREATE YOUR DREAM KITCHEN!
+                {endPath !== 'dream-kitchen'
+                  ? 'LET’S CREATE YOUR DREAM KITCHEN!'
+                  : 'YOUR ELMIRA DREAM KITCHEN'}
               </Typography>
             </Box>
           </Grid>

@@ -1,9 +1,127 @@
 /* eslint-disable  */
-import { Grid, Typography, Box, Tooltip, Button } from '@mui/material';
-import React from 'react';
+import React, { useState } from 'react';
+import { Grid, Typography, Box, Button } from '@mui/material';
 import { StyledEngineProvider } from '@mui/material/styles';
-// import '../../../ThemeStyle.css';
+import { useAppData } from '../../hooks/useAppData';
+import { useMutateStorage } from '../../hooks/useMutateStorage';
+import { useNavigate } from 'react-router-dom';
+
 const DreamKitchen = () => {
+  const { appDataState } = useAppData();
+  const { appliances } = appDataState?.data || {};
+
+  // const [pricing, setPricing] = useState({
+  //   totalPricing: '',
+  // });
+
+  useMutateStorage();
+
+  const navigate = useNavigate();
+
+  const loadOptionsData = (modelOptions, configuredData) => {
+    let pricing = 0;
+    const render = () =>
+      modelOptions.map((item) => {
+        const { title, usa } = configuredData?.[item.id] || {};
+        pricing += usa;
+        return (
+          <li key={item.text}>
+            <Box className="ProductInfo">
+              <Typography variant="h6" textAlign="left">
+                {item.text}
+              </Typography>
+              <Typography variant="body2" textAlign="left">
+                {title || '-'}
+              </Typography>
+            </Box>
+            <Box className="ProductAmount">
+              <Typography variant="h6" textAlign="right">
+                {usa ? '$' + usa : '-'}
+              </Typography>
+            </Box>
+          </li>
+        );
+      });
+    return { render, pricing };
+  };
+
+  console.log('pricing');
+
+  const loadAppliancesData = () => {
+    const configuredData = appDataState?.configuredData;
+
+    return appliances?.map((item) => {
+      const configuredAppliance = configuredData?.[item.name];
+      const { modelPricing } = configuredAppliance || {};
+      return (
+        <Grid key={item.name} item xs={12} sm={12} md={4} lg={4} xl={4}>
+          <Box className="PricingBox">
+            <Box
+              className={`PricingHeaderBox ${
+                configuredAppliance ? 'SkyBlueBg' : 'RedBg'
+              }`}
+            >
+              <Typography variant="body1" textAlign="center">
+                {item.name}
+              </Typography>
+              <Button
+                onClick={() => navigate(`../${item.name}/product-studio`)}
+                className={`CommonButton ${
+                  configuredAppliance ? 'EditBtn' : 'AddBtn'
+                }`}
+                variant="contained"
+              >
+                {configuredAppliance ? 'EDIT' : 'ADD'}
+              </Button>
+            </Box>
+            <Box className="PricingContentBox">
+              <ul>
+                {item?.styles && (
+                  <li>
+                    <Box className="ProductInfo">
+                      {modelPricing && Object.keys(modelPricing).length > 0 ? (
+                        <>
+                          <Typography variant="h6" textAlign="left">
+                            Model
+                          </Typography>
+                          <Typography variant="body2" textAlign="left">
+                            {`${modelPricing?.modelName} ($${modelPricing?.usa})`}
+                          </Typography>
+                        </>
+                      ) : (
+                        <>
+                          <Typography variant="h6" textAlign="left">
+                            Model:{' '}
+                            <span className="RedColor"> Not Selected</span>
+                          </Typography>
+                        </>
+                      )}
+                    </Box>
+                    <Box className="ProductAmount">
+                      <Typography variant="h6" textAlign="right">
+                        {modelPricing?.usa ? '$' + modelPricing?.usa : '-'}
+                      </Typography>
+                    </Box>
+                  </li>
+                )}
+                {loadOptionsData(
+                  item?.modelOptions,
+                  configuredAppliance,
+                )?.render()}
+              </ul>
+              <Box className="PricingFooterBox SkyBlueColor">
+                <Typography variant="h5" textAlign="right">
+                  <span>TOTAL</span>$
+                  {configuredAppliance?.totalPricing || ' ' + ''}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+        </Grid>
+      );
+    });
+  };
+
   return (
     <StyledEngineProvider injectFirst>
       <Grid
@@ -16,161 +134,6 @@ const DreamKitchen = () => {
         marginRight="auto"
       >
         <Grid item xs={12}>
-          <Box className="VisualizerHeading">
-            <Typography variant="h1" textAlign="center">
-              YOUR ELMIRA DREAM KITCHEN
-            </Typography>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
-          <Box className="CreateKitchenSection">
-            <Box className="HeaderSection">
-              <Box className="HeaderLeftSide">
-                <a className="EditButton">SAVE AS PDF</a>
-                <a className="EditButton RedLink">RESET</a>
-              </Box>
-              <Box className="HeaderRightSide">
-                <Box className="CabinetColorSection">
-                  <Typography variant="h6">CABINET COLOUR</Typography>
-                  <Box className="CabinetColors CommonCircle">
-                    <ul>
-                      <li>
-                        <Tooltip placement="top" title="White">
-                          <a
-                            className="CabinetColorFirst"
-                            style={{ backgroundColor: '#f7f7f1' }}
-                          >
-                            <span>White</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="Pussywillow">
-                          <a
-                            className="CabinetColorSecond Active"
-                            style={{ backgroundColor: '#b3ada4' }}
-                          >
-                            <span>Pussywillow</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="DarkBlue">
-                          <a
-                            className="CabinetColorThird"
-                            style={{ backgroundColor: '#2a3d4c' }}
-                          >
-                            <span>DarkBlue</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="Dry Creek Plum">
-                          <a
-                            className="CabinetColorFourth"
-                            style={{
-                              backgroundImage:
-                                'url(https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg)',
-                            }}
-                          >
-                            <span>Dry Creek Plum</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="Lorum">
-                          <a
-                            className="CabinetColorFifth"
-                            style={{
-                              backgroundImage:
-                                'url(https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg)',
-                            }}
-                          >
-                            <span>Lorum</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="Lorum">
-                          <a
-                            className="CabinetColorSixth"
-                            style={{
-                              backgroundImage:
-                                'url(https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg)',
-                            }}
-                          >
-                            <span>Lorum</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                    </ul>
-                  </Box>
-                </Box>
-                <Box className="FlooringStyleSection">
-                  <Typography variant="h6">Flooring Style</Typography>
-                  <Box className="CabinetColors CommonCircle">
-                    <ul>
-                      <li>
-                        <Tooltip placement="top" title="Lorum">
-                          <a
-                            className="CabinetColorFirst"
-                            style={{
-                              backgroundImage:
-                                'url(https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg)',
-                            }}
-                          >
-                            <span>Lorum</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                      <li>
-                        <Tooltip placement="top" title="Medium">
-                          <a
-                            className="CabinetColorSecond Active"
-                            style={{
-                              backgroundImage:
-                                'url(https://elmirastg.wpengine.com/wp-content/uploads/2022/05/Dry-Creek-Plum.jpg)',
-                            }}
-                          >
-                            <span>Medium</span>
-                          </a>
-                        </Tooltip>
-                      </li>
-                    </ul>
-                  </Box>
-                </Box>
-              </Box>
-            </Box>
-            <Box className="MainKitchenSection">
-              <img
-                className="KitchenImage"
-                src={require('../../assets/images/2022-North30-30.png')}
-                // src="https://elmirastg.wpengine.com/wp-content/uploads/2022/05/2022-North30-30.jpg"
-                alt="Kitchen"
-              />
-              <Box component="span" className="CommonIconBoxLast IconLast">
-                <img
-                  className=""
-                  // src={require('../../assets/images/VisualizerIcon.png').default}
-                  src="https://elmirastg.wpengine.com/wp-content/uploads/2022/05/VisualizerIcon.png"
-                  alt="Visualizer Icon"
-                />
-                <Box component="div" className="CustomizeBox">
-                  CUSTOMIZE YOUR NORTHSTAR APPLIANCE
-                </Box>
-              </Box>
-            </Box>
-            <Box className="FooterSection">
-              <Typography variant="body1" textAlign="center">
-                <b>PLEASE NOTE:</b> Kitchen and product images are for
-                illustrative purposes only, not for installation or cabinet
-                planning. View appliance specification sheets for exact
-                dimensions of products.
-              </Typography>
-            </Box>
-          </Box>
-        </Grid>
-        <Grid item xs={12}>
           <Grid
             container
             direction="row"
@@ -179,7 +142,8 @@ const DreamKitchen = () => {
             className="PricingContainerBox"
             spacing={5}
           >
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+            {loadAppliancesData()}
+            {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Box className="PricingBox">
                 <Box className="PricingHeaderBox SkyBlueBg">
                   <Typography variant="body1" textAlign="center">
@@ -367,8 +331,8 @@ const DreamKitchen = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+            </Grid> */}
+            {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
               <Box className="PricingBox">
                 <Box className="PricingHeaderBox RedBg">
                   <Typography variant="body1" textAlign="center">
@@ -700,7 +664,7 @@ const DreamKitchen = () => {
                   </Typography>
                 </Box>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
         <Grid item xs={12}>
