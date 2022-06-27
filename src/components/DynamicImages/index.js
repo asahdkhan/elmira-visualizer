@@ -1,3 +1,4 @@
+/* eslint-disable */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import React from 'react';
 

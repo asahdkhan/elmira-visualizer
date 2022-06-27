@@ -9,6 +9,9 @@ const MainStyles = () => {
         '.Active': {
           transform: 'scale(1.1)',
         },
+        '.VisualizerMainContainer': {
+          maxWidth: '1024px!important',
+        },
         '.textured-black': {
           width: 40,
           height: 40,
@@ -189,6 +192,23 @@ const MainStyles = () => {
           cursor: 'pointer',
           fontSize: '50px',
         },
+        '.SavePdfBtn': {
+          backgroundColor: 'transparent!important',
+          padding: '0!important',
+          color: '#00a8ff!important',
+          marginRight: '15px!important',
+        },
+        '.SavePdfBtn:hover': {
+          backgroundColor: 'transparent',
+        },
+        '.ResetBtn': {
+          backgroundColor: 'transparent!important',
+          padding: '0!important',
+          color: '#802f2d!important',
+        },
+        '.ResetBtn:hover': {
+          backgroundColor: 'transparent',
+        },
         '.no-splashback:before': {
           content: '"✖"',
           display: 'flex',
@@ -233,10 +253,10 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/range/trimtype/chrome.png`)}
+            ${require(`./assets/northstar/range/chrome/chrome.jpg`)}
           )`,
           backgroundColor: '#dad6d5',
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -249,10 +269,10 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/range/trimtype/painted.png`)}
+            ${require(`./assets/northstar/range/chrome/painted.jpg`)}
           )`,
           backgroundColor: '#dad6d5',
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -265,10 +285,10 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/fridge/hinge/fridge-hinge-left.png`)}
+            ${require(`./assets/northstar/fridge/hinge/thumbs/hing-left.jpg`)}
           )`,
           backgroundColor: '#dad6d5',
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -281,10 +301,10 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/fridge/hinge/fridge-hinge-right.png`)}
+            ${require(`./assets/northstar/fridge/hinge/thumbs/hing-right.jpg`)}
           )`,
           backgroundColor: '#dad6d5',
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -297,9 +317,9 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/range/oventype/oven.png`)}
+            ${require(`./assets/northstar/range/oven/thumbs/oven.png`)}
           )`,
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -312,9 +332,9 @@ const MainStyles = () => {
           content: '""',
           display: 'flex',
           backgroundImage: `url(
-            ${require(`./assets/appliances/range/oventype/oven.png`)}
+            ${require(`./assets/northstar/range/oven/thumbs/oven.png`)}
           )`,
-          padding: '10px 10px',
+          // padding: '10px 10px',
           width: '80px',
           height: '80px',
           borderRadius: '100%',
@@ -326,6 +346,9 @@ const MainStyles = () => {
         '.createKitchenSection': {
           border: '2px solid #dad6d5',
           borderRadius: '6px',
+        },
+        '.CommonButton.SaveBtn': {
+          minWidth: '260px',
         },
         '.width100': {
           width: '100%',
@@ -430,7 +453,8 @@ const MainStyles = () => {
           justifyContent: 'flex-end',
         },
         '.HeaderLeftSide': {
-          margin: '20px auto 20px',
+          // margin: '20px auto 20px',
+          margin: '20px 0 20px 0',
         },
         '.FlooringStyleSection': {
           display: 'flex',
@@ -494,14 +518,48 @@ const MainStyles = () => {
           position: 'absolute',
           cursor: 'pointer',
           zIndex: '888',
-          backgroundImage: `url(
-            ${require(`./assets/images/VisualizerIcon.png`)}
-          )`,
+          // backgroundImage: `url(
+          //   ${require(`./assets/images/VisualizerIcon.png`)}
+          // )`,
+          backgroundColor: '#6ec8d7',
+          borderRadius: '100%',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center center',
-          width: '36px',
-          height: '36px',
+          width: '30px',
+          height: '30px',
         },
+        '.CommonIconBox:before': {
+          display: 'block',
+          content: '"+"',
+          fontSize: '30px',
+          color: '#fff',
+          fontWeight: '700',
+          textAlign: 'center',
+          position: 'absolute',
+          top: '11px',
+          left: '50%',
+          width: '100%',
+          transform: 'translate(-50%, -50%)',
+          zIndex: '-9',
+        },
+        '.CommonIconBoxLast:before': {
+          display: 'block',
+          content: '"+"',
+          fontSize: '30px',
+          color: '#fff',
+          fontWeight: '700',
+          textAlign: 'center',
+          position: 'absolute',
+          top: '0px',
+          right: '0px',
+          width: '30px',
+          height: '30px',
+          zIndex: '-9',
+          backgroundColor: '#6ec8d7',
+          lineHeight: '25px',
+          borderRadius: '100%',
+        },
+
         '.CommonIconBoxLast': {
           position: 'absolute',
           cursor: 'pointer',
@@ -509,8 +567,8 @@ const MainStyles = () => {
         },
         '.Icon': {
           display: 'block',
-          width: '36px',
-          height: '36px',
+          width: '30px',
+          height: '30px',
         },
         '.CommonIconBox.NorthstarIconFirst': {
           top: '40%',
@@ -594,9 +652,9 @@ const MainStyles = () => {
         },
         '.ModalInfo': {
           textAlign: 'center',
-          padding: '15px 15px',
+          padding: '10px 10px',
           // width: 'calc( 50% - 30px)',
-          maxWidth: 'calc( 29% - 30px)',
+          maxWidth: 'calc( 29% - 20px)',
           // minWidth: 'calc( 29% - 30px)',
         },
         '.ModalBox': {
@@ -720,8 +778,13 @@ const MainStyles = () => {
           marginRight: '40px',
         },
         '.FooterSectionSecond': {
-          display: 'flex',
+          display: 'grid',
           justifyContent: 'center',
+        },
+        '.FooterSection.FooterSectionSecond .FooterLeftSide': {
+          marginRight: '0',
+          marginBottom: '20px',
+          marginTop: '10px',
         },
         '.ProductApplianceBox ul': {
           padding: '0px',
@@ -831,6 +894,25 @@ const MainStyles = () => {
         '.PricingContainerBox': {
           marginTop: '20px',
           marginBottom: '60px',
+          maxWidth: '1024px!important',
+        },
+        '.PricingBox': {
+          margin: '0 15px 20px 15px',
+        },
+        '.PricingContainerBox .MuiGrid-root:nth-child(1) .PricingBox': {
+          marginLeft: '0px',
+        },
+        '.PricingContainerBox .MuiGrid-root:nth-child(3) .PricingBox': {
+          marginRight: '0px',
+        },
+        '.PricingContainerBox .MuiGrid-root:nth-child(4) .PricingBox': {
+          marginLeft: '0px',
+        },
+        '.PricingContainerBox .MuiGrid-root:nth-child(6) .PricingBox': {
+          marginRight: '0px',
+        },
+        '.PricingTotalBox': {
+          maxWidth: '1024px',
         },
         '.RedBg': {
           backgroundColor: '#802f2d',
@@ -841,10 +923,12 @@ const MainStyles = () => {
         '.PricingTotalInfo': {
           padding: '15px 20px',
           borderRadius: '4px',
+          margin: '0 15px 10px 15px',
         },
         '.PricingTotalInfo h3': {
           fontWeight: '600',
         },
+
         '.parentApplianceContainer': {
           position: 'relative',
           maxWidth: '450px',
