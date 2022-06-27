@@ -12,38 +12,58 @@ const CreateKitchen = () => {
   const [kitchen, setKitchen] = useState({
     cabinetSrc: '',
     flooringSrc: '',
-    appliancesSrc:
-      'cabinets/all-appliances/northstar-30-30-all-appliances-bisque.png',
+    appliancesSrc: [],
     patchSrc: '',
   });
   const navigate = useNavigate();
   const params = useParams();
   const location = useLocation();
   const parentPath = location.pathname.split('/')[1];
-  const endPath = location.pathname.split('/')[2];
+  const dreamKitchen = location.pathname.split('/')[2] === 'dream-kitchen';
 
   useEffect(() => {
     fetchInitialData(parentPath);
   }, [fetchInitialData, parentPath]);
 
-  const { data } = appDataState;
+  const { data, configuredData } = appDataState;
+
+  // console.log('configuredData', configuredData);
+
+  const fetchEnvSrc = (configuredData) => {
+    if (Object.keys(configuredData)?.length > 0 && dreamKitchen) {
+      let env_src = '';
+      for (var item of data?.appliances) {
+        env_src += configuredData?.[item.name]?.style?.env
+          ? item.name + '_' + configuredData?.[item.name]?.style?.env + '&'
+          : '';
+      }
+      env_src = env_src.slice(0, -1);
+
+      console.log('env_src', env_src);
+
+      return { env_src };
+    }
+  };
 
   useEffect(() => {
     const defaultCabinet = data?.cabinetColour?.find((item) => item.default);
+    const env_src = 'src_' + fetchEnvSrc(configuredData)?.env_src;
+    const env_patch = 'patch_' + fetchEnvSrc(configuredData)?.env_src;
+
     if (defaultCabinet) {
       setKitchen((prevState) => ({
         ...prevState,
-        cabinetSrc: defaultCabinet.src,
-        patchSrc: defaultCabinet.patch,
+        cabinetSrc: defaultCabinet?.[env_src] || defaultCabinet?.src,
+        patchSrc: defaultCabinet?.[env_patch] || defaultCabinet?.patch,
       }));
     } else {
       setKitchen((prevState) => ({
         ...prevState,
-        cabinetSrc: data?.cabinetColour[0].src,
-        patchSrc: data?.cabinetColour[0].patch,
+        cabinetSrc: data?.cabinetColour[0]?.[env_src] || defaultCabinet?.src,
+        patchSrc: data?.cabinetColour[0]?.[env_patch] || defaultCabinet?.patch,
       }));
     }
-  }, [data?.cabinetColour, setKitchen]);
+  }, [data?.cabinetColour, configuredData, setKitchen]);
 
   useEffect(() => {
     const defaultFlooring = data?.flooringStyle?.find((item) => item.default);
@@ -60,10 +80,30 @@ const CreateKitchen = () => {
     }
   }, [data?.flooringStyle, setKitchen]);
 
-  // console.log('appDataState', kitchen);
+  useEffect(() => {
+    let defaultAppliances = [];
+    let env_pos = '';
+    if (Object.keys(configuredData)?.length > 0 && dreamKitchen) {
+      defaultAppliances = data?.appliances?.map((item) => {
+        env_pos = 'pos_' + fetchEnvSrc(configuredData)?.env_src;
+        return {
+          src: configuredData?.[item.name]?.imagesSet || [item.defaultModelSrc],
+          positioning: item?.[env_pos] || item.positioning,
+        };
+      });
+    } else {
+      defaultAppliances = data?.appliances?.map((item) => ({
+        src: [item.defaultModelSrc],
+        positioning: item?.[env_pos] || item.positioning,
+      }));
+    }
+    setKitchen((prevState) => ({
+      ...prevState,
+      appliancesSrc: defaultAppliances,
+    }));
+  }, [data?.appliances, configuredData, setKitchen]);
 
   const cabinetColour = () => {
-    // const classes = useStyle();
     return (
       <ul>
         {data?.cabinetColour?.map((item) => (
@@ -76,13 +116,16 @@ const CreateKitchen = () => {
                     ${require(`../../assets/${item?.icon}`)}
                   )`,
                 }}
-                onClick={() =>
+                onClick={() => {
+                  const env_src = 'src_' + fetchEnvSrc(configuredData)?.env_src;
+                  const env_patch =
+                    'patch_' + fetchEnvSrc(configuredData)?.env_src;
                   setKitchen({
                     ...kitchen,
-                    cabinetSrc: item.src,
-                    patchSrc: item.patch,
-                  })
-                }
+                    cabinetSrc: item?.[env_src] || item?.src,
+                    patchSrc: item?.[env_patch] || item?.patch,
+                  });
+                }}
               >
                 <span>{item?.name || ''}</span>
               </a>
@@ -133,6 +176,28 @@ const CreateKitchen = () => {
       </Box>
     ));
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const loadConfiguredImage = (configuredAppliance) => {
+    const { src, positioning } = configuredAppliance || {};
+
+    return (
+      <>
+        {src?.length > 0 &&
+          src?.map((el) => (
+            <Image
+              key={el}
+              classes="childImageBox"
+              style={{
+                left: positioning?.[0],
+                top: positioning?.[1],
+              }}
+              name={el}
+            />
+          ))}
+      </>
+    );
+  };
+
   return (
     <>
       {!params.appliances && (
@@ -141,14 +206,14 @@ const CreateKitchen = () => {
           direction="row"
           justifyContent="center"
           alignItems="center"
-          maxWidth="xl"
+          maxWidth="lg"
           marginLeft="auto"
           marginRight="auto"
         >
           <Grid item xs={12}>
             <Box className="VisualizerHeading">
               <Typography variant="h1" textAlign="center">
-                {endPath !== 'dream-kitchen'
+                {!dreamKitchen
                   ? 'LET’S CREATE YOUR DREAM KITCHEN!'
                   : 'YOUR ELMIRA DREAM KITCHEN'}
               </Typography>
@@ -187,23 +252,23 @@ const CreateKitchen = () => {
                       name={kitchen.flooringSrc}
                     />
                   )}
-                  {kitchen.appliancesSrc && (
-                    <Image
-                      classes="childImageBox"
-                      name={kitchen.appliancesSrc}
-                    />
-                  )}
+                  {kitchen?.appliancesSrc?.length > 0 &&
+                    kitchen?.appliancesSrc?.map((configuredAppliance) =>
+                      loadConfiguredImage(configuredAppliance),
+                    )}
                   {kitchen.patchSrc && (
                     <Image classes="childImageBox" name={kitchen.patchSrc} />
                   )}
                 </Box>
-                {configuratorIcon()}
-                <Box component="span" className="CommonIconBoxLast IconLast">
-                  <Image name="images/VisualizerIcon.png" />
-                  <Box component="div" className="CustomizeBox">
-                    CUSTOMIZE YOUR NORTHSTAR APPLIANCE
+                {!dreamKitchen && configuratorIcon()}
+                {!dreamKitchen && (
+                  <Box component="span" className="CommonIconBoxLast IconLast">
+                    <Image name="images/VisualizerIcon.png" />
+                    <Box component="div" className="CustomizeBox">
+                      CUSTOMIZE YOUR NORTHSTAR APPLIANCE
+                    </Box>
                   </Box>
-                </Box>
+                )}
               </Box>
               <Box className="FooterSection">
                 <Typography variant="body1" textAlign="center">

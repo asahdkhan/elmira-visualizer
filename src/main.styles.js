@@ -483,12 +483,12 @@ const MainStyles = () => {
           textTransform: 'uppercase',
         },
         '.MainKitchenSection .parentKitchenImageBox img': {
-          width: '100%',
+          width: 'auto',
         },
         '.MainKitchenSection': {
           display: 'flex',
           position: 'relative',
-          minHeight: '590px',
+          minHeight: '540px',
         },
         '.CommonIconBox': {
           position: 'absolute',

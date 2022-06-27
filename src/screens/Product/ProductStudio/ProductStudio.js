@@ -164,9 +164,14 @@ const ProductStudioStage1 = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
     const { imagesSet } = configuredApplianceData || {};
+    console.log('imagesSet', imagesSet);
     let parentImg = '';
     let childImg = [];
-    if (applianceData?.baseModelSrc) {
+    if (
+      applianceData?.baseModelSrc &&
+      !appliance['style']?.modelSrc &&
+      !appliance['colours']?.modelSrc
+    ) {
       parentImg = applianceData?.baseModelSrc;
       childImg = imagesSet;
     } else {
@@ -179,7 +184,6 @@ const ProductStudioStage1 = () => {
       childImg = c;
     }
 
-    console.log('___', parentImg, childImg);
     return (
       <>
         {parentImg && <Image classes="firstChildImageBox" name={parentImg} />}
@@ -209,7 +213,7 @@ const ProductStudioStage1 = () => {
       direction="row"
       justifyContent="center"
       alignItems="center"
-      maxWidth="xl"
+      maxWidth="lg"
       marginLeft="auto"
       marginRight="auto"
     >
@@ -231,7 +235,7 @@ const ProductStudioStage1 = () => {
                 <Box
                   variant="body1"
                   component=""
-                  onClick={() => navigate('../')}
+                  onClick={() => navigate(-1)}
                   className="BackButton"
                 >
                   &#8592; Back
@@ -288,6 +292,7 @@ const ProductStudioStage1 = () => {
                 onClick={() => save(modelPricing)}
                 className="CommonButton SaveBtn"
                 variant="contained"
+                disabled={!configuredApplianceData?.imagesSet?.length > 0}
               >
                 Save First
               </Button>

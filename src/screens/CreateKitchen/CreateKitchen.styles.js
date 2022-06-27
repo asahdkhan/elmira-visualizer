@@ -1,5 +1,4 @@
 /* eslint-disable  */
-export const styles = {};
 export const styles = {
   parentImageBox: {
     position: 'relative',

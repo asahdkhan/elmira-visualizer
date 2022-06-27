@@ -10,7 +10,9 @@ export const useMutateStorage = () => {
       const localItem = localStorage.getItem(element.id);
       if (localItem) {
         const { configuration } = JSON.parse(localItem);
-        const appliance = appliances?.find((item) => item?.name === item?.id);
+        const appliance = appliances?.find(
+          (item) => item?.name === element?.id,
+        );
         genrateApplianceImage(
           element.id,
           configuration,
