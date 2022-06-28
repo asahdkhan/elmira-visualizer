@@ -1,7 +1,7 @@
 /* eslint-disable */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
 import React, { useEffect, useState } from 'react';
-import { Grid, Typography, Box, Tooltip } from '@mui/material';
+import { Grid, Typography, Box, Tooltip, Button } from '@mui/material';
 import { useAppData } from '../../hooks/useAppData';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router';
 import Image from '../../components/DynamicImages';
@@ -209,6 +209,7 @@ const CreateKitchen = () => {
           maxWidth="lg"
           marginLeft="auto"
           marginRight="auto"
+          className="VisualizerMainContainer"
         >
           <Grid item xs={12}>
             <Box className="VisualizerHeading">
@@ -222,7 +223,14 @@ const CreateKitchen = () => {
           <Grid item xs={12}>
             <Box className="createKitchenSection">
               <Box className="HeaderSection">
-                <Box className="HeaderLeftSide"></Box>
+                <Box className="HeaderLeftSide">
+                  <Button variant="Button" className="SavePdfBtn">
+                    SAVE AS PDF
+                  </Button>
+                  <Button variant="Button" className="ResetBtn">
+                    RESET
+                  </Button>
+                </Box>
                 <Box className="HeaderRightSide">
                   <Box className="CabinetColorSection">
                     <Typography variant="h6">CABINET COLOUR</Typography>
@@ -263,7 +271,7 @@ const CreateKitchen = () => {
                 {!dreamKitchen && configuratorIcon()}
                 {!dreamKitchen && (
                   <Box component="span" className="CommonIconBoxLast IconLast">
-                    <Image name="images/VisualizerIcon.png" />
+                    {/* <Image name="images/VisualizerIcon.png" /> */}
                     <Box component="div" className="CustomizeBox">
                       CUSTOMIZE YOUR NORTHSTAR APPLIANCE
                     </Box>

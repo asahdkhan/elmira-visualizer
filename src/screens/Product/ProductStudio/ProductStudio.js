@@ -216,6 +216,7 @@ const ProductStudioStage1 = () => {
       maxWidth="lg"
       marginLeft="auto"
       marginRight="auto"
+      className="VisualizerMainContainer"
     >
       <Grid item xs={12}>
         <Box className="VisualizerHeading">

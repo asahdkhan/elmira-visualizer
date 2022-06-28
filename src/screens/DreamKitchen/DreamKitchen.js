@@ -140,7 +140,9 @@ const DreamKitchen = () => {
             justifyContent="flex-start"
             alignItems="flex-start"
             className="PricingContainerBox"
-            spacing={5}
+            spacing={0}
+            marginLeft="auto"
+            marginRight="auto"
           >
             {loadAppliancesData()}
             {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
@@ -675,9 +677,11 @@ const DreamKitchen = () => {
             alignItems="flex-start"
             className="PricingTotalBox"
             marginBottom={5}
-            spacing={5}
+            spacing={0}
+            marginLeft="auto"
+            marginRight="auto"
           >
-            <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <Box className="PricingTotalInfo SkyBlueBg">
                 <Typography variant="h3" textAlign="center">
                   {' '}
@@ -688,7 +692,7 @@ const DreamKitchen = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12} sm={12} md={5} lg={5} xl={5}>
+            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
               <a>
                 <Box className="PricingTotalInfo WaterBlueBg">
                   <Typography variant="h3" textAlign="center">
