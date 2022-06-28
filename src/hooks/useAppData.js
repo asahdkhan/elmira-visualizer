@@ -73,6 +73,7 @@ export const useAppData = () => {
           return !seen;
         });
       } else if (appliance['style']?.insert) {
+        // On style insert add baseModelSrc too
         imagesSet = [appliance['style']?.baseModelSrc, ...imagesSet];
       }
 
