@@ -1,14 +1,16 @@
 /* eslint-disable */
 /* eslint-disable jsx-control-statements/jsx-jcs-no-undef */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Grid, Typography, Box, Tooltip, Button } from '@mui/material';
 import { useAppData } from '../../hooks/useAppData';
 import { Outlet, useLocation, useNavigate, useParams } from 'react-router';
+import ReactToPrint from 'react-to-print';
 import Image from '../../components/DynamicImages';
 // import { styles as classes } from './CreateKitchen.styles';
 
 const CreateKitchen = () => {
-  const { appDataState, fetchInitialData } = useAppData();
+  const { appDataState, fetchInitialData, reset } = useAppData();
+  const dreamKitchenRef = useRef(null);
   const [kitchen, setKitchen] = useState({
     cabinetSrc: '',
     flooringSrc: '',
@@ -38,8 +40,6 @@ const CreateKitchen = () => {
           : '';
       }
       env_src = env_src.slice(0, -1);
-
-      console.log('env_src', env_src);
 
       return { env_src };
     }
@@ -222,15 +222,29 @@ const CreateKitchen = () => {
           </Grid>
           <Grid item xs={12}>
             <Box className="createKitchenSection">
-              <Box className="HeaderSection">
+              <Box id="no-print" className="HeaderSection">
                 <Box className="HeaderLeftSide">
-                  <Button variant="Button" className="SavePdfBtn">
-                    SAVE AS PDF
-                  </Button>
-                  <Button variant="Button" className="ResetBtn">
-                    RESET
-                  </Button>
+                  {dreamKitchen && (
+                    <>
+                      <ReactToPrint
+                        trigger={() => (
+                          <Button variant="Button" className="SavePdfBtn">
+                            SAVE AS PDF
+                          </Button>
+                        )}
+                        content={() => dreamKitchenRef.current}
+                      />
+                      <Button
+                        variant="Button"
+                        onClick={() => reset()}
+                        className="ResetBtn"
+                      >
+                        RESET
+                      </Button>
+                    </>
+                  )}
                 </Box>
+
                 <Box className="HeaderRightSide">
                   <Box className="CabinetColorSection">
                     <Typography variant="h6">CABINET COLOUR</Typography>
@@ -246,7 +260,7 @@ const CreateKitchen = () => {
                   </Box>
                 </Box>
               </Box>
-              <Box className="MainKitchenSection">
+              <Box ref={dreamKitchenRef} className="MainKitchenSection">
                 <Box className="parentKitchenImageBox width100">
                   {kitchen.cabinetSrc && (
                     <Image

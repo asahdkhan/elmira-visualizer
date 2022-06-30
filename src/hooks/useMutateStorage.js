@@ -7,8 +7,10 @@ export const useMutateStorage = () => {
   const { configuratorIcon, appliances } = appDataState?.data || {};
 
   useEffect(() => {
+    // Optimize :  Reset configure date to avoid configured data on going back
     configuratorIcon?.map((element) => {
       const localItem = localStorage.getItem(element.id);
+
       if (localItem) {
         const { configuration } = JSON.parse(localItem);
         const appliance = appliances?.find(

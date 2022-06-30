@@ -30,15 +30,17 @@ const ProductStudioStage1 = () => {
     setModelOptions,
     save,
     reset,
-    isLocalStorage,
+    localItem,
   } = useStorage(applianceName);
 
   // Internal state
   const [modelPricing, setModelPricing] = useState({});
+  const [boxHeight, setBoxHeight] = useState(0);
 
   // clear internal state on params change
   // useEffect(() => {
-  //   setModelOptions(null);
+  //   setModelOptions([]);
+  //   setAppliance({});
   // }, [applianceName]);
 
   // load selected appliances data from JSON
@@ -61,7 +63,7 @@ const ProductStudioStage1 = () => {
     applianceName,
     modelStylesData,
     modelOptionsData,
-    isLocalStorage,
+    localItem,
   ]);
 
   useEffect(() => {
@@ -164,7 +166,7 @@ const ProductStudioStage1 = () => {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const loadConfiguredImage = () => {
     const { imagesSet } = configuredApplianceData || {};
-    console.log('imagesSet', imagesSet);
+    // console.log('imagesSet', imagesSet);
     let parentImg = '';
     let childImg = [];
     if (
@@ -186,7 +188,13 @@ const ProductStudioStage1 = () => {
 
     return (
       <>
-        {parentImg && <Image classes="firstChildImageBox" name={parentImg} />}
+        {parentImg && (
+          <Image
+            classes="firstChildImageBox"
+            onLoad={(img) => setBoxHeight(img.target.offsetHeight + 100)}
+            name={parentImg}
+          />
+        )}
         {childImg?.length > 0 &&
           childImg?.map((src) => (
             <Image key={src} classes="childImageBox" name={src} />
@@ -247,7 +255,7 @@ const ProductStudioStage1 = () => {
               </Box>
             </Box>
           </Box>
-          <Box className="MainKitchenSection">
+          <Box className="MainKitchenSection" style={{ minHeight: boxHeight }}>
             <Box className="ApplianceBoxLeft">
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
@@ -301,7 +309,7 @@ const ProductStudioStage1 = () => {
                 onClick={reset}
                 className="CommonButton SaveBtn"
                 variant="contained"
-                disabled={!isLocalStorage}
+                disabled={!localItem}
                 sx={{ ml: 2, mr: 2 }}
               >
                 Reset
@@ -310,7 +318,7 @@ const ProductStudioStage1 = () => {
                 <Button
                   className="CommonButton SaveBtn"
                   variant="contained"
-                  disabled={!isLocalStorage}
+                  disabled={!localItem}
                 >
                   VIEW YOUR DREAM KITCHEN
                 </Button>

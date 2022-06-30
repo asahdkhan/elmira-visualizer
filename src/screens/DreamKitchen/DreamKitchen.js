@@ -18,42 +18,40 @@ const DreamKitchen = () => {
 
   const navigate = useNavigate();
 
-  const loadOptionsData = (modelOptions, configuredData) => {
-    let pricing = 0;
-    const render = () =>
-      modelOptions.map((item) => {
-        const { title, usa } = configuredData?.[item.id] || {};
-        pricing += usa;
-        return (
-          <li key={item.text}>
-            <Box className="ProductInfo">
-              <Typography variant="h6" textAlign="left">
-                {item.text}
-              </Typography>
-              <Typography variant="body2" textAlign="left">
-                {title || '-'}
-              </Typography>
-            </Box>
-            <Box className="ProductAmount">
-              <Typography variant="h6" textAlign="right">
-                {usa ? '$' + usa : '-'}
-              </Typography>
-            </Box>
-          </li>
-        );
-      });
-    return { render, pricing };
-  };
+  const loadOptionsData = (modelOptions, configuredData) =>
+    modelOptions.map((item) => {
+      const { title, usa } = configuredData?.[item.id] || {};
+      return (
+        <li key={item.id}>
+          <Box className="ProductInfo">
+            <Typography variant="h6" textAlign="left">
+              {item.text}
+            </Typography>
+            <Typography variant="body2" textAlign="left">
+              {title || '-'}
+            </Typography>
+          </Box>
+          <Box className="ProductAmount">
+            <Typography variant="h6" textAlign="right">
+              {usa ? '$' + usa : '-'}
+            </Typography>
+          </Box>
+        </li>
+      );
+    });
 
-  console.log('pricing');
+  const navigateToProduct = (name) => navigate(`../${name}/product-studio`);
 
   const loadAppliancesData = () => {
-    const configuredData = appDataState?.configuredData;
+    const { configuredData } = appDataState || {};
+    const render = [];
+    let overallPricing = 0;
 
-    return appliances?.map((item) => {
+    for (const item of appliances || []) {
       const configuredAppliance = configuredData?.[item.name];
-      const { modelPricing } = configuredAppliance || {};
-      return (
+      const { modelPricing, totalPricing } = configuredAppliance || {};
+      overallPricing += totalPricing || 0;
+      render.push(
         <Grid key={item.name} item xs={12} sm={12} md={4} lg={4} xl={4}>
           <Box className="PricingBox">
             <Box
@@ -65,7 +63,7 @@ const DreamKitchen = () => {
                 {item.name}
               </Typography>
               <Button
-                onClick={() => navigate(`../${item.name}/product-studio`)}
+                onClick={() => navigateToProduct(item.name)}
                 className={`CommonButton ${
                   configuredAppliance ? 'EditBtn' : 'AddBtn'
                 }`}
@@ -104,22 +102,23 @@ const DreamKitchen = () => {
                     </Box>
                   </li>
                 )}
-                {loadOptionsData(
-                  item?.modelOptions,
-                  configuredAppliance,
-                )?.render()}
+                {loadOptionsData(item?.modelOptions, configuredAppliance)}
               </ul>
               <Box className="PricingFooterBox SkyBlueColor">
                 <Typography variant="h5" textAlign="right">
-                  <span>TOTAL</span>$
-                  {configuredAppliance?.totalPricing || ' ' + ''}
+                  <span>TOTAL</span>${totalPricing || ' ' + ''}
                 </Typography>
               </Box>
             </Box>
           </Box>
-        </Grid>
+        </Grid>,
       );
-    });
+    }
+
+    return {
+      render,
+      overallPricing,
+    };
   };
 
   return (
@@ -144,529 +143,7 @@ const DreamKitchen = () => {
             marginLeft="auto"
             marginRight="auto"
           >
-            {loadAppliancesData()}
-            {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box className="PricingBox">
-                <Box className="PricingHeaderBox SkyBlueBg">
-                  <Typography variant="body1" textAlign="center">
-                    RANGE
-                  </Typography>
-                  <Button className="CommonButton EditBtn" variant="contained">
-                    EDIT
-                  </Button>
-                </Box>
-                <Box className="PricingContentBox">
-                  <ul>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model: 1875, non-convection
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 8295
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model Description
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          45” Six-Burner Dual Feul
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Self-Cleaning
-                        </Typography>
-                        <a className="EditButton">MORE MODEL INFO</a>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Colour
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Black
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Gas Type
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Natural Gas
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Metal Trim
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Door Frames
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 350
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Legs Trim
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 200
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Front Skirt
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 200
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Trivet
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 200
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Decorative Shelf
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 100
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Ventilation
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          Nickel
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Antiquing
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ 200
-                        </Typography>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-                <Box className="PricingFooterBox SkyBlueColor">
-                  <Typography variant="h5" textAlign="right">
-                    <span>TOTAL</span>$ 9345
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid> */}
-            {/* <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box className="PricingBox">
-                <Box className="PricingHeaderBox RedBg">
-                  <Typography variant="body1" textAlign="center">
-                    REFRIGERATOR
-                  </Typography>
-                  <Button className="CommonButton AddBtn" variant="contained">
-                    ADD
-                  </Button>
-                </Box>
-                <Box className="PricingContentBox">
-                  <ul>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model: <span className="RedColor">Not Selected</span>
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ -
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model Description
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Colour
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Handles
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Door Frames
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Hinge
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Ice Maker
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-                <Box className="PricingFooterBox RedColor">
-                  <Typography variant="h5" textAlign="right">
-                    <span>TOTAL</span>$ -
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box className="PricingBox">
-                <Box className="PricingHeaderBox RedBg">
-                  <Typography variant="body1" textAlign="center">
-                    WALL OVEN
-                  </Typography>
-                  <Button className="CommonButton AddBtn" variant="contained">
-                    ADD
-                  </Button>
-                </Box>
-                <Box className="PricingContentBox">
-                  <ul>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model: <span className="RedColor">Not Selected</span>
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ -
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model Description
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Colour
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Metal Trim Color
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Door Frames
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Antiquing
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-                <Box className="PricingFooterBox RedColor">
-                  <Typography variant="h5" textAlign="right">
-                    <span>TOTAL</span>$ -
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box className="PricingBox">
-                <Box className="PricingHeaderBox RedBg">
-                  <Typography variant="body1" textAlign="center">
-                    MICROWAVE
-                  </Typography>
-                  <Button className="CommonButton AddBtn" variant="contained">
-                    ADD
-                  </Button>
-                </Box>
-                <Box className="PricingContentBox">
-                  <ul>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model: <span className="RedColor">Not Selected</span>
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ -
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Colour
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Door Frames
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-                <Box className="PricingFooterBox RedColor">
-                  <Typography variant="h5" textAlign="right">
-                    <span>TOTAL</span>$ -
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
-              <Box className="PricingBox">
-                <Box className="PricingHeaderBox RedBg">
-                  <Typography variant="body1" textAlign="center">
-                    Dishwasher / Panel
-                  </Typography>
-                  <Button className="CommonButton AddBtn" variant="contained">
-                    ADD
-                  </Button>
-                </Box>
-                <Box className="PricingContentBox">
-                  <ul>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Model: <span className="RedColor">Not Selected</span>
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right">
-                          $ -
-                        </Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Colour
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                    <li>
-                      <Box className="ProductInfo">
-                        <Typography variant="h6" textAlign="left">
-                          Door Frames
-                        </Typography>
-                        <Typography variant="body2" textAlign="left">
-                          -
-                        </Typography>
-                      </Box>
-                      <Box className="ProductAmount">
-                        <Typography variant="h6" textAlign="right"></Typography>
-                      </Box>
-                    </li>
-                  </ul>
-                </Box>
-                <Box className="PricingFooterBox RedColor">
-                  <Typography variant="h5" textAlign="right">
-                    <span>TOTAL</span>$ -
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid> */}
+            {loadAppliancesData().render}
           </Grid>
         </Grid>
         <Grid item xs={12}>
@@ -685,7 +162,7 @@ const DreamKitchen = () => {
               <Box className="PricingTotalInfo SkyBlueBg">
                 <Typography variant="h3" textAlign="center">
                   {' '}
-                  APPLIANCE TOTAL $9,345{' '}
+                  APPLIANCE TOTAL ${loadAppliancesData().overallPricing}
                 </Typography>
                 <Typography variant="body2" textAlign="center">
                   (excludes freight, delivery, and applicable taxes)

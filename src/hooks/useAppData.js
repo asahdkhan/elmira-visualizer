@@ -1,9 +1,11 @@
 /* eslint-disable */
 import { useCallback, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { AppDataContext } from '../contexts/appDataContext';
 
 export const useAppData = () => {
   const [appDataState, appDataDispatch] = useContext(AppDataContext);
+  const navigate = useNavigate();
 
   const fetchInitialData = useCallback(
     (kitchen) => {
@@ -73,7 +75,10 @@ export const useAppData = () => {
           seen = item == appliance['style']?.modelSrc;
           return !seen;
         });
-      } else if (appliance['style']?.insert) {
+      } else if (
+        appliance['style']?.insert &&
+        !appliance['colours']?.modelSrc
+      ) {
         // On style insert add baseModelSrc too
         imagesSet = [appliance['style']?.baseModelSrc, ...imagesSet];
       }
@@ -93,17 +98,19 @@ export const useAppData = () => {
     [appDataDispatch],
   );
 
-  // const resetImagesSet = useCallback(() => {
-  //   appDataDispatch({
-  //     type: 'RESET_IMAGE',
-  //     data: { applianceName, configuredData: { ...appliance, imagesSet } },
-  //   });
-  // }, [appDataDispatch]);
+  const reset = useCallback(() => {
+    appDataDispatch({
+      type: 'RESET',
+    });
+    localStorage.clear();
+    navigate('../');
+  }, [appDataDispatch]);
 
   return {
     appDataState,
     fetchInitialData,
     selectedApplianceData,
     genrateApplianceImage,
+    reset,
   };
 };

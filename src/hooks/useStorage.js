@@ -1,25 +1,30 @@
 /* eslint-disable */
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 // import { useAppData } from './useAppData';
 
 export const useStorage = (applianceName = '') => {
+  const [localItem, setLocalItem] = useState(null);
+  const [modelOptions, setModelOptions] = useState([]);
+  const [appliance, setAppliance] = useState({});
+
   // const { appDataState } = useAppData();
   // const { configuredData } = appDataState;
   // const configuredApplianceData = configuredData?.[applianceName];
 
-  let initialModelState = [];
-  let initialApplianceState = {};
+  useEffect(() => {
+    setModelOptions([]);
+    setAppliance({});
+    setLocalItem(localStorage.getItem(applianceName));
+  }, [applianceName]);
 
-  const localItem = localStorage.getItem(applianceName);
-  if (localItem) {
-    const { options, configuration } = JSON.parse(localItem);
-    initialModelState = options;
-    initialApplianceState = configuration;
-  }
-
-  const [modelOptions, setModelOptions] = useState(initialModelState);
-  const [appliance, setAppliance] = useState(initialApplianceState);
-  const [isLocalStorage, setIsLocalStorage] = useState(!!localItem);
+  useEffect(() => {
+    if (localItem) {
+      const { options, configuration } = JSON.parse(localItem);
+      // clear internal state on params change
+      setModelOptions(options);
+      setAppliance(configuration);
+    }
+  }, [localItem]);
 
   const save = (modelPricing) => {
     localStorage.setItem(
@@ -29,14 +34,14 @@ export const useStorage = (applianceName = '') => {
         configuration: { ...appliance, modelPricing },
       }),
     );
-    setIsLocalStorage(true);
+    setLocalItem(localStorage.getItem(applianceName));
   };
 
   const reset = () => {
     localStorage.removeItem(applianceName);
+    setLocalItem(null);
     setModelOptions([]);
     setAppliance({});
-    setIsLocalStorage(false);
   };
 
   return {
@@ -46,6 +51,6 @@ export const useStorage = (applianceName = '') => {
     setModelOptions,
     save,
     reset,
-    isLocalStorage,
+    localItem,
   };
 };
