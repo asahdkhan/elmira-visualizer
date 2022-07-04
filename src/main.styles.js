@@ -590,6 +590,26 @@ const MainStyles = () => {
           top: '30%',
           right: '17%',
         },
+        '.CommonIconBox.HeritageIconFirst': {
+          top: '25%',
+          left: '26%',
+        },
+        '.CommonIconBox.HeritageIconSecond': {
+          top: '26%',
+          left: '53%',
+        },
+        '.CommonIconBox.HeritageIconThird': {
+          top: '27%',
+          right: '15%',
+        },
+        '.CommonIconBox.HeritageIconFourth': {
+          top: '43%',
+          right: '14%',
+        },
+        '.CommonIconBox.HeritageIconFifth': {
+          bottom: '28%',
+          right: '15%',
+        },
         '.CommonIconBoxLast.IconLast': {
           bottom: '13%',
           right: '8%',

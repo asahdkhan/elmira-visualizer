@@ -246,7 +246,7 @@ const ProductStudioStage1 = () => {
                 <Box
                   variant="body1"
                   component=""
-                  onClick={() => navigate(-1)}
+                  onClick={() => navigate('../')}
                   className="BackButton"
                 >
                   &#8592; Back

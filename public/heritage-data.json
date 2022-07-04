@@ -4,29 +4,29 @@
   "defaultAppliancesSrc": "",
   "configuratorIcon": [
     {
-      "id": "microwave",
-      "title": "Configure your Microwave",
-      "positioning": "NorthstarIconFirst"
-    },
-    {
-      "id": "dishwasher",
-      "title": "Configure your Dishwasher",
-      "positioning": "NorthstarIconSecond"
-    },
-    {
-      "id": "wall-oven",
-      "title": "Configure your Wall Oven",
-      "positioning": "NorthstarIconThird"
+      "id": "refrigerator",
+      "title": "Configure your Refrigerator",
+      "positioning": "HeritageIconFirst"
     },
     {
       "id": "range",
       "title": "Configure your Range",
-      "positioning": "NorthstarIconFourth"
+      "positioning": "HeritageIconSecond"
     },
     {
-      "id": "refrigerator",
-      "title": "Configure your Refrigerator",
-      "positioning": "NorthstarIconFifth"
+      "id": "microwave",
+      "title": "Configure your Microwave",
+      "positioning": "HeritageIconThird"
+    },
+    {
+      "id": "wall-oven",
+      "title": "Configure your Wall Oven",
+      "positioning": "HeritageIconFourth"
+    },
+    {
+      "id": "dishwasher",
+      "title": "Configure your Dishwasher",
+      "positioning": "HeritageIconFifth"
     }
   ],
   "cabinetColour": [
@@ -43,8 +43,7 @@
       "patch_refrigerator_36": "heritage/cabinet/charcoal/charcoal-top-30-36.png",
       "patch_refrigerator_24": "heritage/cabinet/charcoal/charcoal-top-30-24.png",
       "patch_range_36&refrigerator_36": "heritage/cabinet/charcoal/charcoal-top-36-36.png",
-      "patch_range_36&refrigerator_24": "heritage/cabinet/charcoal/charcoal-top-36-24.png",
-      "default": true
+      "patch_range_36&refrigerator_24": "heritage/cabinet/charcoal/charcoal-top-36-24.png"
     },
     {
       "name": "Light Wood",
@@ -65,18 +64,19 @@
     {
       "name": "Darkwood",
       "icon": "heritage/cabinet/icon-ball/darkwood.jpg",
-      "src": "heritage/cabinet/darkwood/darkwood-30-30.png",
+      "src": "heritage/cabinet/darkwood/darkwood-30-36.png",
       "src_range_36": "heritage/cabinet/darkwood/darkwood-36-30.png",
       "src_refrigerator_36": "heritage/cabinet/darkwood/darkwood-30-36.png",
       "src_refrigerator_24": "heritage/cabinet/darkwood/darkwood-30-24.png",
       "src_range_36&refrigerator_36": "heritage/cabinet/darkwood/darkwood-36-36.png",
       "src_range_36&refrigerator_24": "heritage/cabinet/darkwood/darkwood-36-24.png",
-      "patch": "heritage/cabinet/darkwood/darkwood-top-30-30.png",
+      "patch": "heritage/cabinet/darkwood/darkwood-top-30-36.png",
       "patch_range_36": "heritage/cabinet/darkwood/darkwood-top-36-30.png",
       "patch_refrigerator_36": "heritage/cabinet/darkwood/darkwood-top-30-36.png",
       "patch_refrigerator_24": "heritage/cabinet/darkwood/darkwood-top-30-24.png",
       "patch_range_36&refrigerator_36": "heritage/cabinet/darkwood/darkwood-top-36-36.png",
-      "patch_range_36&refrigerator_24": "heritage/cabinet/darkwood/darkwood-top-36-24.png"
+      "patch_range_36&refrigerator_24": "heritage/cabinet/darkwood/darkwood-top-36-24.png",
+      "default": true
     }
   ],
   "flooringStyle": [
@@ -94,344 +94,17 @@
   ],
   "appliances": [
     {
-      "name": "rangehood",
-      "defaultModelSrc": "northstar/rangehood/1961-Recirculating/candy-red.png",
-      "bg": "northstar/rangehood/bg30.jpg",
-      "configureOrder": ["splashback-colors", "style", "colours"],
-      "positioning": ["360px", "65px"],
-      "styles": [
-        {
-          "id": "1961",
-          "title": "1961 30\" Recirculating",
-          "src": "northstar/rangehood/model/thumbs/1961.jpg",
-          "modelSrc": "northstar/rangehood/1961-Recirculating/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
-        },
-        {
-          "id": "1962",
-          "title": "1962 30\" Outside-Vent",
-          "src": "northstar/rangehood/model/thumbs/1962.jpg",
-          "modelSrc": "northstar/rangehood/1962-Outside-Vent/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
-        },
-        {
-          "id": "1963",
-          "title": "1963 36\" Outside-Vent",
-          "bg": "northstar/rangehood/bg36.jpg",
-          "src": "northstar/rangehood/model/thumbs/1963.jpg",
-          "modelSrc": "northstar/rangehood/1963/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
-        }
-      ],
-      "modelOptions": [
-        {
-          "id": "colours",
-          "text": "Colour",
-          "opt": [
-            {
-              "id": "textured-black",
-              "title": "Textured Black",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/textured-black.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/textured-black.png",
-                "1963": "northstar/rangehood/1963/textured-black.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "white",
-              "title": "White",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/white.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/white.png",
-                "1963": "northstar/rangehood/1963/white.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "bisque",
-              "title": "Bisque",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/bisque.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/bisque.png",
-                "1963": "northstar/rangehood/1963/bisque.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "candy-red",
-              "title": "Candy Red",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/candy-red.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/candy-red.png",
-                "1963": "northstar/rangehood/1963/candy-red.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "buttercup-yellow",
-              "title": "Buttercup Yellow",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/buttercup-yellow.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/buttercup-yellow.png",
-                "1963": "northstar/rangehood/1963/buttercup-yellow.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "robins-egg-blue",
-              "title": "Robins Egg Blue",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/robbins-egg-blue.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/robbins-egg-blue.png",
-                "1963": "northstar/rangehood/1963/robbins-egg-blue.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "tropical-blue",
-              "title": "Tropical Blue",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/tropical-blue.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/tropical-blue.png",
-                "1963": "northstar/rangehood/1963/tropical-blue.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "mint-green",
-              "title": "Mint Green",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/rangehood/1961-Recirculating/mint-green.png",
-                "1962": "northstar/rangehood/1962-Outside-Vent/mint-green.png",
-                "1963": "northstar/rangehood/1963/mint-green.png"
-              },
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        },
-        {
-          "id": "splashback",
-          "text": "Splashback",
-          "opt": [
-            {
-              "id": "yes-splashback",
-              "title": "30\" Splashback",
-              "src": "css",
-              "populate": ["splashback-colors"],
-              "usa": { "1961": 199, "1962": 199, "1963": 269 },
-              "canada": [0]
-            },
-            {
-              "id": "no-splashback",
-              "title": "No Splashback",
-              "src": "css",
-              "removeAssociated": "yes-splashback",
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        },
-        {
-          "id": "splashback-colors",
-          "text": "Splashback Colours",
-          "if": "yes-splashback",
-          "opt": [
-            {
-              "id": "splashback-colors-textured-black",
-              "title": "Textured Black",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/textured-black.png",
-                "1962": "northstar/splashback/30/textured-black.png",
-                "1963": "northstar/splashback/36/textured-black.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-white",
-              "title": "White",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/white.png",
-                "1962": "northstar/splashback/30/white.png",
-                "1963": "northstar/splashback/36/white.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-bisque",
-              "title": "Bisque",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/bisque.png",
-                "1962": "northstar/splashback/30/bisque.png",
-                "1963": "northstar/splashback/36/bisque.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-candy-red",
-              "title": "Candy Red",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/candy-red.png",
-                "1962": "northstar/splashback/30/candy-red.png",
-                "1963": "northstar/splashback/36/candy-red.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-buttercup-yellow",
-              "title": "Buttercup Yellow",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/buttercup-yellow.png",
-                "1962": "northstar/splashback/30/buttercup-yellow.png",
-                "1963": "northstar/splashback/36/buttercup-yellow.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-robins-egg-blue",
-              "title": "Robins Egg Blue",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/robbins-egg-blue.png",
-                "1962": "northstar/splashback/30/robbins-egg-blue.png",
-                "1963": "northstar/splashback/36/robbins-egg-blue.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-tropical-blue",
-              "title": "Tropical Blue",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/tropical-blue.png",
-                "1962": "northstar/splashback/30/tropical-blue.png",
-                "1963": "northstar/splashback/36/tropical-blue.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "splashback-colors-mint-green",
-              "title": "Mint Green",
-              "src": "css",
-              "modelSrc": {
-                "1961": "northstar/splashback/30/mint-green.png",
-                "1962": "northstar/splashback/30/mint-green.png",
-                "1963": "northstar/splashback/36/mint-green.png"
-              },
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        },
-        {
-          "id": "duck-cover-kit",
-          "text": "Duck Cover Kit",
-          "opt": [
-            {
-              "id": "yes",
-              "title": "Yes",
-              "src": "css",
-              "usa": 600,
-              "canada": 0
-            },
-            {
-              "id": "no",
-              "title": "No",
-              "src": "css",
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        }
-      ],
-      "pricing": [
-        {
-          "modelName": "Model 1961 30",
-          "onSelection": { "style": "1961" },
-          "usa": 1895,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1962 30",
-          "onSelection": { "style": "1962" },
-          "usa": 1995,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1963 36",
-          "onSelection": { "style": "1963" },
-          "usa": 2395,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1944 30",
-          "onSelection": {
-            "style": "1961",
-            "splashback": "yes-splashback"
-          },
-          "usa": 2094,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1944 30",
-          "onSelection": {
-            "style": "1962",
-            "splashback": "yes-splashback"
-          },
-          "usa": 2194,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1944 36",
-          "onSelection": {
-            "style": "1963",
-            "splashback": "yes-splashback"
-          },
-          "usa": 2664,
-          "canada": ""
-        }
-      ]
-    },
-    {
       "name": "range",
-      "baseModelSrc": "",
-      "defaultModelSrc": "",
-      "positioning": ["388px", "195px"],
+      "baseModelSrc": "heritage/range/colors/30/1.png",
+      "defaultModelSrc": "heritage/range/colors/30/1.png",
+      "positioning": ["380px", "118px"],
       "styles": [
         {
           "id": "30-4-burner-electric-smoothtop",
           "title": "30\" 4-Burner Electric Smoothtop, Controls on Cooktop",
-          "src": "",
-          "baseModelSrc": "",
-          "modelSrc": "",
+          "src": "heritage/range/cooktop/thumbs/2.jpg",
+          "baseModelSrc": "heritage/range/colors/30/1.png",
+          "modelSrc": "heritage/range/cooktop/2.png",
           "options": [
             "colours",
             "oven",
@@ -443,7 +116,15 @@
             "trivet",
             "ventilation"
           ],
-          "configureOrder": [],
+          "configureOrder": [
+            "colours",
+            "style",
+            "metal-trim",
+            "door-frames",
+            "legs-trim",
+            "front-skirt",
+            "trivet"
+          ],
           "nestedOptions": { "oven": ["electric-self-convection"] },
           "insert": true
         },
@@ -452,9 +133,8 @@
           "title": "45\" 6-Burner Electric Smoothtop, Controls on Cooktop",
           "env": "45",
           "envOrder": 1,
-          "src": "",
-          "baseModelSrc": "",
-          "modelSrc": "",
+          "src": "heritage/range/cooktop/thumbs/6.jpg",
+          "modelSrc": "heritage/range/colors/45/1.png",
           "options": [
             "colours",
             "oven",
@@ -466,15 +146,23 @@
             "trivet",
             "ventilation"
           ],
-          "configureOrder": [],
-          "nestedOptions": { "oven": ["electric-self-convection"] },
-          "insert": true
+          "configureOrder": [
+            "colours",
+            "style",
+            "metal-trim",
+            "door-frames",
+            "legs-trim",
+            "front-skirt",
+            "trivet"
+          ],
+          "nestedOptions": { "oven": ["electric-self-convection"] }
         },
         {
           "id": "30-4-burner-gas",
           "title": "30\" 4-Burner Gas",
-          "src": "",
-          "modelSrc": "",
+          "src": "heritage/range/cooktop/thumbs/4.jpg",
+          "baseModelSrc": "heritage/range/colors/30/1.png",
+          "modelSrc": "heritage/range/cooktop/4.png",
           "options": [
             "gas-type",
             "colours",
@@ -487,13 +175,23 @@
             "trivet",
             "ventilation"
           ],
-          "configureOrder": []
+          "configureOrder": [
+            "colours",
+            "style",
+            "metal-trim",
+            "door-frames",
+            "legs-trim",
+            "front-skirt",
+            "trivet"
+          ],
+          "insert": true
         },
         {
           "id": "45-6-burner-gas",
           "title": "45\" 6-Burner Gas",
-          "src": "",
-          "modelSrc": "",
+          "src": "heritage/range/cooktop/thumbs/9.jpg",
+          "baseModelSrc": "heritage/range/colors/45/1.png",
+          "modelSrc": "heritage/range/cooktop/9.png",
           "options": [
             "gas-type",
             "colours",
@@ -506,13 +204,23 @@
             "trivet",
             "ventilation"
           ],
-          "configureOrder": []
+          "configureOrder": [
+            "colours",
+            "style",
+            "metal-trim",
+            "door-frames",
+            "legs-trim",
+            "front-skirt",
+            "trivet"
+          ],
+          "insert": true
         },
         {
           "id": "45-6-burner-dual-fuel",
           "title": "45\" 6-Burner Dual Fuel, 4 Gas, 2 Smoothtop",
-          "src": "",
-          "modelSrc": "",
+          "src": "heritage/range/cooktop/thumbs/10.jpg",
+          "baseModelSrc": "heritage/range/colors/45/1.png",
+          "modelSrc": "heritage/range/cooktop/10.png",
           "options": [
             "gas-type",
             "colours",
@@ -525,8 +233,16 @@
             "trivet",
             "ventilation"
           ],
-          "configureOrder": [],
-          "nestedOptions": { "oven": ["electric-self-convection"] }
+          "configureOrder": [
+            "colours",
+            "style",
+            "metal-trim",
+            "door-frames",
+            "legs-trim",
+            "front-skirt",
+            "trivet"
+          ],
+          "insert": true
         }
       ],
       "modelOptions": [
@@ -555,15 +271,85 @@
           "text": "Colour",
           "opt": [
             {
-              "id": "textured-black",
-              "title": "Textured Black",
+              "id": "bisque",
+              "title": "Bisque",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/7.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/7.png",
+                "30-4-burner-gas": "heritage/range/colors/30/7.png",
+                "45-6-burner-gas": "heritage/range/colors/45/7.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/7.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "black-bisque",
+              "title": "Black/Bisque",
+              "src": "heritage/range/colors/thumbs/Black-Bisque.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/2.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/2.png",
+                "30-4-burner-gas": "heritage/range/colors/30/2.png",
+                "45-6-burner-gas": "heritage/range/colors/45/2.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/2.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "black-white",
+              "title": "Black/White",
+              "src": "heritage/range/colors/thumbs/Black-White.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/5.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/5.png",
+                "30-4-burner-gas": "heritage/range/colors/30/5.png",
+                "45-6-burner-gas": "heritage/range/colors/45/5.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/5.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "black",
+              "title": "Black",
+              "src": "heritage/range/colors/thumbs/black.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/1.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/1.png",
+                "30-4-burner-gas": "heritage/range/colors/30/1.png",
+                "45-6-burner-gas": "heritage/range/colors/45/1.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/1.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "cayenne-pepper-red",
+              "title": "Cayenne Pepper Red",
+              "src": "heritage/range/colors/thumbs/Cayenne-Pepper-Red.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/3.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/3.png",
+                "30-4-burner-gas": "heritage/range/colors/30/3.png",
+                "45-6-burner-gas": "heritage/range/colors/45/3.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/3.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "liberty-blue",
+              "title": "Libery Blue",
+              "src": "heritage/range/colors/thumbs/Liberty-Blue.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/4.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/4.png",
+                "30-4-burner-gas": "heritage/range/colors/30/4.png",
+                "45-6-burner-gas": "heritage/range/colors/45/4.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/4.png"
               },
               "usa": 0,
               "canada": 0
@@ -573,95 +359,11 @@
               "title": "White",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "bisque",
-              "title": "Bisque",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "candy-red",
-              "title": "Candy Red",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "buttercup-yellow",
-              "title": "Buttercup Yellow",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "robins-egg-blue",
-              "title": "Robins Egg Blue",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "tropical-blue",
-              "title": "Tropical Blue",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "mint-green",
-              "title": "Mint Green",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
+                "30-4-burner-electric-smoothtop": "heritage/range/colors/30/6.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/colors/45/6.png",
+                "30-4-burner-gas": "heritage/range/colors/30/6.png",
+                "45-6-burner-gas": "heritage/range/colors/45/6.png",
+                "45-6-burner-dual-fuel": "heritage/range/colors/45/6.png"
               },
               "usa": 0,
               "canada": 0
@@ -676,7 +378,7 @@
               "id": "electric-self-convection",
               "title": "Electric self-cleaning true convection oven",
               "populate": ["cord-type"],
-              "src": "css",
+              "src": "heritage/range/oven/thumbs/1.jpg",
               "usa": 400,
               "canada": 0
             },
@@ -684,7 +386,7 @@
               "id": "gas-self",
               "title": "Gas self-cleaning oven",
               "removeAssociated": "electric-self-convection",
-              "src": "css",
+              "src": "heritage/range/oven/thumbs/2.jpg",
               "usa": 0,
               "canada": 0
             }
@@ -719,13 +421,13 @@
               "id": "metal-trim-nickel",
               "title": "Nickel",
               "populate": ["antiquing"],
-              "src": "css",
+              "src": "heritage/range/metal-trim/thumbs/1.jpg",
               "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
+                "30-4-burner-electric-smoothtop": "heritage/range/metal-trim/30/1.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/metal-trim/45/1.png",
+                "30-4-burner-gas": "heritage/range/metal-trim/30/1.png",
+                "45-6-burner-gas": "heritage/range/metal-trim/45/1.png",
+                "45-6-burner-dual-fuel": "heritage/range/metal-trim/45/1.png"
               },
               "usa": 0,
               "canada": 0
@@ -734,8 +436,14 @@
               "id": "metal-trim-copper",
               "title": "Copper",
               "removeAssociated": "metal-trim-nickel",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/metal-trim/thumbs/2.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/metal-trim/30/2.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/metal-trim/45/2.png",
+                "30-4-burner-gas": "heritage/range/metal-trim/30/2.png",
+                "45-6-burner-gas": "heritage/range/metal-trim/45/2.png",
+                "45-6-burner-dual-fuel": "heritage/range/metal-trim/45/2.png"
+              },
               "usa": 0,
               "canada": 0
             }
@@ -748,21 +456,20 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/door-frames/thumbs/0.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "css",
+              "src": "heritage/range/door-frames/thumbs/1.jpg",
               "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
+                "30-4-burner-electric-smoothtop": "heritage/range/door-frames/30/1.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/door-frames/45/1.png",
+                "30-4-burner-gas": "heritage/range/door-frames/30/1.png",
+                "45-6-burner-gas": "heritage/range/door-frames/45/1.png",
+                "45-6-burner-dual-fuel": "heritage/range/door-frames/45/1.png"
               },
               "usa": 0,
               "canada": 0
@@ -770,8 +477,14 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/door-frames/thumbs/2.jpg",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "heritage/range/door-frames/30/2.png",
+                "45-6-burner-electric-smoothtop": "heritage/range/door-frames/45/2.png",
+                "30-4-burner-gas": "heritage/range/door-frames/30/2.png",
+                "45-6-burner-gas": "heritage/range/door-frames/45/2.png",
+                "45-6-burner-dual-fuel": "heritage/range/door-frames/45/2.png"
+              },
               "usa": 0,
               "canada": 0
             }
@@ -784,16 +497,14 @@
             {
               "id": "standard",
               "title": "Standard",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/leg/thumbs/standard.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "short",
               "title": "Short",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/leg/thumbs/short.jpg",
               "usa": 0,
               "canada": 0
             }
@@ -806,30 +517,23 @@
             {
               "id": "no-trim",
               "title": "No Trim",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/leg/thumbs/0.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
+              "src": "heritage/range/leg/thumbs/1.jpg",
+              "modelSrc": "heritage/range/leg/1.png",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "copper",
               "title": "Copper",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/leg/thumbs/2.jpg",
+              "modelSrc": "heritage/range/leg/2.png",
               "usa": 0,
               "canada": 0
             }
@@ -842,30 +546,23 @@
             {
               "id": "no-skirt",
               "title": "No Skirt",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/skirt/thumbs/0.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
+              "src": "heritage/range/skirt/thumbs/1.jpg",
+              "modelSrc": "heritage/range/skirt/1.png",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "copper",
               "title": "Copper",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/skirt/thumbs/2.jpg",
+              "modelSrc": "heritage/range/skirt/2.png",
               "usa": 0,
               "canada": 0
             }
@@ -878,30 +575,23 @@
             {
               "id": "no-trivet",
               "title": "No Trivet",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/trivet/thumbs/0.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
+              "src": "heritage/range/trivet/thumbs/1.jpg",
+              "modelSrc": "heritage/range/trivet/1.png",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "copper",
               "title": "Copper",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/trivet/thumbs/2.jpg",
+              "modelSrc": "heritage/range/trivet/2.png",
               "usa": 0,
               "canada": 0
             }
@@ -914,30 +604,21 @@
             {
               "id": "standard",
               "title": "Standard",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/optional-ventilation/thumbs/inline.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "in-line",
               "title": "In Line",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-smoothtop": "",
-                "45-6-burner-electric-smoothtop": "",
-                "30-4-burner-gas": "",
-                "45-6-burner-gas": "",
-                "45-6-burner-dual-fuel": ""
-              },
+              "src": "heritage/range/optional-ventilation/thumbs/inline.jpg",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "wall-mounted",
               "title": "Wall Mounted",
-              "src": "css",
-              "modelSrc": "",
+              "src": "heritage/range/optional-ventilation/thumbs/throughwall.jpg",
               "usa": 0,
               "canada": 0
             }
@@ -952,7 +633,6 @@
               "id": "yes",
               "title": "yes",
               "src": "css",
-              "modelSrc": "",
               "usa": 0,
               "canada": 0
             },
@@ -960,7 +640,6 @@
               "id": "no",
               "title": "No",
               "src": "css",
-              "modelSrc": "",
               "usa": 0,
               "canada": 0
             }
@@ -1122,229 +801,35 @@
       ]
     },
     {
-      "name": "microwave",
-      "bg": "northstar/microwave/bg.jpg",
-      "defaultModelSrc": "northstar/microwave/candy-red.png",
-      "configureOrder": ["style", "colours"],
-      "positioning": ["62px", "214px"],
-      "modelOptions": [
-        {
-          "id": "colours",
-          "text": "Colour",
-          "opt": [
-            {
-              "id": "textured-black",
-              "title": "Textured Black",
-              "src": "css",
-              "modelSrc": "northstar/microwave/textured-black.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "white",
-              "title": "White",
-              "src": "css",
-              "modelSrc": "northstar/microwave/white.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "bisque",
-              "title": "Bisque",
-              "src": "css",
-              "modelSrc": "northstar/microwave/bisque.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "candy-red",
-              "title": "Candy Red",
-              "src": "css",
-              "modelSrc": "northstar/microwave/candy-red.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "buttercup-yellow",
-              "title": "Buttercup Yellow",
-              "src": "css",
-              "modelSrc": "northstar/microwave/buttercup-yellow.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "robins-egg-blue",
-              "title": "Robins Egg Blue",
-              "src": "css",
-              "modelSrc": "northstar/microwave/robbins-egg-blue.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "tropical-blue",
-              "title": "Tropical Blue",
-              "src": "css",
-              "modelSrc": "northstar/microwave/tropical-blue.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "mint-green",
-              "title": "Mint Green",
-              "src": "css",
-              "modelSrc": "northstar/microwave/mint-green.png",
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        }
-      ],
-      "pricing": [
-        {
-          "modelName": "Model 1953",
-          "onSelection": {},
-          "usa": 795,
-          "canada": ""
-        }
-      ]
-    },
-    {
-      "name": "dishwasher",
-      "bg": "northstar/dishwasher/bg.jpg",
-      "defaultModelSrc": "northstar/dishwasher/candy-red.png",
-      "configureOrder": ["style", "colours"],
-      "positioning": ["82px", "305px"],
-      "styles": [
-        {
-          "id": "panel-only",
-          "title": "Panel Only",
-          "src": "northstar/dishwasher/model-1957-thumbnail.png",
-          "options": ["colours"]
-        },
-        {
-          "id": "complete-dishwasher",
-          "title": "Complete Dishwasher",
-          "src": "northstar/dishwasher/model-1957-dw-thumbnail.png",
-          "options": ["colours"]
-        }
-      ],
-      "modelOptions": [
-        {
-          "id": "colours",
-          "text": "Colour",
-          "opt": [
-            {
-              "id": "textured-black",
-              "title": "Textured Black",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/textured-black.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "white",
-              "title": "White",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/white.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "bisque",
-              "title": "Bisque",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/bisque.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "candy-red",
-              "title": "Candy Red",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/candy-red.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "buttercup-yellow",
-              "title": "Buttercup Yellow",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/buttercup-yellow.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "robins-egg-blue",
-              "title": "Robins Egg Blue",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/robbins-egg-blue.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "tropical-blue",
-              "title": "Tropical Blue",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/tropical-blue.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "mint-green",
-              "title": "Mint Green",
-              "src": "css",
-              "modelSrc": "northstar/dishwasher/mint-green.png",
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        }
-      ],
-      "pricing": [
-        {
-          "modelName": "Model 1957",
-          "onSelection": {},
-          "usa": 395,
-          "canada": ""
-        },
-        {
-          "modelName": "Model 1957DW",
-          "onSelection": { "style": "complete-dishwasher" },
-          "usa": 2995,
-          "canada": ""
-        }
-      ]
-    },
-    {
       "name": "refrigerator",
-      "defaultModelSrc": "northstar/fridge/colors/1950/candy-red.png",
-      "configureOrder": ["style", "colours"],
-      "positioning": ["638px", "90px"],
-      "pos_refrigerator_36": ["636px", "83px"],
-      "pos_range_36&refrigerator_36": ["657px", "84px"],
-      "pos_range_36&refrigerator_24": ["655px", "91px"],
+      "defaultModelSrc": "heritage/refrigerator/colors/1898/1.png",
+      "configureOrder": [],
+      "positioning": ["61px", "76px"],
+      "30_36": ["61px", "76px"],
+      "36_36": ["657px", "84px"],
+      "36_24": ["655px", "91px"],
       "styles": [
         {
-          "id": "1950",
-          "title": "Model 1950 30\" 18.5 cubic foot with Bottom Freezer",
-          "src": "northstar/fridge/colors/thumbs/northerstar-30-model-1950-thumbnail.png",
-          "modelSrc": "northstar/fridge/colors/1950/candy-red.png",
-          "options": ["colours", "hinge", "ice-maker"]
+          "id": "1896",
+          "title": "Model 1896 30\" 18.5 cubic foot with Bottom Freezer",
+          "src": "",
+          "modelSrc": "",
+          "options": []
         },
         {
-          "id": "1951",
-          "title": "Model 1951 24\" 11.5 cubic foot with Top Freezer",
-          "src": "northstar/fridge/colors/thumbs/northerstar-24-model-1951-thumbnail.png",
+          "id": "1898",
+          "title": "Model 1898 36\" 24.8 cubic foot French Door - Full Depth",
+          "src": "",
           "env": "24",
-          "modelSrc": "northstar/fridge/colors/1951/candy-red.png",
-          "options": ["colours", "hinge"]
+          "modelSrc": "",
+          "options": []
         },
         {
-          "id": "1952",
-          "title": "Model 1952 30\" 18.2 cubic foot with Top Freezer",
-          "src": "northstar/fridge/colors/thumbs/northerstar-30-model-1952-thumbnail.png",
-          "modelSrc": "northstar/fridge/colors/1952/candy-red.png",
-          "options": ["colours", "hinge", "ice-maker"]
+          "id": "1899",
+          "title": "Model 1899 36\" 19.8 cubic foot French Door - Cabinet Depth",
+          "src": "",
+          "modelSrc": "",
+          "options": []
         },
         {
           "id": "1958",
@@ -1483,6 +968,53 @@
           ]
         },
         {
+          "id": "handle",
+          "text": "Handle",
+          "opt": [
+            {
+              "id": "nickle",
+              "title": "Nickle",
+              "src": "css",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "usa": 50,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "door-frame",
+          "text": "Door Frame",
+          "opt": [
+            {
+              "id": "no-frame",
+              "title": "No Frame",
+              "src": "css",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "nickle",
+              "title": "Nickle",
+              "src": "css",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "usa": 50,
+              "canada": 0
+            }
+          ]
+        },
+        {
           "id": "hinge",
           "text": "Hinge",
           "opt": [
@@ -1582,6 +1114,200 @@
           "modelName": "Model 1959",
           "onSelection": { "style": "1959" },
           "usa": 7295,
+          "canada": ""
+        }
+      ]
+    },
+    {
+      "name": "microwave",
+      "bg": "northstar/microwave/bg.jpg",
+      "defaultModelSrc": "heritage/microwave/black.png",
+      "configureOrder": ["style", "colours"],
+      "positioning": ["642px", "129px"],
+      "modelOptions": [
+        {
+          "id": "colours",
+          "text": "Colour",
+          "opt": [
+            {
+              "id": "textured-black",
+              "title": "Textured Black",
+              "src": "css",
+              "modelSrc": "northstar/microwave/textured-black.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "white",
+              "title": "White",
+              "src": "css",
+              "modelSrc": "northstar/microwave/white.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "bisque",
+              "title": "Bisque",
+              "src": "css",
+              "modelSrc": "northstar/microwave/bisque.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "candy-red",
+              "title": "Candy Red",
+              "src": "css",
+              "modelSrc": "northstar/microwave/candy-red.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "buttercup-yellow",
+              "title": "Buttercup Yellow",
+              "src": "css",
+              "modelSrc": "northstar/microwave/buttercup-yellow.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "robins-egg-blue",
+              "title": "Robins Egg Blue",
+              "src": "css",
+              "modelSrc": "northstar/microwave/robbins-egg-blue.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "tropical-blue",
+              "title": "Tropical Blue",
+              "src": "css",
+              "modelSrc": "northstar/microwave/tropical-blue.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "mint-green",
+              "title": "Mint Green",
+              "src": "css",
+              "modelSrc": "northstar/microwave/mint-green.png",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        }
+      ],
+      "pricing": [
+        {
+          "modelName": "Model 1953",
+          "onSelection": {},
+          "usa": 795,
+          "canada": ""
+        }
+      ]
+    },
+    {
+      "name": "wall-oven",
+      "bg": "northstar/dishwasher/bg.jpg",
+      "defaultModelSrc": "heritage/wallOven/colors/1.png",
+      "configureOrder": ["style", "colours"],
+      "positioning": ["650px", "183px"],
+      "styles": [
+        {
+          "id": "panel-only",
+          "title": "Panel Only",
+          "src": "northstar/dishwasher/model-1957-thumbnail.png",
+          "options": ["colours"]
+        },
+        {
+          "id": "complete-dishwasher",
+          "title": "Complete Dishwasher",
+          "src": "northstar/dishwasher/model-1957-dw-thumbnail.png",
+          "options": ["colours"]
+        }
+      ],
+      "modelOptions": [
+        {
+          "id": "colours",
+          "text": "Colour",
+          "opt": [
+            {
+              "id": "textured-black",
+              "title": "Textured Black",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/textured-black.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "white",
+              "title": "White",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/white.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "bisque",
+              "title": "Bisque",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/bisque.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "candy-red",
+              "title": "Candy Red",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/candy-red.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "buttercup-yellow",
+              "title": "Buttercup Yellow",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/buttercup-yellow.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "robins-egg-blue",
+              "title": "Robins Egg Blue",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/robbins-egg-blue.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "tropical-blue",
+              "title": "Tropical Blue",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/tropical-blue.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "mint-green",
+              "title": "Mint Green",
+              "src": "css",
+              "modelSrc": "northstar/dishwasher/mint-green.png",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        }
+      ],
+      "pricing": [
+        {
+          "modelName": "Model 1957",
+          "onSelection": {},
+          "usa": 395,
+          "canada": ""
+        },
+        {
+          "modelName": "Model 1957DW",
+          "onSelection": { "style": "complete-dishwasher" },
+          "usa": 2995,
           "canada": ""
         }
       ]
