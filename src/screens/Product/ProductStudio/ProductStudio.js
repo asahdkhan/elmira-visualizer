@@ -144,10 +144,12 @@ const ProductStudioStage1 = () => {
 
     let updatedOptionsData = [];
     if (!appliance[key]?.populate && selectedOption?.populate) {
-      updatedOptionsData = [
-        ...modelOptions,
-        ...modelOptionsData.filter((mO) => mO.if === selectedOption?.id),
-      ];
+      const populateArr = modelOptionsData.filter(
+        (mO) => mO.if === selectedOption?.id,
+      );
+      const selectednOptionIndex = modelOptions.findIndex((x) => x.id === key);
+      updatedOptionsData = [...modelOptions];
+      updatedOptionsData.splice(selectednOptionIndex + 1, 0, ...populateArr);
     } else if (selectedOption?.removeAssociated) {
       updatedOptionsData = modelOptions.filter((mO) => {
         if (mO.if === selectedOption?.removeAssociated) {

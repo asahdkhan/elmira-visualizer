@@ -1,5 +1,5 @@
 {
-  "name": "northstar",
+  "name": "heritage",
   "src": "",
   "defaultAppliancesSrc": "",
   "configuratorIcon": [
@@ -14,8 +14,8 @@
       "positioning": "NorthstarIconSecond"
     },
     {
-      "id": "rangehood",
-      "title": "Configure your Rangehood & Splashback",
+      "id": "wall-oven",
+      "title": "Configure your Wall Oven",
       "positioning": "NorthstarIconThird"
     },
     {
@@ -31,66 +31,65 @@
   ],
   "cabinetColour": [
     {
-      "name": "Charcoal",
-      "icon": "northstar/cabinet/icon-ball/charcoal.jpg",
-      "src": "northstar/cabinet/charcoal/charcoal-30-30.png",
-      "src_36_30": "northstar/cabinet/charcoal/charcoal-36-30.png",
-      "src_30_36": "northstar/cabinet/charcoal/charcoal-30-36.png",
-      "src_30_24": "northstar/cabinet/charcoal/charcoal-30-24.png",
-      "src_36_36": "northstar/cabinet/charcoal/charcoal-36-36.png",
-      "src_36_24": "northstar/cabinet/charcoal/charcoal-36-24.png",
-      "patch": "northstar/cabinet/charcoal/charcoal-top-30-30.png",
-      "patch_36_30": "northstar/cabinet/charcoal/charcoal-top-36-30.png",
-      "patch_30_36": "northstar/cabinet/charcoal/charcoal-top-30-36.png",
-      "patch_30_24": "northstar/cabinet/charcoal/charcoal-top-30-24.png",
-      "patch_36_36": "northstar/cabinet/charcoal/charcoal-top-36-36.png",
-      "patch_36_24": "northstar/cabinet/charcoal/charcoal-top-36-24.png",
+      "name": "White",
+      "icon": "heritage/cabinet/icon-ball/white.jpg",
+      "src": "heritage/cabinet/white/white-30-30.png",
+      "src_range_45": "heritage/cabinet/white/white-45-30.png",
+      "src_refrigerator_36": "heritage/cabinet/white/white-30-36.png",
+      "src_range_45&refrigerator_36": "heritage/cabinet/charcoal/charcoal-36-36.png",
+      "src_range_45&refrigerator_24": "heritage/cabinet/charcoal/charcoal-36-24.png",
+      "patch": "heritage/cabinet/charcoal/charcoal-top-30-30.png",
+      "patch_range_36": "heritage/cabinet/charcoal/charcoal-top-36-30.png",
+      "patch_refrigerator_36": "heritage/cabinet/charcoal/charcoal-top-30-36.png",
+      "patch_refrigerator_24": "heritage/cabinet/charcoal/charcoal-top-30-24.png",
+      "patch_range_36&refrigerator_36": "heritage/cabinet/charcoal/charcoal-top-36-36.png",
+      "patch_range_36&refrigerator_24": "heritage/cabinet/charcoal/charcoal-top-36-24.png",
       "default": true
     },
     {
       "name": "Light Wood",
-      "icon": "northstar/cabinet/icon-ball/lightwood.jpg",
-      "src": "northstar/cabinet/lightwood/lightwood-30-30.png",
-      "src_36_30": "northstar/cabinet/lightwood/lightwood-36-30.png",
-      "src_30_36": "northstar/cabinet/lightwood/lightwood-30-36.png",
-      "src_30_24": "northstar/cabinet/lightwood/lightwood-30-24.png",
-      "src_36_36": "northstar/cabinet/lightwood/lightwood-36-36.png",
-      "src_36_24": "northstar/cabinet/lightwood/lightwood-36-24.png",
-      "patch": "northstar/cabinet/lightwood/lightwood-top-30-30.png",
-      "patch_36_30": "northstar/cabinet/lightwood/lightwood-top-36-30.png",
-      "patch_30_36": "northstar/cabinet/lightwood/lightwood-top-30-36.png",
-      "patch_30_24": "northstar/cabinet/lightwood/lightwood-top-30-24.png",
-      "patch_36_36": "northstar/cabinet/lightwood/lightwood-top-36-36.png",
-      "patch_36_24": "northstar/cabinet/lightwood/lightwood-top-36-24.png"
+      "icon": "heritage/cabinet/icon-ball/lightwood.jpg",
+      "src": "heritage/cabinet/lightwood/lightwood-30-30.png",
+      "src_range_36": "heritage/cabinet/lightwood/lightwood-36-30.png",
+      "src_refrigerator_36": "heritage/cabinet/lightwood/lightwood-30-36.png",
+      "src_refrigerator_24": "norheritagethstar/cabinet/lightwood/lightwood-30-24.png",
+      "src_range_36&refrigerator_36": "heritage/cabinet/lightwood/lightwood-36-36.png",
+      "src_range_36&refrigerator_24": "heritage/cabinet/lightwood/lightwood-36-24.png",
+      "patch": "heritage/cabinet/lightwood/lightwood-top-30-30.png",
+      "patch_range_36": "heritage/cabinet/lightwood/lightwood-top-36-30.png",
+      "patch_refrigerator_36": "heritage/cabinet/lightwood/lightwood-top-30-36.png",
+      "patch_refrigerator_24": "heritage/cabinet/lightwood/lightwood-top-30-24.png",
+      "patch_range_36&refrigerator_36": "heritage/cabinet/lightwood/lightwood-top-36-36.png",
+      "patch_range_36&refrigerator_24": "heritage/cabinet/lightwood/lightwood-top-36-24.png"
     },
     {
-      "name": "White",
-      "icon": "northstar/cabinet/icon-ball/white.jpg",
-      "src": "northstar/cabinet/white/white-30-30.png",
-      "src_36_30": "northstar/cabinet/white/white-36-30.png",
-      "src_30_36": "northstar/cabinet/white/white-30-36.png",
-      "src_30_24": "northstar/cabinet/white/white-30-24.png",
-      "src_36_36": "northstar/cabinet/white/white-36-36.png",
-      "src_36_24": "northstar/cabinet/white/white-36-24.png",
-      "patch": "northstar/cabinet/white/white-top-30-30.png",
-      "patch_36_30": "northstar/cabinet/white/white-top-36-30.png",
-      "patch_30_36": "northstar/cabinet/white/white-top-30-36.png",
-      "patch_30_24": "northstar/cabinet/white/white-top-30-24.png",
-      "patch_36_36": "northstar/cabinet/white/white-top-36-36.png",
-      "patch_36_24": "northstar/cabinet/white/white-top-36-24.png"
+      "name": "Darkwood",
+      "icon": "heritage/cabinet/icon-ball/darkwood.jpg",
+      "src": "heritage/cabinet/darkwood/darkwood-30-30.png",
+      "src_range_36": "heritage/cabinet/darkwood/darkwood-36-30.png",
+      "src_refrigerator_36": "heritage/cabinet/darkwood/darkwood-30-36.png",
+      "src_refrigerator_24": "heritage/cabinet/darkwood/darkwood-30-24.png",
+      "src_range_36&refrigerator_36": "heritage/cabinet/darkwood/darkwood-36-36.png",
+      "src_range_36&refrigerator_24": "heritage/cabinet/darkwood/darkwood-36-24.png",
+      "patch": "heritage/cabinet/darkwood/darkwood-top-30-30.png",
+      "patch_range_36": "heritage/cabinet/darkwood/darkwood-top-36-30.png",
+      "patch_refrigerator_36": "heritage/cabinet/darkwood/darkwood-top-30-36.png",
+      "patch_refrigerator_24": "heritage/cabinet/darkwood/darkwood-top-30-24.png",
+      "patch_range_36&refrigerator_36": "heritage/cabinet/darkwood/darkwood-top-36-36.png",
+      "patch_range_36&refrigerator_24": "heritage/cabinet/darkwood/darkwood-top-36-24.png"
     }
   ],
   "flooringStyle": [
     {
       "name": "Dark Floor",
       "icon": "northstar/floor/icon-ball/dark-floor.jpg",
-      "src": "northstar/floor/dark-floor/dark-floor-30-30.png",
+      "src": "0",
       "default": true
     },
     {
       "name": "Wood Floor",
       "icon": "northstar/floor/icon-ball/wood-floor.jpg",
-      "src": "northstar/floor/wood-floor/wood-floor-30-30.png"
+      "src": "1"
     }
   ],
   "appliances": [
@@ -120,8 +119,6 @@
           "title": "1963 36\" Outside-Vent",
           "bg": "northstar/rangehood/bg36.jpg",
           "src": "northstar/rangehood/model/thumbs/1963.jpg",
-          "env": "36",
-          "envOrder": 0,
           "modelSrc": "northstar/rangehood/1963/candy-red.png",
           "options": ["colours", "splashback", "duck-cover-kit"]
         }
@@ -425,40 +422,111 @@
     },
     {
       "name": "range",
-      "baseModelSrc": "northstar/range/colors/30-painted/candy-red.png",
-      "defaultModelSrc": "northstar/range/colors/30/default-candy-red.png",
+      "baseModelSrc": "",
+      "defaultModelSrc": "",
       "positioning": ["388px", "195px"],
       "styles": [
         {
-          "id": "30-4-burner-electric-self",
-          "title": "30\" 4-Burner Electric Top, Self-Clean",
-          "src": "northstar/range/thumbnail/30-electric.png",
-          "baseModelSrc": "northstar/range/colors/30-painted/candy-red.png",
-          "modelSrc": "northstar/range/cooktop/electric.png",
-          "options": ["colours", "trim", "oven"],
-          "configureOrder": ["colours", "style", "trim"],
+          "id": "30-4-burner-electric-smoothtop",
+          "title": "30\" 4-Burner Electric Smoothtop, Controls on Cooktop",
+          "src": "",
+          "baseModelSrc": "",
+          "modelSrc": "",
+          "options": [
+            "colours",
+            "oven",
+            "metal-trim",
+            "door-frames",
+            "legs-length",
+            "legs-trim",
+            "front-skirt",
+            "trivet",
+            "ventilation"
+          ],
+          "configureOrder": [],
           "nestedOptions": { "oven": ["electric-self-convection"] },
           "insert": true
         },
         {
-          "id": "30-4-burner-gas-self",
-          "title": "30\" 4-Burner Gas Top, Self-Clean",
-          "src": "northstar/range/thumbnail/30-gas-4-burner.png",
-          "baseModelSrc": "northstar/range/colors/30-painted/candy-red.png",
-          "modelSrc": "northstar/range/cooktop/4-burner.png",
-          "options": ["gas-type", "colours", "trim", "oven"],
-          "configureOrder": ["colours", "style", "trim"],
+          "id": "45-6-burner-electric-smoothtop",
+          "title": "45\" 6-Burner Electric Smoothtop, Controls on Cooktop",
+          "env": "45",
+          "envOrder": 1,
+          "src": "",
+          "baseModelSrc": "",
+          "modelSrc": "",
+          "options": [
+            "colours",
+            "oven",
+            "metal-trim",
+            "door-frames",
+            "legs-length",
+            "legs-trim",
+            "front-skirt",
+            "trivet",
+            "ventilation"
+          ],
+          "configureOrder": [],
+          "nestedOptions": { "oven": ["electric-self-convection"] },
           "insert": true
         },
         {
-          "id": "30-6-burner-gas",
-          "title": "36\" 6-Burner Gas Top",
-          "env": "36",
-          "envOrder": 0,
-          "src": "northstar/range/thumbnail/36-gas.png",
-          "modelSrc": "northstar/range/colors/36-painted/candy-red.png",
-          "options": ["gas-type", "colours", "trim"],
-          "configureOrder": ["colours", "trim", "style"]
+          "id": "30-4-burner-gas",
+          "title": "30\" 4-Burner Gas",
+          "src": "",
+          "modelSrc": "",
+          "options": [
+            "gas-type",
+            "colours",
+            "oven",
+            "metal-trim",
+            "door-frames",
+            "legs-length",
+            "legs-trim",
+            "front-skirt",
+            "trivet",
+            "ventilation"
+          ],
+          "configureOrder": []
+        },
+        {
+          "id": "45-6-burner-gas",
+          "title": "45\" 6-Burner Gas",
+          "src": "",
+          "modelSrc": "",
+          "options": [
+            "gas-type",
+            "colours",
+            "oven",
+            "metal-trim",
+            "door-frames",
+            "legs-length",
+            "legs-trim",
+            "front-skirt",
+            "trivet",
+            "ventilation"
+          ],
+          "configureOrder": []
+        },
+        {
+          "id": "45-6-burner-dual-fuel",
+          "title": "45\" 6-Burner Dual Fuel, 4 Gas, 2 Smoothtop",
+          "src": "",
+          "modelSrc": "",
+          "options": [
+            "gas-type",
+            "colours",
+            "oven",
+            "metal-trim",
+            "door-frames",
+            "legs-length",
+            "legs-trim",
+            "front-skirt",
+            "trivet",
+            "ventilation"
+          ],
+          "configureOrder": [],
+          "nestedOptions": { "oven": ["electric-self-convection"] }
         }
       ],
       "modelOptions": [
@@ -491,9 +559,11 @@
               "title": "Textured Black",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/textured-black.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/textured-black.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/textured-black.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -503,9 +573,11 @@
               "title": "White",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/white.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/white.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/white.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -515,9 +587,11 @@
               "title": "Bisque",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/bisque.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/bisque.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/bisque.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -527,9 +601,11 @@
               "title": "Candy Red",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/candy-red.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/candy-red.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/candy-red.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -539,9 +615,11 @@
               "title": "Buttercup Yellow",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/buttercup-yellow.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/buttercup-yellow.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/buttercup-yellow.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -551,9 +629,11 @@
               "title": "Robins Egg Blue",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/robbins-egg-blue.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/robbins-egg-blue.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/robbins-egg-blue.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -563,9 +643,11 @@
               "title": "Tropical Blue",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/tropical-blue.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/tropical-blue.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/tropical-blue.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
               "usa": 0,
               "canada": 0
@@ -575,36 +657,12 @@
               "title": "Mint Green",
               "src": "css",
               "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/colors/30-painted/mint-green.png",
-                "30-4-burner-gas-self": "northstar/range/colors/30-painted/mint-green.png",
-                "30-6-burner-gas": "northstar/range/colors/36-painted/mint-green.png"
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
               },
-              "usa": 0,
-              "canada": 0
-            }
-          ]
-        },
-        {
-          "id": "trim",
-          "text": "Trim",
-          "opt": [
-            {
-              "id": "chrome",
-              "title": "Chrome",
-              "src": "css",
-              "modelSrc": {
-                "30-4-burner-electric-self": "northstar/range/chrome/chrome-range.png",
-                "30-4-burner-gas-self": "northstar/range/chrome/chrome-range.png",
-                "30-6-burner-gas": "northstar/range/chrome/36-chrome.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "painted",
-              "title": "Painted",
-              "src": "css",
-              "modelSrc": "",
               "usa": 0,
               "canada": 0
             }
@@ -617,7 +675,7 @@
             {
               "id": "electric-self-convection",
               "title": "Electric self-cleaning true convection oven",
-              "populate": ["cord-type", "warmer"],
+              "populate": ["cord-type"],
               "src": "css",
               "usa": 400,
               "canada": 0
@@ -654,21 +712,255 @@
           ]
         },
         {
-          "id": "warmer",
-          "text": "Warmer",
-          "if": "electric-self-convection",
+          "id": "metal-trim",
+          "text": "Metal Trim Color",
+          "opt": [
+            {
+              "id": "metal-trim-nickel",
+              "title": "Nickel",
+              "populate": ["antiquing"],
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "metal-trim-copper",
+              "title": "Copper",
+              "removeAssociated": "metal-trim-nickel",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "door-frames",
+          "text": "Door Frames",
+          "opt": [
+            {
+              "id": "no-frames",
+              "title": "No Frames",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "legs-length",
+          "text": "Legs Length",
+          "opt": [
+            {
+              "id": "standard",
+              "title": "Standard",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "short",
+              "title": "Short",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "legs-trim",
+          "text": "Legs Trim",
+          "opt": [
+            {
+              "id": "no-trim",
+              "title": "No Trim",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "front-skirt",
+          "text": "Front Skirt",
+          "opt": [
+            {
+              "id": "no-skirt",
+              "title": "No Skirt",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "trivet",
+          "text": "Trivet",
+          "opt": [
+            {
+              "id": "no-trivet",
+              "title": "No Trivet",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "copper",
+              "title": "Copper",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "ventilation",
+          "text": "Ventilation",
+          "opt": [
+            {
+              "id": "standard",
+              "title": "Standard",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "in-line",
+              "title": "In Line",
+              "src": "css",
+              "modelSrc": {
+                "30-4-burner-electric-smoothtop": "",
+                "45-6-burner-electric-smoothtop": "",
+                "30-4-burner-gas": "",
+                "45-6-burner-gas": "",
+                "45-6-burner-dual-fuel": ""
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "wall-mounted",
+              "title": "Wall Mounted",
+              "src": "css",
+              "modelSrc": "",
+              "usa": 0,
+              "canada": 0
+            }
+          ]
+        },
+        {
+          "id": "antiquing",
+          "if": "metal-trim-nickel",
+          "text": "Antiquing",
           "opt": [
             {
               "id": "yes",
-              "title": "Yes",
+              "title": "yes",
               "src": "css",
-              "usa": 750,
+              "modelSrc": "",
+              "usa": 0,
               "canada": 0
             },
             {
               "id": "no",
               "title": "No",
               "src": "css",
+              "modelSrc": "",
               "usa": 0,
               "canada": 0
             }
@@ -1028,9 +1320,9 @@
       "defaultModelSrc": "northstar/fridge/colors/1950/candy-red.png",
       "configureOrder": ["style", "colours"],
       "positioning": ["638px", "90px"],
-      "30_36": ["636px", "83px"],
-      "36_36": ["657px", "84px"],
-      "36_24": ["655px", "91px"],
+      "pos_refrigerator_36": ["636px", "83px"],
+      "pos_range_36&refrigerator_36": ["657px", "84px"],
+      "pos_range_36&refrigerator_24": ["655px", "91px"],
       "styles": [
         {
           "id": "1950",
@@ -1044,7 +1336,6 @@
           "title": "Model 1951 24\" 11.5 cubic foot with Top Freezer",
           "src": "northstar/fridge/colors/thumbs/northerstar-24-model-1951-thumbnail.png",
           "env": "24",
-          "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1951/candy-red.png",
           "options": ["colours", "hinge"]
         },
@@ -1060,7 +1351,6 @@
           "title": "Model 1958 36\" 24.8 cubic foot French Door - Full Depth",
           "src": "northstar/fridge/colors/thumbs/northerstar-36-model-1958-thumbnail.png",
           "env": "36",
-          "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1958/candy-red.png",
           "options": ["colours"]
         },
@@ -1069,7 +1359,6 @@
           "title": "Model 1959 36\" 19.8 cubic foot French Door - Cabinet Depth",
           "src": "northstar/fridge/colors/thumbs/northerstar-36-model-1959-thumbnail.png",
           "env": "36",
-          "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1959/candy-red.png",
           "options": ["colours"]
         }

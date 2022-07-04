@@ -23,7 +23,11 @@ let appRoutes = [
     element: <CreateKitchen />,
     children: [...childrenRoutes],
   },
-  { path: 'heritage', element: <></> },
+  {
+    path: 'heritage',
+    element: <CreateKitchen />,
+    children: [...childrenRoutes],
+  },
 ];
 
 const Routes = () => {
