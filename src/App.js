@@ -16,3 +16,24 @@ function App() {
 }
 
 export default App;
+
+// Heritage JSON (Pricing)
+// {
+//   "modelName": "Model 1865-ST-C",
+//   "onSelection": {
+//     "style": "45-4-burner-electric-smoothtop",
+//     "oven": "electric-self-convection"
+//   },
+//   "usa": 9495,
+//   "canada": 9495
+// },
+// {
+//   "modelName": "Model 1865-ST-CLP",
+//   "onSelection": {
+//     "style": "45-4-burner-electric-smoothtop",
+//     "oven": "electric-self-convection",
+//     "gas-type": "liquid-propane"
+//   },
+//   "usa": 9595,
+//   "canada": 9595
+// },

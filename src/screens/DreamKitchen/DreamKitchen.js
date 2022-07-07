@@ -4,17 +4,16 @@ import { Grid, Typography, Box, Button } from '@mui/material';
 import { StyledEngineProvider } from '@mui/material/styles';
 import { useAppData } from '../../hooks/useAppData';
 import { useMutateStorage } from '../../hooks/useMutateStorage';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const DreamKitchen = () => {
   const { appDataState } = useAppData();
   const { appliances } = appDataState?.data || {};
 
-  // const [pricing, setPricing] = useState({
-  //   totalPricing: '',
-  // });
+  const location = useLocation();
+  const parentPath = location.pathname.split('/')[1];
 
-  useMutateStorage();
+  useMutateStorage(parentPath);
 
   const navigate = useNavigate();
 

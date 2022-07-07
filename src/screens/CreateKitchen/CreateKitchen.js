@@ -29,6 +29,11 @@ const CreateKitchen = () => {
 
   const { data, configuredData } = appDataState;
 
+  // Reset configuredData on kitchen change
+  useEffect(() => {
+    reset();
+  }, [parentPath]);
+
   // console.log('configuredData', configuredData);
 
   const fetchEnvSrc = (configuredData) => {
@@ -41,6 +46,7 @@ const CreateKitchen = () => {
       envArray = envArray.filter((i) => i != undefined);
 
       const env = envArray[0] + '_' + envArray[1];
+      // console.log('env', env);
       return { env };
     }
   };
@@ -86,18 +92,27 @@ const CreateKitchen = () => {
     let env_pos = '';
     if (Object.keys(configuredData)?.length > 0 && dreamKitchen) {
       defaultAppliances = data?.appliances?.map((item) => {
-        env_pos = fetchEnvSrc(configuredData)?.env;
-        return {
-          src: configuredData?.[item.name]?.imagesSet || [item.defaultModelSrc],
-          positioning: item?.[env_pos] || item.positioning,
-        };
+        if (!item?.hide) {
+          env_pos = fetchEnvSrc(configuredData)?.env;
+          return {
+            src: configuredData?.[item.name]?.imagesSet || [
+              item.defaultModelSrc,
+            ],
+            positioning: item?.[env_pos] || item.positioning,
+          };
+        }
       });
     } else {
-      defaultAppliances = data?.appliances?.map((item) => ({
-        src: [item.defaultModelSrc],
-        positioning: item?.[env_pos] || item.positioning,
-      }));
+      defaultAppliances = data?.appliances?.map((item) => {
+        if (!item?.hide) {
+          return {
+            src: [item.defaultModelSrc],
+            positioning: item?.[env_pos] || item.positioning,
+          };
+        }
+      });
     }
+
     setKitchen((prevState) => ({
       ...prevState,
       appliancesSrc: defaultAppliances,
@@ -235,7 +250,11 @@ const CreateKitchen = () => {
                       />
                       <Button
                         variant="Button"
-                        onClick={() => reset()}
+                        onClick={() => {
+                          reset();
+                          localStorage.removeItem(parentPath);
+                          navigate(`../${parentPath}`);
+                        }}
                         className="ResetBtn"
                       >
                         RESET

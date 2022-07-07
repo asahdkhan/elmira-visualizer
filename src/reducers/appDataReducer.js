@@ -17,13 +17,13 @@ const appDataReducer = (state, { type, data }) => {
         configuredData: {
           ...state.configuredData,
           [data.applianceName]: {
-            ...state.configuredData?.[data.applianceName],
+            // ...state.configuredData?.[data.applianceName],
             ...data.configuredData,
           },
         },
       };
     case 'RESET':
-      return initialState;
+      return { ...state, configuredData: {} };
     default:
       return state;
   }

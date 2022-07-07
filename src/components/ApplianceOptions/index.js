@@ -38,7 +38,12 @@ export default function ApplianceOptions({
       // }
 
       if (typeof item?.usa === 'object') {
-        item = { ...item, usa: item?.usa[selectedOptions?.style?.id] };
+        item = {
+          ...item,
+          usa: item.priceOn
+            ? item?.usa[selectedOptions?.[item.priceOn]?.id]
+            : item?.usa[selectedOptions?.style?.id],
+        };
       }
 
       return (

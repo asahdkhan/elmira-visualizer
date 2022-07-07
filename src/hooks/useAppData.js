@@ -1,11 +1,9 @@
 /* eslint-disable */
 import { useCallback, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { AppDataContext } from '../contexts/appDataContext';
 
 export const useAppData = () => {
   const [appDataState, appDataDispatch] = useContext(AppDataContext);
-  const navigate = useNavigate();
 
   const fetchInitialData = useCallback(
     (kitchen) => {
@@ -102,8 +100,6 @@ export const useAppData = () => {
     appDataDispatch({
       type: 'RESET',
     });
-    localStorage.clear();
-    navigate('../');
   }, [appDataDispatch]);
 
   return {

@@ -2,17 +2,18 @@
 import { useEffect } from 'react';
 import { useAppData } from './useAppData';
 
-export const useMutateStorage = () => {
+export const useMutateStorage = (parentPath = '') => {
   const { appDataState, genrateApplianceImage } = useAppData();
   const { configuratorIcon, appliances } = appDataState?.data || {};
 
   useEffect(() => {
     // Optimize :  Reset configure date to avoid configured data on going back
     configuratorIcon?.map((element) => {
-      const localItem = localStorage.getItem(element.id);
+      const localData = localStorage.getItem(parentPath);
+      const parseLocalData = JSON.parse(localData)?.[element?.id] || null;
 
-      if (localItem) {
-        const { configuration } = JSON.parse(localItem);
+      if (parseLocalData) {
+        const { configuration } = parseLocalData || {};
         const appliance = appliances?.find(
           (item) => item?.name === element?.id,
         );

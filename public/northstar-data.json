@@ -239,7 +239,7 @@
               "src": "css",
               "populate": ["splashback-colors"],
               "usa": { "1961": 199, "1962": 199, "1963": 269 },
-              "canada": [0]
+              "canada": { "1961": 199, "1962": 199, "1963": 269 }
             },
             {
               "id": "no-splashback",
@@ -351,6 +351,18 @@
               },
               "usa": 0,
               "canada": 0
+            },
+            {
+              "id": "splashback-colors-white",
+              "title": "Quick Silver",
+              "src": "css",
+              "modelSrc": {
+                "1961": "northstar/splashback/30/white.png",
+                "1962": "northstar/splashback/30/white.png",
+                "1963": "northstar/splashback/36/white.png"
+              },
+              "usa": 100,
+              "canada": 100
             }
           ]
         },
@@ -380,19 +392,19 @@
           "modelName": "Model 1961 30",
           "onSelection": { "style": "1961" },
           "usa": 1895,
-          "canada": ""
+          "canada": 1895
         },
         {
           "modelName": "Model 1962 30",
           "onSelection": { "style": "1962" },
           "usa": 1995,
-          "canada": ""
+          "canada": 1995
         },
         {
           "modelName": "Model 1963 36",
           "onSelection": { "style": "1963" },
           "usa": 2395,
-          "canada": ""
+          "canada": 2395
         },
         {
           "modelName": "Model 1944 30",
@@ -400,8 +412,8 @@
             "style": "1961",
             "splashback": "yes-splashback"
           },
-          "usa": 2094,
-          "canada": ""
+          "usa": 1895,
+          "canada": 1895
         },
         {
           "modelName": "Model 1944 30",
@@ -409,8 +421,8 @@
             "style": "1962",
             "splashback": "yes-splashback"
           },
-          "usa": 2194,
-          "canada": ""
+          "usa": 1995,
+          "canada": 1995
         },
         {
           "modelName": "Model 1944 36",
@@ -418,8 +430,8 @@
             "style": "1963",
             "splashback": "yes-splashback"
           },
-          "usa": 2664,
-          "canada": ""
+          "usa": 2395,
+          "canada": 2395
         }
       ]
     },
@@ -683,7 +695,7 @@
             "gas-type": "natural-gas"
           },
           "usa": 8495,
-          "canada": ""
+          "canada": 8495
         },
         {
           "modelName": "Model 1947-CLP",
@@ -691,8 +703,8 @@
             "style": "30-6-burner-gas",
             "gas-type": "liquid-propane"
           },
-          "usa": 8595,
-          "canada": ""
+          "usa": 8495,
+          "canada": 8495
         },
         {
           "modelName": "Model 1954-C",
@@ -702,8 +714,8 @@
             "oven": "electric-self-convection",
             "cord-type": ["prong-3", "prong-4"]
           },
-          "usa": 8595,
-          "canada": ""
+          "usa": 6195,
+          "canada": 6195
         },
         {
           "modelName": "Model 1955-C",
@@ -713,8 +725,8 @@
             "trim": "chrome",
             "oven": "electric-self-convection"
           },
-          "usa": 7295,
-          "canada": ""
+          "usa": 6895,
+          "canada": 6895
         },
         {
           "modelName": "Model 1955-CLP",
@@ -725,8 +737,8 @@
             "oven": "electric-self-convection",
             "cord-type": ["prong-3", "prong-4"]
           },
-          "usa": 7395,
-          "canada": ""
+          "usa": 6895,
+          "canada": 6895
         },
         {
           "modelName": "Model 1956",
@@ -737,7 +749,7 @@
             "oven": "gas-self"
           },
           "usa": 7695,
-          "canada": ""
+          "canada": 7695
         },
         {
           "modelName": "Model 1956LP",
@@ -747,8 +759,8 @@
             "trim": "chrome",
             "oven": "gas-self"
           },
-          "usa": 7795,
-          "canada": ""
+          "usa": 7695,
+          "canada": 7695
         },
         {
           "modelName": "Model 1947P-C",
@@ -758,7 +770,7 @@
             "trim": ["chrome", "painted"]
           },
           "usa": 8495,
-          "canada": ""
+          "canada": 8495
         },
         {
           "modelName": "Model 1947P-CLP",
@@ -767,19 +779,19 @@
             "gas-type": "liquid-propane",
             "trim": ["chrome", "painted"]
           },
-          "usa": 8595,
-          "canada": ""
+          "usa": 8495,
+          "canada": 8495
         },
         {
           "modelName": "Model 1954P-C",
           "onSelection": {
             "style": "30-4-burner-electric-self",
-            "trim": "painted",
             "oven": "electric-self-convection",
+            "trim": "painted",
             "cord-type": ["prong-3", "prong-4"]
           },
-          "usa": 6595,
-          "canada": ""
+          "usa": 6195,
+          "canada": 6195
         },
         {
           "modelName": "Model 1955P-C",
@@ -790,8 +802,8 @@
             "oven": "electric-self-convection",
             "cord-type": ["prong-3", "prong-4"]
           },
-          "usa": 7295,
-          "canada": ""
+          "usa": 6895,
+          "canada": 6895
         },
         {
           "modelName": "Model 1955P-CLP",
@@ -802,8 +814,8 @@
             "oven": "electric-self-convection",
             "cord-type": ["prong-3", "prong-4"]
           },
-          "usa": 7395,
-          "canada": ""
+          "usa": 6895,
+          "canada": 6895
         },
         {
           "modelName": "Model 1956P",
@@ -824,8 +836,8 @@
             "trim": "painted",
             "oven": "gas-self"
           },
-          "usa": 7795,
-          "canada": ""
+          "usa": 7695,
+          "canada": 7695
         }
       ]
     },
@@ -835,6 +847,7 @@
       "defaultModelSrc": "northstar/microwave/candy-red.png",
       "configureOrder": ["style", "colours"],
       "positioning": ["62px", "214px"],
+      "msg": "Select Colour",
       "modelOptions": [
         {
           "id": "colours",
@@ -910,9 +923,20 @@
       "pricing": [
         {
           "modelName": "Model 1953",
-          "onSelection": {},
+          "onSelection": {
+            "colours": [
+              "textured-black",
+              "white",
+              "bisque",
+              "candy-red",
+              "buttercup-yellow",
+              "robins-egg-blue",
+              "mint-green",
+              "tropical-blue"
+            ]
+          },
           "usa": 795,
-          "canada": ""
+          "canada": 795
         }
       ]
     },
@@ -922,17 +946,20 @@
       "defaultModelSrc": "northstar/dishwasher/candy-red.png",
       "configureOrder": ["style", "colours"],
       "positioning": ["82px", "305px"],
+      "msg": "Select Model then Colour",
       "styles": [
         {
           "id": "panel-only",
           "title": "Panel Only",
           "src": "northstar/dishwasher/model-1957-thumbnail.png",
+          "modelSrc": "northstar/dishwasher/candy-red.png",
           "options": ["colours"]
         },
         {
           "id": "complete-dishwasher",
           "title": "Complete Dishwasher",
           "src": "northstar/dishwasher/model-1957-dw-thumbnail.png",
+          "modelSrc": "northstar/dishwasher/candy-red.png",
           "options": ["colours"]
         }
       ],
@@ -1011,15 +1038,15 @@
       "pricing": [
         {
           "modelName": "Model 1957",
-          "onSelection": {},
+          "onSelection": { "style": "panel-only" },
           "usa": 395,
-          "canada": ""
+          "canada": 395
         },
         {
           "modelName": "Model 1957DW",
           "onSelection": { "style": "complete-dishwasher" },
           "usa": 2995,
-          "canada": ""
+          "canada": 2995
         }
       ]
     },
@@ -1239,61 +1266,61 @@
           "modelName": "Model 1950",
           "onSelection": { "style": "1950" },
           "usa": 4795,
-          "canada": ""
+          "canada": 4795
         },
         {
           "modelName": "Model 1950-LH",
           "onSelection": { "style": "1950", "hinge": "left" },
-          "usa": 4845,
-          "canada": ""
+          "usa": 4795,
+          "canada": 4795
         },
         {
           "modelName": "Model 1950-ICE",
           "onSelection": { "style": "1950", "ice-maker": "yes" },
-          "usa": 5045,
-          "canada": ""
+          "usa": 4795,
+          "canada": 4795
         },
         {
           "modelName": "Model 1951",
           "onSelection": { "style": "1951" },
           "usa": 3995,
-          "canada": ""
+          "canada": 3295
         },
         {
           "modelName": "Model 1951-LH",
           "onSelection": { "style": "1951", "hinge": "left" },
-          "usa": 4045,
-          "canada": ""
+          "usa": 3995,
+          "canada": 3295
         },
         {
           "modelName": "Model 1952",
           "onSelection": { "style": "1952" },
           "usa": 3995,
-          "canada": ""
+          "canada": 3995
         },
         {
           "modelName": "Model 1952-LH",
           "onSelection": { "style": "1952", "hinge": "left" },
-          "usa": 4045,
-          "canada": ""
+          "usa": 3995,
+          "canada": 3995
         },
         {
           "modelName": "Model 1952-ICE",
           "onSelection": { "style": "1952", "ice-maker": "yes" },
-          "usa": 4245,
-          "canada": ""
+          "usa": 3995,
+          "canada": 3995
         },
         {
           "modelName": "Model 1958",
           "onSelection": { "style": "1958" },
           "usa": 7295,
-          "canada": ""
+          "canada": 7295
         },
         {
           "modelName": "Model 1959",
           "onSelection": { "style": "1959" },
           "usa": 7295,
-          "canada": ""
+          "canada": 7295
         }
       ]
     }

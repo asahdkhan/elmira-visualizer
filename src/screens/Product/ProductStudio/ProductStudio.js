@@ -5,7 +5,7 @@ import { Grid, Typography, Box, Button } from '@mui/material';
 import React, { useCallback, useEffect, useState } from 'react';
 // import '../../../ThemeStyle.css';
 import { useAppData } from '../../../hooks/useAppData';
-import { useNavigate, useParams } from 'react-router';
+import { useNavigate, useParams, useLocation } from 'react-router';
 import ApplianceOptions from '../../../components/ApplianceOptions';
 import Image from '../../../components/DynamicImages';
 import { useStorage } from '../../../hooks/useStorage';
@@ -13,6 +13,8 @@ import { Link } from 'react-router-dom';
 
 const ProductStudioStage1 = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  const parentPath = location.pathname.split('/')[1];
   const { appliances: applianceName } = useParams();
 
   const { selectedApplianceData, genrateApplianceImage, appDataState } =
@@ -31,7 +33,7 @@ const ProductStudioStage1 = () => {
     save,
     reset,
     localItem,
-  } = useStorage(applianceName);
+  } = useStorage(parentPath, applianceName);
 
   // Internal state
   const [modelPricing, setModelPricing] = useState({});
@@ -49,14 +51,18 @@ const ProductStudioStage1 = () => {
   }, [data, selectedApplianceData, applianceName]);
 
   // in case of no model style
-  //optimize
   useEffect(() => {
     if (
       applianceData?.name === applianceName &&
       modelOptionsData &&
       !modelStylesData
     ) {
-      setModelOptions(modelOptionsData);
+      if (!localItem) {
+        const updatedOptionsData = modelOptionsData.filter((item) => {
+          return applianceData?.options?.indexOf(item.id) !== -1;
+        });
+        setModelOptions(updatedOptionsData);
+      }
     }
   }, [
     applianceData,
@@ -205,8 +211,6 @@ const ProductStudioStage1 = () => {
     );
   };
 
-  // console.log('configuredData', appliance);
-
   const fetchbackgroundImg = () => {
     let backgroundImg = null;
     if (configuredApplianceData?.style?.bg) {
@@ -252,7 +256,8 @@ const ProductStudioStage1 = () => {
                   &#8592; Back
                 </Box>
                 <Typography variant="h6">
-                  SELECT MODEL THEN COLOUR AND ADDITIONAL OPTIONS WILL OPEN
+                  {applianceData?.msg ||
+                    'SELECT MODEL THEN COLOUR AND ADDITIONAL OPTIONS WILL OPEN'}
                 </Typography>
               </Box>
             </Box>
@@ -262,7 +267,7 @@ const ProductStudioStage1 = () => {
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
                   {Object.keys(modelPricing).length > 0
-                    ? `${modelPricing?.modelName} ($${modelPricing?.usa})`
+                    ? `${modelPricing?.modelName} ($${configuredApplianceData?.totalPricing})`
                     : `Configure your ${applianceName}`}
                 </Typography>
               </Box>
@@ -303,7 +308,7 @@ const ProductStudioStage1 = () => {
                 onClick={() => save(modelPricing)}
                 className="CommonButton SaveBtn"
                 variant="contained"
-                disabled={!configuredApplianceData?.imagesSet?.length > 0}
+                disabled={Object.keys(modelPricing).length == 0}
               >
                 Save First
               </Button>
