@@ -49,6 +49,7 @@ const DreamKitchen = () => {
     for (const item of appliances || []) {
       const configuredAppliance = configuredData?.[item.name];
       const { modelPricing, totalPricing } = configuredAppliance || {};
+
       overallPricing += totalPricing || 0;
       render.push(
         <Grid key={item.name} item xs={12} sm={12} md={4} lg={4} xl={4}>

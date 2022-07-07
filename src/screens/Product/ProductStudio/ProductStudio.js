@@ -267,7 +267,10 @@ const ProductStudioStage1 = () => {
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
                   {Object.keys(modelPricing).length > 0
-                    ? `${modelPricing?.modelName} ($${configuredApplianceData?.totalPricing})`
+                    ? `${modelPricing?.modelName} ($${
+                        modelPricing?.usa +
+                        configuredApplianceData?.totalPricing
+                      })`
                     : `Configure your ${applianceName}`}
                 </Typography>
               </Box>
