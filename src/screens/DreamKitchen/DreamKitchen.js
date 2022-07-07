@@ -52,7 +52,16 @@ const DreamKitchen = () => {
 
       overallPricing += totalPricing || 0;
       render.push(
-        <Grid key={item.name} item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid
+          key={item.name}
+          item
+          xs={12}
+          sm={12}
+          md={4}
+          lg={4}
+          xl={4}
+          className="PricingBoxCol"
+        >
           <Box className="PricingBox">
             <Box
               className={`PricingHeaderBox ${
@@ -137,7 +146,7 @@ const DreamKitchen = () => {
             container
             direction="row"
             justifyContent="flex-start"
-            alignItems="flex-start"
+            alignItems="stretch"
             className="PricingContainerBox"
             spacing={0}
             marginLeft="auto"

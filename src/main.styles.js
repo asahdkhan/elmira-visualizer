@@ -830,9 +830,14 @@ const MainStyles = () => {
         '.RedColor': {
           color: '#802f2d',
         },
-        '.PricingBox': {
+        // '.PricingBox': {
+        //   background: '#fbf9f9',
+        //   borderRadius: '6px',
+        // },
+        '.PricingBoxCol': {
           background: '#fbf9f9',
           borderRadius: '6px',
+          border: '10px solid #fff',
         },
         '.SkyBlueBg': {
           backgroundColor: '#74d2e7',
@@ -863,6 +868,7 @@ const MainStyles = () => {
         },
         '.PricingContentBox': {
           padding: '15px 15px',
+          // border: '1px solid #dad6d5',
         },
         '.ProductInfo': {
           width: 'calc( 100% - 100px)',
@@ -916,21 +922,21 @@ const MainStyles = () => {
           marginBottom: '60px',
           maxWidth: '1024px!important',
         },
-        '.PricingBox': {
-          margin: '0 15px 20px 15px',
-        },
-        '.PricingContainerBox .MuiGrid-root:nth-child(1) .PricingBox': {
-          marginLeft: '0px',
-        },
-        '.PricingContainerBox .MuiGrid-root:nth-child(3) .PricingBox': {
-          marginRight: '0px',
-        },
-        '.PricingContainerBox .MuiGrid-root:nth-child(4) .PricingBox': {
-          marginLeft: '0px',
-        },
-        '.PricingContainerBox .MuiGrid-root:nth-child(6) .PricingBox': {
-          marginRight: '0px',
-        },
+        // '.PricingBox': {
+        //   margin: '0 15px 20px 15px',
+        // },
+        // '.PricingContainerBox .MuiGrid-root:nth-child(1) .PricingBox': {
+        //   marginLeft: '0px',
+        // },
+        // '.PricingContainerBox .MuiGrid-root:nth-child(3) .PricingBox': {
+        //   marginRight: '0px',
+        // },
+        // '.PricingContainerBox .MuiGrid-root:nth-child(4) .PricingBox': {
+        //   marginLeft: '0px',
+        // },
+        // '.PricingContainerBox .MuiGrid-root:nth-child(6) .PricingBox': {
+        //   marginRight: '0px',
+        // },
         '.PricingTotalBox': {
           maxWidth: '1024px',
         },
