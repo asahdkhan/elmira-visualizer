@@ -102,7 +102,10 @@ export default function ApplianceOptions({
                 textAlign="center"
                 className="ModalDetailInfo"
               >
-                <span>-</span> {selectedOptions[o.id]?.title}
+                <span>-</span>{' '}
+                <span className="ModalTitleName">
+                  {selectedOptions[o.id]?.title}
+                </span>
               </Typography>
               <a className="EditButton">
                 {selectedOptions[o.id]?.id ? 'CHANGE' : 'SELECT'}
@@ -142,7 +145,10 @@ export default function ApplianceOptions({
                 textAlign="center"
                 className="ModalDetailInfo"
               >
-                <span>-</span> {selectedOptions['style']?.title}
+                <span>-</span>{' '}
+                <span className="ModalTitleName">
+                  {selectedOptions['style']?.title}
+                </span>
               </Typography>
               <a className="EditButton">
                 {selectedOptions['style']?.id ? 'CHANGE' : 'SELECT'}
