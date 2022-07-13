@@ -280,7 +280,7 @@
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
-              "src": "heritage/range/colors/thumbs/Black-Bisque.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/colors/30/2.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/colors/45/2.png",
@@ -294,7 +294,7 @@
             {
               "id": "black-white",
               "title": "Black/White",
-              "src": "heritage/range/colors/thumbs/Black-White.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/colors/30/5.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/colors/45/5.png",
@@ -308,7 +308,7 @@
             {
               "id": "black",
               "title": "Black",
-              "src": "heritage/range/colors/thumbs/black.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/colors/30/1.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/colors/45/1.png",
@@ -322,7 +322,7 @@
             {
               "id": "cayenne-pepper-red",
               "title": "Cayenne Pepper Red",
-              "src": "heritage/range/colors/thumbs/Cayenne-Pepper-Red.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/colors/30/3.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/colors/45/3.png",
@@ -336,7 +336,7 @@
             {
               "id": "liberty-blue",
               "title": "Libery Blue",
-              "src": "heritage/range/colors/thumbs/Liberty-Blue.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/colors/30/4.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/colors/45/4.png",
@@ -371,7 +371,7 @@
               "id": "electric-self-convection",
               "title": "Electric self-cleaning true convection oven",
               "populate": ["cord-type"],
-              "src": "heritage/range/oven/thumbs/1.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
@@ -379,7 +379,7 @@
               "id": "gas-self",
               "title": "Gas self-cleaning oven",
               "removeAssociated": "electric-self-convection",
-              "src": "heritage/range/oven/thumbs/2.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             }
@@ -414,7 +414,7 @@
               "id": "metal-trim-nickel",
               "title": "Nickel",
               "populate": ["antiquing"],
-              "src": "heritage/range/metal-trim/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/metal-trim/30/1.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/metal-trim/45/1.png",
@@ -429,7 +429,7 @@
               "id": "metal-trim-copper",
               "title": "Copper",
               "removeAssociated": "metal-trim-nickel",
-              "src": "heritage/range/metal-trim/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/metal-trim/30/2.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/metal-trim/45/2.png",
@@ -461,14 +461,14 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "heritage/range/door-frames/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/range/door-frames/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/door-frames/30/1.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/door-frames/45/1.png",
@@ -494,7 +494,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/range/door-frames/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": {
                 "30-4-burner-electric-smoothtop": "heritage/range/door-frames/30/2.png",
                 "45-6-burner-electric-smoothtop": "heritage/range/door-frames/45/2.png",
@@ -546,7 +546,7 @@
             {
               "id": "no-trim",
               "title": "No Trim",
-              "src": "heritage/range/leg/thumbs/0.jpg",
+              "src": "css",
               "priceOn": "legs-length",
               "usa": {
                 "standard": 0,
@@ -560,7 +560,7 @@
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/range/leg/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/leg/1.png",
               "priceOn": "legs-length",
               "usa": {
@@ -575,7 +575,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/range/leg/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/leg/2.png",
               "priceOn": "legs-length",
               "usa": {
@@ -596,14 +596,14 @@
             {
               "id": "no-skirt",
               "title": "No Skirt",
-              "src": "heritage/range/skirt/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/range/skirt/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/skirt/1.png",
               "usa": 250,
               "canada": 250
@@ -611,7 +611,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/range/skirt/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/skirt/2.png",
               "usa": 400,
               "canada": 400
@@ -625,14 +625,14 @@
             {
               "id": "no-trivet",
               "title": "No Trivet",
-              "src": "heritage/range/trivet/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/range/trivet/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/trivet/1.png",
               "usa": 250,
               "canada": 250
@@ -640,7 +640,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/range/trivet/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/range/trivet/2.png",
               "usa": 350,
               "canada": 350
@@ -654,21 +654,21 @@
             {
               "id": "standard",
               "title": "Standard",
-              "src": "heritage/range/optional-ventilation/thumbs/inline.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "in-line",
               "title": "In Line",
-              "src": "heritage/range/optional-ventilation/thumbs/inline.jpg",
+              "src": "css",
               "usa": 700,
               "canada": 700
             },
             {
               "id": "wall-mounted",
               "title": "Wall Mounted",
-              "src": "heritage/range/optional-ventilation/thumbs/throughwall.jpg",
+              "src": "css",
               "usa": 700,
               "canada": 700
             }
@@ -837,33 +837,9 @@
           "text": "Colour",
           "opt": [
             {
-              "id": "black",
-              "title": "Black",
-              "src": "heritage/refrigerator/colors/thumbs/black.jpg",
-              "modelSrc": {
-                "1896": "heritage/refrigerator/colors/1896/1.png",
-                "1898": "heritage/refrigerator/colors/1898/1.png",
-                "1899": "heritage/refrigerator/colors/1899/1.png"
-              },
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "black-bisque",
-              "title": "Black/Bisque",
-              "src": "heritage/refrigerator/colors/thumbs/Black-Bisque.jpg",
-              "modelSrc": {
-                "1896": "heritage/refrigerator/colors/1896/2.png",
-                "1898": "heritage/refrigerator/colors/1898/2.png",
-                "1899": "heritage/refrigerator/colors/1899/2.png"
-              },
-              "usa": 300,
-              "canada": 300
-            },
-            {
               "id": "cayenne-pepper-red",
               "title": "Cayenne Pepper Red",
-              "src": "heritage/refrigerator/colors/thumbs/Cayenne-Pepper-Red.jpg",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/colors/1896/3.png",
                 "1898": "heritage/refrigerator/colors/1898/3.png",
@@ -873,9 +849,33 @@
               "canada": 200
             },
             {
+              "id": "bisque",
+              "title": "Bisque",
+              "src": "css",
+              "modelSrc": {
+                "1896": "heritage/refrigerator/colors/1896/7.png",
+                "1898": "heritage/refrigerator/colors/1898/7.png",
+                "1899": "heritage/refrigerator/colors/1899/7.png"
+              },
+              "usa": 0,
+              "canada": 0
+            },
+            {
+              "id": "black-bisque",
+              "title": "Black/Bisque",
+              "src": "css",
+              "modelSrc": {
+                "1896": "heritage/refrigerator/colors/1896/2.png",
+                "1898": "heritage/refrigerator/colors/1898/2.png",
+                "1899": "heritage/refrigerator/colors/1899/2.png"
+              },
+              "usa": 300,
+              "canada": 300
+            },
+            {
               "id": "liberty-blue",
               "title": "Liberty Blue ",
-              "src": "heritage/refrigerator/colors/thumbs/Liberty-Blue.jpg",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/colors/1896/4.png",
                 "1898": "heritage/refrigerator/colors/1898/4.png",
@@ -883,18 +883,6 @@
               },
               "usa": 200,
               "canada": 200
-            },
-            {
-              "id": "black-white",
-              "title": "Black/White",
-              "src": "heritage/refrigerator/colors/thumbs/Black-White.jpg",
-              "modelSrc": {
-                "1896": "heritage/refrigerator/colors/1896/5.png",
-                "1898": "heritage/refrigerator/colors/1898/5.png",
-                "1899": "heritage/refrigerator/colors/1899/5.png"
-              },
-              "usa": 300,
-              "canada": 300
             },
             {
               "id": "white",
@@ -909,13 +897,25 @@
               "canada": 0
             },
             {
-              "id": "bisque",
-              "title": "Bisque",
+              "id": "black-white",
+              "title": "Black/White",
               "src": "css",
               "modelSrc": {
-                "1896": "heritage/refrigerator/colors/1896/7.png",
-                "1898": "heritage/refrigerator/colors/1898/7.png",
-                "1899": "heritage/refrigerator/colors/1899/7.png"
+                "1896": "heritage/refrigerator/colors/1896/5.png",
+                "1898": "heritage/refrigerator/colors/1898/5.png",
+                "1899": "heritage/refrigerator/colors/1899/5.png"
+              },
+              "usa": 300,
+              "canada": 300
+            },
+            {
+              "id": "black",
+              "title": "Black",
+              "src": "css",
+              "modelSrc": {
+                "1896": "heritage/refrigerator/colors/1896/1.png",
+                "1898": "heritage/refrigerator/colors/1898/1.png",
+                "1899": "heritage/refrigerator/colors/1899/1.png"
               },
               "usa": 0,
               "canada": 0
@@ -927,9 +927,9 @@
           "text": "Handle",
           "opt": [
             {
-              "id": "nickle",
-              "title": "Nickle",
-              "src": "heritage/refrigerator/metal-trim/thumbs/1.jpg",
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/metal-trim/1896/1.png",
                 "1898": "heritage/refrigerator/metal-trim/1898/1.png",
@@ -941,7 +941,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/refrigerator/metal-trim/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/metal-trim/1896/2.png",
                 "1898": "heritage/refrigerator/metal-trim/1898/2.png",
@@ -959,14 +959,14 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "heritage/refrigerator/door-frames/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
-              "id": "nickle",
-              "title": "Nickle",
-              "src": "heritage/refrigerator/door-frames/thumbs/1.jpg",
+              "id": "nickel",
+              "title": "Nickel",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/door-frames/1896/1.png",
                 "1898": "heritage/refrigerator/door-frames/1898/1.png",
@@ -978,7 +978,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/refrigerator/door-frames/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": {
                 "1896": "heritage/refrigerator/door-frames/1896/2.png",
                 "1898": "heritage/refrigerator/door-frames/1898/2.png",
@@ -1127,20 +1127,12 @@
           "text": "Colour",
           "opt": [
             {
-              "id": "black",
-              "title": "Black",
-              "src": "heritage/refrigerator/colors/thumbs/black.jpg",
-              "modelSrc": "heritage/microwave/black.png",
-              "usa": 0,
-              "canada": 0
-            },
-            {
-              "id": "white",
-              "title": "White",
+              "id": "cayenne-pepper-red",
+              "title": "Cayenne Pepper Red",
               "src": "css",
-              "modelSrc": "heritage/microwave/white.png",
-              "usa": 0,
-              "canada": 0
+              "modelSrc": "heritage/microwave/cayenne-pepper-red.png",
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "bisque",
@@ -1151,36 +1143,44 @@
               "canada": 0
             },
             {
-              "id": "cayenne-pepper-red",
-              "title": "Cayenne Pepper Red",
-              "src": "heritage/refrigerator/colors/thumbs/Cayenne-Pepper-Red.jpg",
-              "modelSrc": "heritage/microwave/cayenne-pepper-red.png",
+              "id": "black-bisque",
+              "title": "Black/Bisque",
+              "src": "css",
+              "modelSrc": "heritage/microwave/black-bisque.png",
               "usa": 100,
               "canada": 100
             },
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
-              "src": "heritage/refrigerator/colors/thumbs/Liberty-Blue.jpg",
+              "src": "css",
               "modelSrc": "heritage/microwave/liberty-blue.png",
               "usa": 100,
               "canada": 100
             },
             {
+              "id": "white",
+              "title": "White",
+              "src": "css",
+              "modelSrc": "heritage/microwave/white.png",
+              "usa": 0,
+              "canada": 0
+            },
+            {
               "id": "black-white",
               "title": "Black/White",
-              "src": "heritage/refrigerator/colors/thumbs/Black-White.jpg",
+              "src": "css",
               "modelSrc": "heritage/microwave/black-white.png",
               "usa": 100,
               "canada": 100
             },
             {
-              "id": "black-bisque",
-              "title": "Black/Bisque",
-              "src": "heritage/refrigerator/colors/thumbs/Black-Bisque.jpg",
-              "modelSrc": "heritage/microwave/black-bisque.png",
-              "usa": 100,
-              "canada": 100
+              "id": "black",
+              "title": "Black",
+              "src": "css",
+              "modelSrc": "heritage/microwave/black.png",
+              "usa": 0,
+              "canada": 0
             }
           ]
         },
@@ -1191,14 +1191,14 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "heritage/refrigerator/door-frames/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/refrigerator/door-frames/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/microwave/door-frames/1.png",
               "usa": 250,
               "canada": 250
@@ -1206,7 +1206,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/refrigerator/door-frames/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/microwave/door-frames/2.png",
               "usa": 350,
               "canada": 350
@@ -1287,7 +1287,7 @@
             {
               "id": "black",
               "title": "Black",
-              "src": "heritage/wallOven/colors/thumbs/black.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/1.png",
               "usa": 0,
               "canada": 0
@@ -1296,14 +1296,14 @@
               "id": "white",
               "title": "White",
               "src": "css",
-              "modelSrc": "heritage/wallOven/colors/6.png",
+              "modelSrc": "heritage/wallOven/colors/3.png",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "bisque",
               "title": "Bisque",
-              "src": "heritage/wallOven/colors/thumbs/Bisque.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/7.png",
               "usa": 0,
               "canada": 0
@@ -1311,7 +1311,7 @@
             {
               "id": "cayenne-pepper-red",
               "title": "Cayenne Pepper Red",
-              "src": "heritage/wallOven/colors/thumbs/Cayenne-Pepper-Red.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/3.png",
               "usa": 200,
               "canada": 200
@@ -1319,7 +1319,7 @@
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
-              "src": "heritage/wallOven/colors/thumbs/Liberty-Blue.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/4.png",
               "usa": 200,
               "canada": 200
@@ -1327,7 +1327,7 @@
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
-              "src": "heritage/wallOven/colors/thumbs/Black-Bisque.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/2.png",
               "usa": 50,
               "canada": 50
@@ -1335,7 +1335,7 @@
             {
               "id": "black-white",
               "title": "Black/White",
-              "src": "heritage/wallOven/colors/thumbs/Black-White.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/colors/5.png",
               "usa": 50,
               "canada": 50
@@ -1350,7 +1350,7 @@
               "id": "metal-trim-nickel",
               "populate": ["antiquing"],
               "title": "Nickel",
-              "src": "heritage/wallOven/metal-trim/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/metal-trim/1.png",
               "usa": 0,
               "canada": 0
@@ -1359,7 +1359,7 @@
               "id": "metal-trim-copper",
               "removeAssociated": "metal-trim-nickel",
               "title": "Copper",
-              "src": "heritage/wallOven/metal-trim/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/metal-trim/2.png",
               "usa": 450,
               "canada": 450
@@ -1373,14 +1373,14 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "heritage/wallOven/door-frames/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/wallOven/door-frames/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/door-frames/1.png",
               "usa": 450,
               "canada": 450
@@ -1388,7 +1388,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/wallOven/door-frames/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/wallOven/door-frames/2.png",
               "usa": 750,
               "canada": 750
@@ -1534,7 +1534,7 @@
             {
               "id": "black",
               "title": "Black",
-              "src": "heritage/dishwasherPanel/colors/thumbs/black.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/colors/1.png",
               "usa": 0,
               "canada": 0
@@ -1558,7 +1558,7 @@
             {
               "id": "cayenne-pepper-red",
               "title": "Cayenne Pepper Red",
-              "src": "heritage/dishwasherPanel/colors/thumbs/Cayenne-Pepper-Red.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/colors/4.png",
               "usa": 100,
               "canada": 100
@@ -1566,7 +1566,7 @@
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
-              "src": "heritage/dishwasherPanel/colors/thumbs/Liberty-Blue.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/colors/5.png",
               "usa": 100,
               "canada": 100
@@ -1574,7 +1574,7 @@
             {
               "id": "black-white",
               "title": "Black/White",
-              "src": "heritage/refrigerator/colors/thumbs/Black-White.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/colors/6.png",
               "usa": 100,
               "canada": 100
@@ -1582,7 +1582,7 @@
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
-              "src": "heritage/refrigerator/colors/thumbs/Black-Bisque.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/colors/7.png",
               "usa": 100,
               "canada": 100
@@ -1596,14 +1596,14 @@
             {
               "id": "no-frames",
               "title": "No Frames",
-              "src": "heritage/dishwasherPanel/door-frames/thumbs/0.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
               "id": "nickel",
               "title": "Nickel",
-              "src": "heritage/dishwasherPanel/door-frames/thumbs/1.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/door-frames/1.png",
               "usa": 250,
               "canada": 250
@@ -1611,7 +1611,7 @@
             {
               "id": "copper",
               "title": "Copper",
-              "src": "heritage/dishwasherPanel/door-frames/thumbs/2.jpg",
+              "src": "css",
               "modelSrc": "heritage/dishwasherPanel/door-frames/2.png",
               "usa": 350,
               "canada": 350

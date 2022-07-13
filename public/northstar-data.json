@@ -106,14 +106,14 @@
           "title": "1961 30\" Recirculating",
           "src": "northstar/rangehood/model/thumbs/1961.jpg",
           "modelSrc": "northstar/rangehood/1961-Recirculating/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"]
         },
         {
           "id": "1962",
           "title": "1962 30\" Outside-Vent",
           "src": "northstar/rangehood/model/thumbs/1962.jpg",
           "modelSrc": "northstar/rangehood/1962-Outside-Vent/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"]
         },
         {
           "id": "1963",
@@ -123,7 +123,7 @@
           "env": "36",
           "envOrder": 0,
           "modelSrc": "northstar/rangehood/1963/candy-red.png",
-          "options": ["colours", "splashback", "duck-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"]
         }
       ],
       "modelOptions": [
@@ -367,8 +367,8 @@
           ]
         },
         {
-          "id": "duck-cover-kit",
-          "text": "Duck Cover Kit",
+          "id": "duct-cover-kit",
+          "text": "Duct Cover Kit",
           "opt": [
             {
               "id": "yes",
