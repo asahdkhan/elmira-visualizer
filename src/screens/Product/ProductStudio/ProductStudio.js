@@ -221,6 +221,25 @@ const ProductStudioStage1 = () => {
     return backgroundImg;
   };
 
+  const renderPricing = () => {
+    let pricingText = `Configure your ${applianceName}`;
+    let pricing;
+    if (Object.keys(modelPricing).length > 0) {
+      const mName = modelPricing?.modelName;
+      const mPricing =
+        typeof modelPricing?.usa === 'object'
+          ? modelPricing?.usa[appliance['style']?.id]
+          : modelPricing?.usa;
+      if (localItem) {
+        pricing = configuredApplianceData?.totalPricing;
+      } else {
+        pricing = mPricing + configuredApplianceData?.totalPricing;
+      }
+      pricingText = `${mName} ($${pricing})`;
+    }
+    return pricingText;
+  };
+
   return (
     <Grid
       container
@@ -266,12 +285,7 @@ const ProductStudioStage1 = () => {
             <Box className="ApplianceBoxLeft">
               <Box className="ApplianceName">
                 <Typography variant="h4" textAlign="center">
-                  {Object.keys(modelPricing).length > 0
-                    ? `${modelPricing?.modelName} ($${
-                        modelPricing?.usa +
-                        configuredApplianceData?.totalPricing
-                      })`
-                    : `Configure your ${applianceName}`}
+                  {renderPricing()}
                 </Typography>
               </Box>
               <Box className="parentApplianceContainer">

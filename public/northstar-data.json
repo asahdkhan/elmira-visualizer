@@ -353,13 +353,13 @@
               "canada": 0
             },
             {
-              "id": "splashback-colors-white",
+              "id": "splashback-colors-quick-silver",
               "title": "Quick Silver",
               "src": "css",
               "modelSrc": {
-                "1961": "northstar/splashback/30/white.png",
-                "1962": "northstar/splashback/30/white.png",
-                "1963": "northstar/splashback/36/white.png"
+                "1961": "northstar/splashback/30/quick-silver.png",
+                "1962": "northstar/splashback/30/quick-silver.png",
+                "1963": "northstar/splashback/36/quick-silver.png"
               },
               "usa": 100,
               "canada": 100

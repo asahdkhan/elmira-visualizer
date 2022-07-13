@@ -213,7 +213,7 @@ const CreateKitchen = () => {
   };
 
   return (
-    <>
+    <div ref={dreamKitchenRef}>
       {!params.appliances && (
         <Grid
           container
@@ -241,6 +241,7 @@ const CreateKitchen = () => {
                   {dreamKitchen && (
                     <>
                       <ReactToPrint
+                        pageStyle="@page { size: 8.26772in 11.6929in }"
                         trigger={() => (
                           <Button variant="Button" className="SavePdfBtn">
                             SAVE AS PDF
@@ -278,7 +279,7 @@ const CreateKitchen = () => {
                   </Box>
                 </Box>
               </Box>
-              <Box ref={dreamKitchenRef} className="MainKitchenSection">
+              <Box className="MainKitchenSection">
                 <Box className="parentKitchenImageBox width100">
                   {kitchen.cabinetSrc && (
                     <Image
@@ -323,7 +324,7 @@ const CreateKitchen = () => {
         </Grid>
       )}
       <Outlet />
-    </>
+    </div>
   );
 };
 

@@ -124,6 +124,13 @@ const MainStyles = () => {
           borderRadius: '100%',
           cursor: 'pointer',
         },
+        '.splashback-colors-quick-silver': {
+          width: 40,
+          height: 40,
+          backgroundColor: '#b3b2b1',
+          borderRadius: '100%',
+          cursor: 'pointer',
+        },
         '.prong-4:before': {
           content: '"4 Prong"',
           display: 'flex',
@@ -813,7 +820,7 @@ const MainStyles = () => {
           marginTop: '40px',
           marginBottom: '40px',
         },
-        '.ProductApplianceBox ul li:first-child': {
+        '.ProductApplianceBox ul li:first-of-type': {
           borderLeft: 'none',
         },
         '.ProductApplianceBox ul li': {
@@ -836,6 +843,7 @@ const MainStyles = () => {
         },
         '.SkyBlueBg': {
           backgroundColor: '#74d2e7',
+          '-webkit-print-color-adjust': 'exact',
         },
         '.PricingHeaderBox': {
           display: 'flex',
@@ -887,6 +895,7 @@ const MainStyles = () => {
         },
         '.PricingFooterBox.SkyBlueColor  .MuiTypography-root': {
           color: '#74d2e7',
+          '-webkit-print-color-adjust': 'exact',
         },
         '.PricingFooterBox.RedColor  .MuiTypography-root': {
           color: '#802f2d',
@@ -910,25 +919,26 @@ const MainStyles = () => {
         },
         '.WaterBlueBg': {
           backgroundColor: '#00a8ff',
+          '-webkit-print-color-adjust': 'exact',
         },
         '.PricingContainerBox': {
           marginTop: '20px',
-          marginBottom: '60px',
+          marginBottom: '20px',
           maxWidth: '1024px!important',
         },
         '.PricingBox': {
           margin: '0 15px 20px 15px',
         },
-        '.PricingContainerBox .MuiGrid-root:nth-child(1) .PricingBox': {
+        '.PricingContainerBox .MuiGrid-root:nth-of-type(1) .PricingBox': {
           marginLeft: '0px',
         },
-        '.PricingContainerBox .MuiGrid-root:nth-child(3) .PricingBox': {
+        '.PricingContainerBox .MuiGrid-root:nth-of-type(3) .PricingBox': {
           marginRight: '0px',
         },
-        '.PricingContainerBox .MuiGrid-root:nth-child(4) .PricingBox': {
+        '.PricingContainerBox .MuiGrid-root:nth-of-type(4) .PricingBox': {
           marginLeft: '0px',
         },
-        '.PricingContainerBox .MuiGrid-root:nth-child(6) .PricingBox': {
+        '.PricingContainerBox .MuiGrid-root:nth-of-type(6) .PricingBox': {
           marginRight: '0px',
         },
         '.PricingTotalBox': {
@@ -936,6 +946,7 @@ const MainStyles = () => {
         },
         '.RedBg': {
           backgroundColor: '#802f2d',
+          '-webkit-print-color-adjust': 'exact',
         },
         '.PricingTotalInfo .MuiTypography-root': {
           color: '#fff',
@@ -965,7 +976,7 @@ const MainStyles = () => {
           left: '50%',
           transform: 'translate(-50%, 0px)',
         },
-        '.parentApplianceImageBox-apply img:nth-child(2)': {
+        '.parentApplianceImageBox-apply img:nth-of-type(2)': {
           zIndex: '99',
         },
         '.ApplianceBoxRight .MuiButtonBase-root.MuiAccordionSummary-root': {

@@ -704,7 +704,7 @@
             "oven": "electric-self-convection"
           },
           "usa": 7395,
-          "canada": 7495
+          "canada": 7395
         },
         {
           "modelName": "Model 1870-C",
@@ -742,8 +742,8 @@
             "oven": "gas-self",
             "gas-type": "liquid-propane"
           },
-          "usa": 8495,
-          "canada": 8495
+          "usa": 8195,
+          "canada": 8195
         },
         {
           "modelName": "Model 1855-ST-SC",
@@ -770,8 +770,8 @@
             "oven": "electric-self-convection",
             "gas-type": "liquid-propane"
           },
-          "usa": 9495,
-          "canada": 9495
+          "usa": 9395,
+          "canada": 9395
         },
         {
           "modelName": "Model 1867",
@@ -787,8 +787,8 @@
             "style": "45-6-burner-gas",
             "gas-type": "liquid-propane"
           },
-          "usa": 9595,
-          "canada": 9595
+          "usa": 9495,
+          "canada": 9495
         }
       ]
     },
@@ -1005,7 +1005,7 @@
               "title": "Left (handle on right)",
               "src": "heritage/refrigerator/hinge/thumbs/left.jpg",
               "usa": 50,
-              "canada": 0
+              "canada": 50
             }
           ]
         },
@@ -1018,7 +1018,7 @@
               "title": "Yes",
               "src": "css",
               "usa": 250,
-              "canada": 0
+              "canada": 250
             },
             {
               "id": "no",
@@ -1117,6 +1117,7 @@
       "baseModelSrc": "heritage/microwave/black.png",
       "configureOrder": ["colours", "door-frames"],
       "positioning": ["642px", "129px"],
+      "msg": "Select Colour and additional options will open",
       "30_36": ["642px", "129px"],
       "45_30": ["689px", "129px"],
       "45_36": ["689px", "129px"],
@@ -1154,32 +1155,32 @@
               "title": "Cayenne Pepper Red",
               "src": "heritage/refrigerator/colors/thumbs/Cayenne-Pepper-Red.jpg",
               "modelSrc": "heritage/microwave/cayenne-pepper-red.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
               "src": "heritage/refrigerator/colors/thumbs/Liberty-Blue.jpg",
               "modelSrc": "heritage/microwave/liberty-blue.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "black-white",
               "title": "Black/White",
               "src": "heritage/refrigerator/colors/thumbs/Black-White.jpg",
               "modelSrc": "heritage/microwave/black-white.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
               "src": "heritage/refrigerator/colors/thumbs/Black-Bisque.jpg",
               "modelSrc": "heritage/microwave/black-bisque.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             }
           ]
         },
@@ -1199,26 +1200,70 @@
               "title": "Nickel",
               "src": "heritage/refrigerator/door-frames/thumbs/1.jpg",
               "modelSrc": "heritage/microwave/door-frames/1.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 250,
+              "canada": 250
             },
             {
               "id": "copper",
               "title": "Copper",
               "src": "heritage/refrigerator/door-frames/thumbs/2.jpg",
               "modelSrc": "heritage/microwave/door-frames/2.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 350,
+              "canada": 350
             }
           ]
         }
       ],
       "pricing": [
         {
-          "modelName": "Model 1953",
-          "onSelection": {},
-          "usa": 795,
-          "canada": ""
+          "modelName": "Model 1895",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ]
+          },
+          "usa": 995,
+          "canada": 995
+        },
+        {
+          "modelName": "Model 1821N",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "door-frames": "nickle"
+          },
+          "usa": 995,
+          "canada": 995
+        },
+        {
+          "modelName": "Model 1821C",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "door-frames": "copper"
+          },
+          "usa": 995,
+          "canada": 995
         }
       ]
     },
@@ -1230,6 +1275,7 @@
       "options": ["colours", "metal-trim-color", "door-frames"],
       "configureOrder": ["colours", "metal-trim-color", "door-frames"],
       "positioning": ["650px", "183px"],
+      "msg": "Select Colour and additional options will open",
       "30_36": ["650px", "183px"],
       "45_30": ["696px", "183px"],
       "45_36": ["696px", "183px"],
@@ -1239,7 +1285,7 @@
           "text": "Colour",
           "opt": [
             {
-              "id": "Black",
+              "id": "black",
               "title": "Black",
               "src": "heritage/wallOven/colors/thumbs/black.jpg",
               "modelSrc": "heritage/wallOven/colors/1.png",
@@ -1267,32 +1313,32 @@
               "title": "Cayenne Pepper Red",
               "src": "heritage/wallOven/colors/thumbs/Cayenne-Pepper-Red.jpg",
               "modelSrc": "heritage/wallOven/colors/3.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 200,
+              "canada": 200
             },
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
               "src": "heritage/wallOven/colors/thumbs/Liberty-Blue.jpg",
               "modelSrc": "heritage/wallOven/colors/4.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 200,
+              "canada": 200
             },
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
               "src": "heritage/wallOven/colors/thumbs/Black-Bisque.jpg",
               "modelSrc": "heritage/wallOven/colors/2.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 50,
+              "canada": 50
             },
             {
               "id": "black-white",
               "title": "Black/White",
               "src": "heritage/wallOven/colors/thumbs/Black-White.jpg",
               "modelSrc": "heritage/wallOven/colors/5.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 50,
+              "canada": 50
             }
           ]
         },
@@ -1315,8 +1361,8 @@
               "title": "Copper",
               "src": "heritage/wallOven/metal-trim/thumbs/2.jpg",
               "modelSrc": "heritage/wallOven/metal-trim/2.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 450,
+              "canada": 450
             }
           ]
         },
@@ -1336,16 +1382,16 @@
               "title": "Nickel",
               "src": "heritage/wallOven/door-frames/thumbs/1.jpg",
               "modelSrc": "heritage/wallOven/door-frames/1.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 450,
+              "canada": 450
             },
             {
               "id": "copper",
               "title": "Copper",
               "src": "heritage/wallOven/door-frames/thumbs/2.jpg",
               "modelSrc": "heritage/wallOven/door-frames/2.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 750,
+              "canada": 750
             }
           ]
         },
@@ -1358,8 +1404,8 @@
               "id": "yes",
               "title": "yes",
               "src": "css",
-              "usa": 0,
-              "canada": 0
+              "usa": 250,
+              "canada": 250
             },
             {
               "id": "no",
@@ -1373,16 +1419,88 @@
       ],
       "pricing": [
         {
-          "modelName": "Model 1957",
-          "onSelection": {},
-          "usa": 395,
-          "canada": ""
+          "modelName": "Model 1880-C",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ]
+          },
+          "usa": 4695,
+          "canada": 4695
         },
         {
-          "modelName": "Model 1957DW",
-          "onSelection": { "style": "complete-dishwasher" },
-          "usa": 2995,
-          "canada": ""
+          "modelName": "Model 1803",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "antiquing": "yes"
+          },
+          "usa": 4695,
+          "canada": 4695
+        },
+        {
+          "modelName": "Model 1827N",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "door-frames": "nickel"
+          },
+          "usa": 4695,
+          "canada": 4695
+        },
+        {
+          "modelName": "Model 1830C",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "metal-trim-color": "metal-trim-copper"
+          },
+          "usa": 4695,
+          "canada": 4695
+        },
+        {
+          "modelName": "Model 1827C",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "door-frames": "copper"
+          },
+          "usa": 4695,
+          "canada": 4695
         }
       ]
     },
@@ -1442,32 +1560,32 @@
               "title": "Cayenne Pepper Red",
               "src": "heritage/dishwasherPanel/colors/thumbs/Cayenne-Pepper-Red.jpg",
               "modelSrc": "heritage/dishwasherPanel/colors/4.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "liberty-blue",
               "title": "Liberty Blue",
               "src": "heritage/dishwasherPanel/colors/thumbs/Liberty-Blue.jpg",
               "modelSrc": "heritage/dishwasherPanel/colors/5.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "black-white",
               "title": "Black/White",
               "src": "heritage/refrigerator/colors/thumbs/Black-White.jpg",
               "modelSrc": "heritage/dishwasherPanel/colors/6.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             },
             {
               "id": "black-bisque",
               "title": "Black/Bisque",
               "src": "heritage/refrigerator/colors/thumbs/Black-Bisque.jpg",
               "modelSrc": "heritage/dishwasherPanel/colors/7.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 100,
+              "canada": 100
             }
           ]
         },
@@ -1487,26 +1605,50 @@
               "title": "Nickel",
               "src": "heritage/dishwasherPanel/door-frames/thumbs/1.jpg",
               "modelSrc": "heritage/dishwasherPanel/door-frames/1.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 250,
+              "canada": 250
             },
             {
               "id": "copper",
               "title": "Copper",
               "src": "heritage/dishwasherPanel/door-frames/thumbs/2.jpg",
               "modelSrc": "heritage/dishwasherPanel/door-frames/2.png",
-              "usa": 0,
-              "canada": 0
+              "usa": 350,
+              "canada": 350
             }
           ]
         }
       ],
       "pricing": [
         {
-          "modelName": "Model 1953",
-          "onSelection": {},
-          "usa": 795,
-          "canada": ""
+          "modelName": "Model 1893DW",
+          "onSelection": { "style": "complete-dishwasher" },
+          "usa": 2995,
+          "canada": 2995
+        },
+        {
+          "modelName": "Model 1893",
+          "onSelection": { "style": "panel-only" },
+          "usa": 595,
+          "canada": 595
+        },
+        {
+          "modelName": "Model 1820N",
+          "onSelection": {
+            "style": ["complete-dishwasher", "panel-only"],
+            "door-frames": "nickel"
+          },
+          "usa": { "complete-dishwasher": 2995, "panel-only": 595 },
+          "canada": { "complete-dishwasher": 2995, "panel-only": 595 }
+        },
+        {
+          "modelName": "Model 1820C",
+          "onSelection": {
+            "style": ["complete-dishwasher", "panel-only"],
+            "door-frames": "copper"
+          },
+          "usa": { "complete-dishwasher": 2995, "panel-only": 595 },
+          "canada": { "complete-dishwasher": 2995, "panel-only": 595 }
         }
       ]
     }

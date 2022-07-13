@@ -30,10 +30,18 @@ export const useStorage = (parentPath = '', applianceName = '') => {
   }, [localItem]);
 
   const save = (modelPricing) => {
+    const filterPrice =
+      typeof modelPricing?.usa === 'object'
+        ? modelPricing?.usa[appliance['style']?.id]
+        : modelPricing?.usa;
+
     let storeData = {
       [applianceName]: {
         options: modelOptions,
-        configuration: { ...appliance, modelPricing },
+        configuration: {
+          ...appliance,
+          modelPricing: { ...modelPricing, usa: filterPrice },
+        },
       },
     };
     if (localData) {
@@ -41,7 +49,10 @@ export const useStorage = (parentPath = '', applianceName = '') => {
         ...parseLocalData,
         [applianceName]: {
           options: modelOptions,
-          configuration: { ...appliance, modelPricing },
+          configuration: {
+            ...appliance,
+            modelPricing: { ...modelPricing, usa: filterPrice },
+          },
         },
       };
     }

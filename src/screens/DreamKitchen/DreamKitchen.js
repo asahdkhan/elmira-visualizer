@@ -1,7 +1,6 @@
 /* eslint-disable  */
-import React, { useState } from 'react';
+import React from 'react';
 import { Grid, Typography, Box, Button } from '@mui/material';
-import { StyledEngineProvider } from '@mui/material/styles';
 import { useAppData } from '../../hooks/useAppData';
 import { useMutateStorage } from '../../hooks/useMutateStorage';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -52,7 +51,7 @@ const DreamKitchen = () => {
 
       overallPricing += totalPricing || 0;
       render.push(
-        <Grid key={item.name} item xs={12} sm={12} md={4} lg={4} xl={4}>
+        <Grid key={item.name} item xs={4} sm={4} md={4} lg={4} xl={4}>
           <Box className="PricingBox">
             <Box
               className={`PricingHeaderBox ${
@@ -74,7 +73,7 @@ const DreamKitchen = () => {
             </Box>
             <Box className="PricingContentBox">
               <ul>
-                {item?.styles && (
+                {(item?.styles || modelPricing) && (
                   <li>
                     <Box className="ProductInfo">
                       {modelPricing && Object.keys(modelPricing).length > 0 ? (
@@ -83,7 +82,7 @@ const DreamKitchen = () => {
                             Model
                           </Typography>
                           <Typography variant="body2" textAlign="left">
-                            {`${modelPricing?.modelName} ($${modelPricing?.usa})`}
+                            {`${modelPricing?.modelName}`}
                           </Typography>
                         </>
                       ) : (
@@ -122,71 +121,69 @@ const DreamKitchen = () => {
   };
 
   return (
-    <StyledEngineProvider injectFirst>
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        maxWidth="xl"
-        marginLeft="auto"
-        marginRight="auto"
-      >
-        <Grid item xs={12}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            className="PricingContainerBox"
-            spacing={0}
-            marginLeft="auto"
-            marginRight="auto"
-          >
-            {loadAppliancesData().render}
-          </Grid>
+    <Grid
+      container
+      direction="row"
+      justifyContent="center"
+      alignItems="center"
+      maxWidth="lg"
+      marginLeft="auto"
+      marginRight="auto"
+    >
+      <Grid item xs={12}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          className="PricingContainerBox"
+          spacing={0}
+          marginLeft="auto"
+          marginRight="auto"
+        >
+          {loadAppliancesData().render}
         </Grid>
-        <Grid item xs={12}>
-          <Grid
-            container
-            direction="row"
-            justifyContent="flex-start"
-            alignItems="flex-start"
-            className="PricingTotalBox"
-            marginBottom={5}
-            spacing={0}
-            marginLeft="auto"
-            marginRight="auto"
-          >
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <Box className="PricingTotalInfo SkyBlueBg">
+      </Grid>
+      <Grid item xs={12}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          className="PricingTotalBox"
+          marginBottom={2}
+          spacing={0}
+          marginLeft="auto"
+          marginRight="auto"
+        >
+          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+            <Box className="PricingTotalInfo SkyBlueBg">
+              <Typography variant="h3" textAlign="center">
+                {' '}
+                APPLIANCE TOTAL ${loadAppliancesData().overallPricing}
+              </Typography>
+              <Typography variant="body2" textAlign="center">
+                (excludes freight, delivery, and applicable taxes)
+              </Typography>
+            </Box>
+          </Grid>
+          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+            <a>
+              <Box className="PricingTotalInfo WaterBlueBg">
                 <Typography variant="h3" textAlign="center">
                   {' '}
-                  APPLIANCE TOTAL ${loadAppliancesData().overallPricing}
+                  CONTACT US FOR YOUR TOTAL COST{' '}
                 </Typography>
                 <Typography variant="body2" textAlign="center">
-                  (excludes freight, delivery, and applicable taxes)
+                  (Elmira appliances plus freight, delivery, and applicable
+                  taxes)
                 </Typography>
               </Box>
-            </Grid>
-            <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-              <a>
-                <Box className="PricingTotalInfo WaterBlueBg">
-                  <Typography variant="h3" textAlign="center">
-                    {' '}
-                    CONTACT US FOR YOUR TOTAL COST{' '}
-                  </Typography>
-                  <Typography variant="body2" textAlign="center">
-                    (Elmira appliances plus freight, delivery, and applicable
-                    taxes)
-                  </Typography>
-                </Box>
-              </a>
-            </Grid>
+            </a>
           </Grid>
         </Grid>
       </Grid>
-    </StyledEngineProvider>
+    </Grid>
   );
 };
 
