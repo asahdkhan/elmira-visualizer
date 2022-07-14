@@ -705,8 +705,8 @@ const MainStyles = () => {
         },
         '.CommonCircle ul li a.Active': {
           transition: 'all 0.5s ease-in-out',
-          // transform: 'scale(1.1)',
-          boxShadow: '0px 0px 10px 2px rgba(194,192,194,0.5)',
+          transform: 'scale(1.2)',
+          boxShadow: 'none',
           borderRadius: '100%',
         },
         '.CommonCircle ul li a.Active span': {
