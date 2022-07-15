@@ -65,27 +65,31 @@ const CreateKitchen = () => {
       setKitchen((prevState) => ({
         ...prevState,
         cabinetSrc:
-          data?.cabinetColour[0]?.['src_' + env] || defaultCabinet?.src,
+          data?.cabinetColour[0]?.['src_' + env] || data?.cabinetColour[0]?.src,
         patchSrc:
-          data?.cabinetColour[0]?.['patch_' + env] || defaultCabinet?.patch,
+          data?.cabinetColour[0]?.['patch_' + env] ||
+          data?.cabinetColour[0]?.patch,
       }));
     }
   }, [data?.cabinetColour, configuredData, setKitchen]);
 
   useEffect(() => {
     const defaultFlooring = data?.flooringStyle?.find((item) => item.default);
+    const { env } = fetchEnvSrc(configuredData) || {};
+
     if (defaultFlooring) {
       setKitchen((prevState) => ({
         ...prevState,
-        flooringSrc: defaultFlooring.src,
+        flooringSrc: defaultFlooring?.['src_' + env] || defaultFlooring?.src,
       }));
     } else {
       setKitchen((prevState) => ({
         ...prevState,
-        flooringSrc: data?.flooringStyle[0].src,
+        flooringSrc:
+          data?.flooringStyle[0]?.['src_' + env] || data?.flooringStyle[0]?.src,
       }));
     }
-  }, [data?.flooringStyle, setKitchen]);
+  }, [data?.flooringStyle, configuredData, setKitchen]);
 
   useEffect(() => {
     let defaultAppliances = [];
@@ -163,9 +167,13 @@ const CreateKitchen = () => {
                     ${require(`../../assets/${item?.icon}`)}
                   )`,
                 }}
-                onClick={() =>
-                  setKitchen({ ...kitchen, flooringSrc: item.src })
-                }
+                onClick={() => {
+                  const { env } = fetchEnvSrc(configuredData) || {};
+                  setKitchen({
+                    ...kitchen,
+                    flooringSrc: item?.['src_' + env] || item?.src,
+                  });
+                }}
               >
                 <span>{item?.name || ''}</span>
               </a>

@@ -726,7 +726,7 @@
           "opt": [
             {
               "id": "yes",
-              "title": "yes",
+              "title": "Yes",
               "src": "css",
               "usa": 250,
               "canada": 250
@@ -748,8 +748,8 @@
             "style": "30-4-burner-electric-smoothtop",
             "oven": "electric-self-convection"
           },
-          "usa": 7395,
-          "canada": 7395
+          "usa": 7495,
+          "canada": 7495
         },
         {
           "modelName": "Model 1870-C",
@@ -842,10 +842,10 @@
       "bg": "heritage/refrigerator/bg30.jpg",
       "defaultModelSrc": "heritage/refrigerator/colors/1896/1.png",
       "configureOrder": ["style", "colours", "handle", "door-frames"],
-      "positioning": ["61px", "76px"],
+      "positioning": ["74px", "78px"],
       "30_36": ["61px", "76px"],
-      "36_36": ["657px", "84px"],
-      "36_24": ["655px", "91px"],
+      "46_36": ["61px", "76px"],
+      "46_30": ["74px", "78px"],
       "styles": [
         {
           "id": "1896",
@@ -1090,14 +1090,14 @@
         },
         {
           "modelName": "Model 1811 N",
-          "onSelection": { "style": ["1898", "1898"], "door-frames": "nickle" },
+          "onSelection": { "style": ["1898", "1899"], "door-frames": "nickel" },
           "usa": 7195,
           "canada": 7195
         },
         {
           "modelName": "Model 1811 C",
           "onSelection": {
-            "style": ["1898", "1898"],
+            "style": ["1898", "1899"],
             "door-frames": "copper"
           },
           "usa": 7195,
@@ -1106,7 +1106,7 @@
         {
           "modelName": "Model 1804 C",
           "onSelection": {
-            "style": ["1898", "1898"],
+            "style": ["1898", "1899"],
             "door-frames": "copper",
             "handle": "copper"
           },
@@ -1121,7 +1121,7 @@
         },
         {
           "modelName": "Model 1832 N",
-          "onSelection": { "style": "1896", "door-frames": "nickle" },
+          "onSelection": { "style": "1896", "door-frames": "nickel" },
           "usa": 4995,
           "canada": 4995
         },
@@ -1447,7 +1447,7 @@
           "opt": [
             {
               "id": "yes",
-              "title": "yes",
+              "title": "Yes",
               "src": "css",
               "usa": 250,
               "canada": 250

@@ -230,7 +230,10 @@ const ProductStudioStage1 = () => {
         typeof modelPricing?.usa === 'object'
           ? modelPricing?.usa[appliance['style']?.id]
           : modelPricing?.usa;
-      if (localItem) {
+      if (
+        localItem &&
+        localItem?.configuration?.style?.id === appliance['style']?.id
+      ) {
         pricing = configuredApplianceData?.totalPricing;
       } else {
         pricing = mPricing + configuredApplianceData?.totalPricing;

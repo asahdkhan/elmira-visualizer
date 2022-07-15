@@ -47,32 +47,34 @@ export default function ApplianceOptions({
       }
 
       return (
-        <Box
-          key={item.id}
-          className="ModalInfo"
-          onClick={() => setSelection(selectionId, item)}
-        >
-          {item.src && (
-            <Tooltip placement="top" arrow title={item?.title || ''}>
-              {item.src == 'css' ? (
-                <div
-                  className={`${item.id} ${
-                    selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
-                  }`}
-                />
-              ) : (
-                <Image
-                  classes={
-                    selectedOptions[selectionId]?.id === item.id ? 'Active' : ''
-                  }
-                  name={item.src}
-                />
-              )}
-            </Tooltip>
-          )}
-          <Typography variant="body2" textAlign="center">
-            {selectionId === 'style' ? item?.title : '$' + item?.usa}
-          </Typography>
+        <Box key={item.id} className="ModalInfo">
+          <div onClick={() => setSelection(selectionId, item)}>
+            {item.src && (
+              <Tooltip placement="top" arrow title={item?.title || ''}>
+                {item.src == 'css' ? (
+                  <div
+                    className={`${item.id} ${
+                      selectedOptions[selectionId]?.id === item.id
+                        ? 'Active'
+                        : ''
+                    }`}
+                  />
+                ) : (
+                  <Image
+                    classes={
+                      selectedOptions[selectionId]?.id === item.id
+                        ? 'Active'
+                        : ''
+                    }
+                    name={item.src}
+                  />
+                )}
+              </Tooltip>
+            )}
+            <Typography variant="body2" textAlign="center">
+              {selectionId === 'style' ? item?.title : '$' + item?.usa}
+            </Typography>
+          </div>
         </Box>
       );
     });
