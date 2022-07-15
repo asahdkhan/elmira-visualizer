@@ -1065,12 +1065,13 @@ const MainStyles = () => {
         '.RedColor': {
           color: '#802f2d',
         },
-        // '.PricingBox': {
-        //   background: '#fbf9f9',
-        //   borderRadius: '6px',
-        // },
-        '.PricingBoxCol': {
+        '.PricingBox': {
           background: '#fbf9f9',
+          // borderRadius: '6px',
+          margin: '15px 10px',
+        },
+        '.PricingBoxCol': {
+          backgroundColor: '#fbf9f9',
           borderRadius: '6px',
           border: '10px solid #fff',
         },
@@ -1156,7 +1157,7 @@ const MainStyles = () => {
           '-webkit-print-color-adjust': 'exact',
         },
         '.PricingContainerBox': {
-          marginTop: '20px',
+          marginTop: '0px!important',
           marginBottom: '20px',
           maxWidth: '1024px!important',
         },
