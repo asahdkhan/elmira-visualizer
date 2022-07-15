@@ -249,7 +249,7 @@ const CreateKitchen = () => {
                   {dreamKitchen && (
                     <>
                       <ReactToPrint
-                        pageStyle="@page { size: 8.26772in 11.6929in }"
+                        pageStyle="@page { size: 8.26772in 12.6929in }"
                         trigger={() => (
                           <Button variant="Button" className="SavePdfBtn">
                             SAVE AS PDF

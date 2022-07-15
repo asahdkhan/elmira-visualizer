@@ -1288,7 +1288,7 @@
               "black-white",
               "black-bisque"
             ],
-            "door-frames": "nickle"
+            "door-frames": "nickel"
           },
           "usa": 995,
           "canada": 995
@@ -1320,7 +1320,7 @@
       "options": ["colours", "metal-trim-color", "door-frames"],
       "configureOrder": ["colours", "metal-trim-color", "door-frames"],
       "positioning": ["650px", "183px"],
-      "msg": "Select Colour and additional options will open",
+      "msg": "Select Title and then additional options will open",
       "30_36": ["650px", "183px"],
       "45_30": ["696px", "183px"],
       "45_36": ["696px", "183px"],
@@ -1341,7 +1341,7 @@
               "id": "white",
               "title": "White",
               "src": "css",
-              "modelSrc": "heritage/wallOven/colors/3.png",
+              "modelSrc": "heritage/wallOven/colors/6.png",
               "usa": 0,
               "canada": 0
             },
@@ -1403,7 +1403,7 @@
             {
               "id": "metal-trim-copper",
               "removeAssociated": "metal-trim-nickel",
-              "title": "Copper",
+              "title": "Antique Copper",
               "src": "css",
               "modelSrc": "heritage/wallOven/metal-trim/2.png",
               "usa": 450,
@@ -1514,23 +1514,6 @@
           "canada": 4695
         },
         {
-          "modelName": "Model 1830C",
-          "onSelection": {
-            "colours": [
-              "black",
-              "white",
-              "bisque",
-              "cayenne-pepper-red",
-              "liberty-blue",
-              "black-white",
-              "black-bisque"
-            ],
-            "metal-trim-color": "metal-trim-copper"
-          },
-          "usa": 4695,
-          "canada": 4695
-        },
-        {
           "modelName": "Model 1827C",
           "onSelection": {
             "colours": [
@@ -1542,6 +1525,24 @@
               "black-white",
               "black-bisque"
             ],
+            "door-frames": "copper"
+          },
+          "usa": 4695,
+          "canada": 4695
+        },
+        {
+          "modelName": "Model 1830C",
+          "onSelection": {
+            "colours": [
+              "black",
+              "white",
+              "bisque",
+              "cayenne-pepper-red",
+              "liberty-blue",
+              "black-white",
+              "black-bisque"
+            ],
+            "metal-trim-color": "metal-trim-copper",
             "door-frames": "copper"
           },
           "usa": 4695,

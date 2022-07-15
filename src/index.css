@@ -17,3 +17,10 @@ code {
     display: none;
   }
 }
+
+@media all {
+  #page-break {
+    margin-top: 5px;
+    page-break-before: always;
+  }
+}
