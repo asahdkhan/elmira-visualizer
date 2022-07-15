@@ -1070,6 +1070,7 @@ const MainStyles = () => {
           // borderRadius: '6px',
           margin: '15px 10px',
         },
+
         '.PricingBoxCol': {
           backgroundColor: '#fbf9f9',
           borderRadius: '6px',
