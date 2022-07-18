@@ -459,6 +459,40 @@ const MainStyles = () => {
           fontWeight: '600',
           cursor: 'pointer',
         },
+        '.rightheritage:before': {
+          content: '""',
+          display: 'flex',
+          backgroundImage: `url(
+            ${require(`./assets/heritage/refrigerator/hinge/thumbs/left.png`)}
+          )`,
+          backgroundColor: '#dad6d5',
+          // padding: '10px 10px',
+          width: '70px',
+          height: '70px',
+          borderRadius: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontWeight: '600',
+          cursor: 'pointer',
+          backgroundPosition: 'right center',
+        },
+        '.leftheritage:before': {
+          content: '""',
+          display: 'flex',
+          backgroundImage: `url(
+            ${require(`./assets/heritage/refrigerator/hinge/thumbs/right.png`)}
+          )`,
+          backgroundColor: '#dad6d5',
+          // padding: '10px 10px',
+          width: '70px',
+          height: '70px',
+          borderRadius: '100%',
+          justifyContent: 'center',
+          alignItems: 'center',
+          fontWeight: '600',
+          cursor: 'pointer',
+          backgroundPosition: 'left center',
+        },
         '.right:before': {
           content: '""',
           display: 'flex',

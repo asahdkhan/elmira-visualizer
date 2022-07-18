@@ -1039,16 +1039,16 @@
           "text": "Hinge",
           "opt": [
             {
-              "id": "right",
+              "id": "rightheritage",
               "title": "Right (standard)",
-              "src": "heritage/refrigerator/hinge/thumbs/right.jpg",
+              "src": "css",
               "usa": 0,
               "canada": 0
             },
             {
-              "id": "left",
+              "id": "leftheritage",
               "title": "Left (handle on right)",
-              "src": "heritage/refrigerator/hinge/thumbs/left.jpg",
+              "src": "css",
               "usa": 50,
               "canada": 50
             }
