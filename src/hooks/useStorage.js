@@ -14,11 +14,12 @@ export const useStorage = (parentPath = '', applianceName = '') => {
   const localData = localStorage.getItem(parentPath);
   const parseLocalData = JSON.parse(localData);
 
+  // clear internal state on params change
   useEffect(() => {
     setModelOptions([]);
     setAppliance({});
     setLocalItem(parseLocalData?.[applianceName]);
-  }, [applianceName]);
+  }, [applianceName, parentPath]);
 
   useEffect(() => {
     if (localItem) {

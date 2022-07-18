@@ -777,8 +777,8 @@
             "oven": "gas-self",
             "gas-type": "natural-gas"
           },
-          "usa": 8195,
-          "canada": 8195
+          "usa": 8395,
+          "canada": 8395
         },
         {
           "modelName": "Model 1860 LP",
@@ -787,11 +787,11 @@
             "oven": "gas-self",
             "gas-type": "liquid-propane"
           },
-          "usa": 8195,
-          "canada": 8195
+          "usa": 8395,
+          "canada": 8395
         },
         {
-          "modelName": "Model 1855-ST-SC",
+          "modelName": "Model 1855-ST-C",
           "onSelection": {
             "style": "45-6-burner-electric-smoothtop",
             "oven": "electric-self-convection"
@@ -1162,7 +1162,7 @@
       "baseModelSrc": "heritage/microwave/black.png",
       "configureOrder": ["colours", "door-frames"],
       "positioning": ["642px", "129px"],
-      "msg": "Select Colour and additional options will open",
+      "msg": "Select colour and additional option",
       "30_36": ["642px", "129px"],
       "45_30": ["689px", "129px"],
       "45_36": ["689px", "129px"],
@@ -1250,7 +1250,7 @@
             },
             {
               "id": "copper",
-              "title": "Copper",
+              "title": "Antique Copper",
               "src": "css",
               "modelSrc": "heritage/microwave/door-frames/2.png",
               "usa": 350,
@@ -1320,7 +1320,7 @@
       "options": ["colours", "metal-trim-color", "door-frames"],
       "configureOrder": ["colours", "metal-trim-color", "door-frames"],
       "positioning": ["650px", "183px"],
-      "msg": "Select Title and then additional options will open",
+      "msg": "Select colour and additional options",
       "30_36": ["650px", "183px"],
       "45_30": ["696px", "183px"],
       "45_36": ["696px", "183px"],
@@ -1555,6 +1555,7 @@
       "bg": "heritage/dishwasherPanel/bg.jpg",
       "defaultModelSrc": "heritage/dishwasherPanel/colors/1.png",
       "configureOrder": ["style", "colours", "door-frames"],
+      "msg": "Select model and additional options will open",
       "hide": true,
       "styles": [
         {
@@ -1656,7 +1657,7 @@
             },
             {
               "id": "copper",
-              "title": "Copper",
+              "title": "Antique Copper",
               "src": "css",
               "modelSrc": "heritage/dishwasherPanel/door-frames/2.png",
               "usa": 350,

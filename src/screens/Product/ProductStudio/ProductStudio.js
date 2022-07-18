@@ -39,12 +39,6 @@ const ProductStudioStage1 = () => {
   const [modelPricing, setModelPricing] = useState({});
   const [boxHeight, setBoxHeight] = useState(0);
 
-  // clear internal state on params change
-  // useEffect(() => {
-  //   setModelOptions([]);
-  //   setAppliance({});
-  // }, [applianceName]);
-
   // load selected appliances data from JSON
   useEffect(() => {
     selectedApplianceData(applianceName, data);
