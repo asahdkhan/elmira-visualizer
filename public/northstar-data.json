@@ -164,14 +164,18 @@
           "title": "1961 30\" Recirculating",
           "src": "northstar/rangehood/model/thumbs/1961.jpg",
           "modelSrc": "northstar/rangehood/1961-Recirculating/candy-red.png",
-          "options": ["colours", "splashback", "duct-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"],
+          "usa": 1895,
+          "canada": 1895
         },
         {
           "id": "1962",
           "title": "1962 30\" Outside-Vent",
           "src": "northstar/rangehood/model/thumbs/1962.jpg",
           "modelSrc": "northstar/rangehood/1962-Outside-Vent/candy-red.png",
-          "options": ["colours", "splashback", "duct-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"],
+          "usa": 1995,
+          "canada": 1995
         },
         {
           "id": "1963",
@@ -181,7 +185,9 @@
           "env": "36",
           "envOrder": 0,
           "modelSrc": "northstar/rangehood/1963/candy-red.png",
-          "options": ["colours", "splashback", "duct-cover-kit"]
+          "options": ["colours", "splashback", "duct-cover-kit"],
+          "usa": 2395,
+          "canada": 2395
         }
       ],
       "modelOptions": [
@@ -1011,14 +1017,18 @@
           "title": "Panel Only",
           "src": "northstar/dishwasher/model-1957-thumbnail.png",
           "modelSrc": "northstar/dishwasher/candy-red.png",
-          "options": ["colours"]
+          "options": ["colours"],
+          "usa": 2995,
+          "canada": 2995
         },
         {
           "id": "complete-dishwasher",
           "title": "Complete Dishwasher",
           "src": "northstar/dishwasher/model-1957-dw-thumbnail.png",
           "modelSrc": "northstar/dishwasher/candy-red.png",
-          "options": ["colours"]
+          "options": ["colours"],
+          "usa": 395,
+          "canada": 395
         }
       ],
       "modelOptions": [
@@ -1122,7 +1132,9 @@
           "title": "Model 1950 30\" 18.5 cubic foot with Bottom Freezer",
           "src": "northstar/fridge/colors/thumbs/northerstar-30-model-1950-thumbnail.png",
           "modelSrc": "northstar/fridge/colors/1950/candy-red.png",
-          "options": ["colours", "hinge", "ice-maker"]
+          "options": ["colours", "hinge", "ice-maker"],
+          "usa": 4795,
+          "canada": 4795
         },
         {
           "id": "1951",
@@ -1131,14 +1143,18 @@
           "env": "24",
           "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1951/candy-red.png",
-          "options": ["colours", "hinge"]
+          "options": ["colours", "hinge"],
+          "usa": 3995,
+          "canada": 3995
         },
         {
           "id": "1952",
           "title": "Model 1952 30\" 18.2 cubic foot with Top Freezer",
           "src": "northstar/fridge/colors/thumbs/northerstar-30-model-1952-thumbnail.png",
           "modelSrc": "northstar/fridge/colors/1952/candy-red.png",
-          "options": ["colours", "hinge", "ice-maker"]
+          "options": ["colours", "hinge", "ice-maker"],
+          "usa": 3995,
+          "canada": 3995
         },
         {
           "id": "1958",
@@ -1147,7 +1163,9 @@
           "env": "36",
           "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1958/candy-red.png",
-          "options": ["colours"]
+          "options": ["colours"],
+          "usa": 7295,
+          "canada": 7295
         },
         {
           "id": "1959",
@@ -1156,7 +1174,9 @@
           "env": "36",
           "envOrder": 1,
           "modelSrc": "northstar/fridge/colors/1959/candy-red.png",
-          "options": ["colours"]
+          "options": ["colours"],
+          "usa": 7295,
+          "canada": 7295
         }
       ],
       "modelOptions": [

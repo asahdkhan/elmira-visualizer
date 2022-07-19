@@ -72,7 +72,11 @@ export default function ApplianceOptions({
               </Tooltip>
             )}
             <Typography variant="body2" textAlign="center">
-              {selectionId === 'style' ? item?.title : '$' + item?.usa}
+              {selectionId === 'style'
+                ? item?.usa
+                  ? `${item?.title} ($${item?.usa})`
+                  : item?.title
+                : '$' + item?.usa}
             </Typography>
           </div>
         </Box>

@@ -853,7 +853,9 @@
           "bg": "heritage/refrigerator/bg30.jpg",
           "src": "heritage/refrigerator/models/thumbs/1896.jpg",
           "modelSrc": "heritage/refrigerator/colors/1896/1.png",
-          "options": ["colours", "handle", "door-frames", "hinge", "ice-maker"]
+          "options": ["colours", "handle", "door-frames", "hinge", "ice-maker"],
+          "usa": 4995,
+          "canada": 4995
         },
         {
           "id": "1898",
@@ -863,7 +865,9 @@
           "env": "36",
           "envOrder": 1,
           "modelSrc": "heritage/refrigerator/colors/1898/1.png",
-          "options": ["colours", "handle", "door-frames"]
+          "options": ["colours", "handle", "door-frames"],
+          "usa": 7195,
+          "canada": 7195
         },
         {
           "id": "1899",
@@ -873,7 +877,9 @@
           "env": "36",
           "envOrder": 1,
           "modelSrc": "heritage/refrigerator/colors/1899/1.png",
-          "options": ["colours", "handle", "door-frames"]
+          "options": ["colours", "handle", "door-frames"],
+          "usa": 7195,
+          "canada": 7195
         }
       ],
       "modelOptions": [
@@ -1563,14 +1569,18 @@
           "title": "Panel Only",
           "src": "heritage/dishwasherPanel/thumb.jpg",
           "modelSrc": "heritage/dishwasherPanel/colors/1.png",
-          "options": ["colours", "door-frames"]
+          "options": ["colours", "door-frames"],
+          "usa": 595,
+          "canada": 595
         },
         {
           "id": "complete-dishwasher",
           "title": "Complete Dishwasher",
           "src": "heritage/dishwasherPanel/thumb.jpg",
           "modelSrc": "heritage/dishwasherPanel/colors/1.png",
-          "options": ["colours", "door-frames"]
+          "options": ["colours", "door-frames"],
+          "usa": 2995,
+          "canada": 2995
         }
       ],
       "modelOptions": [
