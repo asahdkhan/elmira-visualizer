@@ -41,7 +41,9 @@ export default function ApplianceOptions({
         item = {
           ...item,
           usa: item.priceOn
-            ? item?.usa[selectedOptions?.[item.priceOn]?.id]
+            ? selectedOptions?.[item.priceOn]?.id
+              ? item?.usa[selectedOptions?.[item.priceOn]?.id]
+              : 0
             : item?.usa[selectedOptions?.style?.id],
         };
       }
