@@ -90,45 +90,47 @@ export default function ApplianceOptions({
     return modelOptions?.map((o, index) => {
       const panelIndex = modelStylesData ? 2 : 1;
       const panel = `panel${index + panelIndex}`;
-      return (
-        <Accordion
-          key={o.id}
-          disableGutters
-          elevation={0}
-          square
-          expanded={expanded === panel}
-          onChange={handleChange(panel)}
-        >
-          <AccordionSummary>
-            <Box className="ModalHeading">
-              <Image classes="" name="images/VisualizerIconSecond.png" />
-              <Typography variant="h6" textAlign="center">
-                {o.text}
-              </Typography>
-              <Typography
-                variant="body1"
-                textAlign="center"
-                className="ModalDetailInfo"
-              >
-                <span>-</span>{' '}
-                <span className="ModalTitleName">
-                  {selectedOptions[o.id]?.title}
-                </span>
-              </Typography>
-              <a className="EditButton">
-                {selectedOptions[o.id]?.id ? 'CHANGE' : 'SELECT'}
-              </a>
-            </Box>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Box className="ModalBox">
-              <Box className="ModalContentBox">
-                {loadNestedOptions(o.opt, onOptionSelection, o.id)}
+      if (o?.showStep) {
+        return (
+          <Accordion
+            key={o.id}
+            disableGutters
+            elevation={0}
+            square
+            expanded={expanded === panel}
+            onChange={handleChange(panel)}
+          >
+            <AccordionSummary>
+              <Box className="ModalHeading">
+                <Image classes="" name="images/VisualizerIconSecond.png" />
+                <Typography variant="h6" textAlign="center">
+                  {o.text}
+                </Typography>
+                <Typography
+                  variant="body1"
+                  textAlign="center"
+                  className="ModalDetailInfo"
+                >
+                  <span>-</span>{' '}
+                  <span className="ModalTitleName">
+                    {selectedOptions[o.id]?.title}
+                  </span>
+                </Typography>
+                <a className="EditButton">
+                  {selectedOptions[o.id]?.id ? 'CHANGE' : 'SELECT'}
+                </a>
               </Box>
-            </Box>
-          </AccordionDetails>
-        </Accordion>
-      );
+            </AccordionSummary>
+            <AccordionDetails>
+              <Box className="ModalBox">
+                <Box className="ModalContentBox">
+                  {loadNestedOptions(o.opt, onOptionSelection, o.id)}
+                </Box>
+              </Box>
+            </AccordionDetails>
+          </Accordion>
+        );
+      }
     });
   };
 

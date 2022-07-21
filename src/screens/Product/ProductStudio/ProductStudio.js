@@ -44,6 +44,20 @@ const ProductStudioStage1 = () => {
     selectedApplianceData(applianceName, data);
   }, [data, selectedApplianceData, applianceName]);
 
+  const stepByStepOptions = (options, selectedKey) => {
+    // console.log('options', options, selectedKey);
+    return options.reduce((acc, currValue, currIndex) => {
+      if (currValue?.id === 'colours' && selectedKey === 'style') {
+        acc.push({ ...currValue, showStep: true });
+      } else if (options?.[currIndex - 1]?.id === selectedKey) {
+        acc.push({ ...currValue, showStep: true });
+      } else {
+        acc.push(currValue);
+      }
+      return acc;
+    }, []);
+  };
+
   // in case of no model style
   useEffect(() => {
     if (
@@ -55,7 +69,8 @@ const ProductStudioStage1 = () => {
         const updatedOptionsData = modelOptionsData.filter((item) => {
           return applianceData?.options?.indexOf(item.id) !== -1;
         });
-        setModelOptions(updatedOptionsData);
+        const mO = stepByStepOptions(updatedOptionsData, 'style');
+        setModelOptions(mO);
       }
     }
   }, [
@@ -129,7 +144,8 @@ const ProductStudioStage1 = () => {
       }
       return acc;
     }, []);
-    setModelOptions(populateOptions);
+    const mO = stepByStepOptions(populateOptions, key);
+    setModelOptions(mO);
   };
 
   // on appliance option selection,
@@ -161,7 +177,11 @@ const ProductStudioStage1 = () => {
     }
 
     if (updatedOptionsData?.length > 0) {
-      setModelOptions(updatedOptionsData);
+      const mO = stepByStepOptions(updatedOptionsData, key);
+      setModelOptions(mO);
+    } else {
+      const mO = stepByStepOptions(modelOptions, key);
+      setModelOptions(mO);
     }
   };
 
