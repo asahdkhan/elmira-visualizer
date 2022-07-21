@@ -141,7 +141,6 @@
           "modelSrc": "heritage/range/cooktop/2.png",
           "options": [
             "colours",
-            "oven",
             "metal-trim",
             "door-frames",
             "legs-length",
@@ -171,7 +170,6 @@
           "modelSrc": "heritage/range/colors/45/1.png",
           "options": [
             "colours",
-            "oven",
             "metal-trim",
             "door-frames",
             "legs-length",
@@ -745,8 +743,7 @@
         {
           "modelName": "Model 1850-ST-C",
           "onSelection": {
-            "style": "30-4-burner-electric-smoothtop",
-            "oven": "electric-self-convection"
+            "style": "30-4-burner-electric-smoothtop"
           },
           "usa": 7495,
           "canada": 7495
@@ -793,8 +790,7 @@
         {
           "modelName": "Model 1855-ST-C",
           "onSelection": {
-            "style": "45-6-burner-electric-smoothtop",
-            "oven": "electric-self-convection"
+            "style": "45-6-burner-electric-smoothtop"
           },
           "usa": 8995,
           "canada": 8995
@@ -802,7 +798,7 @@
         {
           "modelName": "Model 1875-C",
           "onSelection": {
-            "style": "45-6-burner-dual-fuel",
+            "style": "45-6-burner-gas",
             "oven": "electric-self-convection"
           },
           "usa": 9395,
@@ -811,7 +807,7 @@
         {
           "modelName": "Model 1875-CLP",
           "onSelection": {
-            "style": "45-6-burner-dual-fuel",
+            "style": "45-6-burner-gas",
             "oven": "electric-self-convection",
             "gas-type": "liquid-propane"
           },
@@ -819,9 +815,29 @@
           "canada": 9395
         },
         {
+          "modelName": "Model 1865-ST-C",
+          "onSelection": {
+            "style": "45-6-burner-dual-fuel",
+            "oven": "electric-self-convection"
+          },
+          "usa": 9495,
+          "canada": 9495
+        },
+        {
+          "modelName": "Model 1865-ST-CLP",
+          "onSelection": {
+            "style": "45-6-burner-dual-fuel",
+            "oven": "electric-self-convection",
+            "gas-type": "liquid-propane"
+          },
+          "usa": 9495,
+          "canada": 9495
+        },
+        {
           "modelName": "Model 1867",
           "onSelection": {
-            "style": "45-6-burner-gas"
+            "style": "45-6-burner-gas",
+            "oven": "gas-self"
           },
           "usa": 9495,
           "canada": 9495
@@ -830,6 +846,7 @@
           "modelName": "Model 1867 LP",
           "onSelection": {
             "style": "45-6-burner-gas",
+            "oven": "gas-self",
             "gas-type": "liquid-propane"
           },
           "usa": 9495,

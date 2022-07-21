@@ -1,13 +1,15 @@
 /* eslint-disable */
 import { useCallback, useContext } from 'react';
 import { AppDataContext } from '../contexts/appDataContext';
+import configUrl from '../config';
 
 export const useAppData = () => {
   const [appDataState, appDataDispatch] = useContext(AppDataContext);
+  const baseUrl = configUrl();
 
   const fetchInitialData = useCallback(
     (kitchen) => {
-      fetch(`${kitchen}-data.json`)
+      fetch(`${baseUrl}${kitchen}-data.json`)
         .then((res) => res.json())
         .then((data) => {
           appDataDispatch({ type: 'KITCHEN_DATA', data });
