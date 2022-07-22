@@ -906,16 +906,19 @@ const MainStyles = () => {
           color: '#802f2d',
         },
         '.ModalTitleName': {
-          whiteSpace: 'nowrap',
-          overflow: 'hidden',
-          textOverflow: 'ellipsis',
+          // whiteSpace: 'nowrap',
+          // overflow: 'hidden',
+          // textOverflow: 'ellipsis',
           display: 'inline-block',
           paddingLeft: '5px',
-          width: '90%',
+          paddingTop: '8px',
+          // width: '90%',
+          textAlign: 'left',
+          lineHeight: '20px',
         },
         '.ModalHeading': {
           display: 'flex',
-          alignItems: 'center',
+          // alignItems: 'center',
           // marginBottom: '25px',
           width: '100%',
         },
@@ -931,6 +934,7 @@ const MainStyles = () => {
         '.ApplianceBoxLeft': {
           width: '40%',
           overflow: 'hidden',
+          minWidth: '392px',
         },
         '.ApplianceBoxRight': {
           padding: '40px 20px',
@@ -974,9 +978,13 @@ const MainStyles = () => {
         '.ModalHeading h6': {
           textTransform: 'uppercase',
           marginRight: '5px',
+          paddingTop: '8px',
         },
         '.ModalContentBoxThird::-webkit-scrollbar': {
           width: '12px',
+        },
+        '.ModalHeading .EditButton': {
+          paddingTop: '9px',
         },
         '.ModalContentBox::-webkit-scrollbar': {
           width: '12px',
