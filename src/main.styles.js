@@ -911,7 +911,7 @@ const MainStyles = () => {
           // textOverflow: 'ellipsis',
           display: 'inline-block',
           paddingLeft: '5px',
-          paddingTop: '8px',
+          // paddingTop: '8px',
           // width: '90%',
           textAlign: 'left',
           lineHeight: '20px',
@@ -921,6 +921,7 @@ const MainStyles = () => {
           // alignItems: 'center',
           // marginBottom: '25px',
           width: '100%',
+          paddingBottom: '10px',
         },
         '.ModalHeading img': {
           marginRight: '12px',
@@ -978,7 +979,7 @@ const MainStyles = () => {
         '.ModalHeading h6': {
           textTransform: 'uppercase',
           marginRight: '5px',
-          paddingTop: '8px',
+          paddingTop: '7px',
         },
         '.ModalContentBoxThird::-webkit-scrollbar': {
           width: '12px',
@@ -1053,7 +1054,11 @@ const MainStyles = () => {
         '.ModalDetailInfo': {
           marginLeft: '5px',
           display: 'flex',
-          alignItems: 'center',
+          alignItems: 'flex-start',
+          paddingTop: '8px',
+        },
+        '.DashBox': {
+          lineHeight: '20px',
         },
         'body .MuiButtonBase-root': {
           backgroundColor: '#802f2d',

@@ -111,7 +111,7 @@ export default function ApplianceOptions({
                   textAlign="center"
                   className="ModalDetailInfo"
                 >
-                  <span>-</span>{' '}
+                  <span className="DashBox">-</span>{' '}
                   <span className="ModalTitleName">
                     {selectedOptions[o.id]?.title}
                   </span>
@@ -155,7 +155,7 @@ export default function ApplianceOptions({
                 textAlign="center"
                 className="ModalDetailInfo"
               >
-                <span>-</span>{' '}
+                <span className="DashBox">-</span>{' '}
                 <span className="ModalTitleName">
                   {selectedOptions['style']?.title}
                 </span>

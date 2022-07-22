@@ -1,3 +1,4 @@
+/* eslint-disable */
 const config = () => {
   switch (window.location.host) {
     case 'staging.elmirastoveworks.com':
