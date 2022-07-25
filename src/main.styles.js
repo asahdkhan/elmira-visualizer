@@ -966,7 +966,7 @@ const MainStyles = () => {
           flexWrap: 'wrap',
           // height: '450px',
           // minHeight: '260px',
-          maxHeight: '270px',
+          // maxHeight: '270px',
           overflowX: 'auto',
           alignItems: 'flex-start',
         },
