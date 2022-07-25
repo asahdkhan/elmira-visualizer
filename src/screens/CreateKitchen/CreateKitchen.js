@@ -288,36 +288,44 @@ const CreateKitchen = () => {
                 </Box>
               </Box>
               <Box className="MainKitchenSection">
-                <Box className="parentKitchenImageBox width100">
-                  {kitchen.cabinetSrc && (
-                    <Image
-                      classes="firstChildImageBox width100"
-                      name={kitchen.cabinetSrc}
-                    />
-                  )}
-                  {kitchen.flooringSrc && (
-                    <Image
-                      classes="childImageBox width100"
-                      name={kitchen.flooringSrc}
-                    />
-                  )}
-                  {kitchen?.appliancesSrc?.length > 0 &&
-                    kitchen?.appliancesSrc?.map((configuredAppliance) =>
-                      loadConfiguredImage(configuredAppliance),
+                <Box className="MainKitchenInnerWrapper">
+                  <Box className="parentKitchenImageBox width100">
+                    {kitchen.cabinetSrc && (
+                      <Image
+                        classes="firstChildImageBox width100"
+                        name={kitchen.cabinetSrc}
+                      />
                     )}
-                  {kitchen.patchSrc && (
-                    <Image classes="childImageBox" name={kitchen.patchSrc} />
+                    {kitchen.flooringSrc && (
+                      <Image
+                        classes="childImageBox width100"
+                        name={kitchen.flooringSrc}
+                      />
+                    )}
+                    {kitchen?.appliancesSrc?.length > 0 &&
+                      kitchen?.appliancesSrc?.map((configuredAppliance) =>
+                        loadConfiguredImage(configuredAppliance),
+                      )}
+                    {kitchen.patchSrc && (
+                      <Image classes="childImageBox" name={kitchen.patchSrc} />
+                    )}
+                  </Box>
+                  {!dreamKitchen && configuratorIcon()}
+                  {!dreamKitchen && (
+                    <Box
+                      component="span"
+                      className="CommonIconBoxLast IconLast"
+                    >
+                      {/* <Image name="images/VisualizerIcon.png" /> */}
+                      <Box component="div" className="CustomizeBox">
+                        CUSTOMIZE YOUR {parentPath} APPLIANCE
+                        <Box className="CustomizeBoxMobile">
+                          Scroll horizontal to Image to View All Appliances
+                        </Box>
+                      </Box>
+                    </Box>
                   )}
                 </Box>
-                {!dreamKitchen && configuratorIcon()}
-                {!dreamKitchen && (
-                  <Box component="span" className="CommonIconBoxLast IconLast">
-                    {/* <Image name="images/VisualizerIcon.png" /> */}
-                    <Box component="div" className="CustomizeBox">
-                      CUSTOMIZE YOUR {parentPath} APPLIANCE
-                    </Box>
-                  </Box>
-                )}
               </Box>
               <Box className="FooterSection">
                 <Typography variant="body1" textAlign="center">

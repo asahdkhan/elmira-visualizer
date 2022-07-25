@@ -379,6 +379,7 @@ const MainStyles = () => {
           backgroundColor: 'transparent!important',
           padding: '0!important',
           color: '#802f2d!important',
+          minWidth: 'auto',
         },
         '.ResetBtn:hover': {
           backgroundColor: 'transparent',
@@ -1308,6 +1309,138 @@ const MainStyles = () => {
           backgroundColor: '#BFE0C1',
           borderRadius: '100%',
         },
+        '.CustomizeBoxMobile': {
+          display: 'none',
+        },
+        '@media screen and (min-device-width: 768px) and (max-device-width: 1019px)':
+          {
+            '.CommonButton.SaveBtn': {
+              minWidth: '150px',
+            },
+            '.ApplianceBoxLeft': {
+              minWidth: '340px',
+            },
+          },
+        '@media screen and (min-device-width: 320px) and (max-device-width: 1019px)':
+          {
+            '.CabinetColorSection h6': {
+              fontSize: '14px',
+            },
+            '.FlooringStyleSection h6': {
+              fontSize: '14px',
+            },
+            '.ApplianceName h4': {
+              fontSize: '14px',
+            },
+            '.MainKitchenSection': {
+              overflow: 'scroll',
+            },
+            '.MainKitchenInnerWrapper': {
+              width: '1024px',
+              position: 'relative',
+              display: 'table',
+            },
+            '.CommonIconBoxLast.IconLast': {
+              bottom: 'unset',
+              right: 'unset',
+              left: '330px',
+              top: '40px',
+            },
+            '.CustomizeBoxMobile': {
+              display: 'block',
+              marginTop: '10px',
+            },
+            '.ModalInfo': {
+              maxWidth: 'calc( 50% - 20px)',
+            },
+
+            '.BackButton': {
+              position: 'relative',
+              fontSize: '16px',
+              cursor: 'pointer',
+              left: 'unset',
+              marginRight: '20px',
+              fontWeight: '700',
+            },
+            '.PricingTotalInfo': {
+              minHeight: '90px',
+            },
+          },
+        '@media screen and (min-device-width: 320px) and (max-device-width: 600px)':
+          {
+            '.CommonButton.SaveBtn': {
+              display: 'table',
+              margin: '0 auto 12px',
+            },
+            '.ModalBox': {
+              // paddingLeft: '0px',
+            },
+            '.ApplianceBoxLeft': {
+              // minHeight: '420px',
+              maxWidth: '100%',
+              width: '100%',
+              minWidth: '100%',
+            },
+            '.ModalTitleName': {
+              fontSize: '14px',
+            },
+            '.ModalHeading h6': {
+              fontSize: '14px',
+            },
+            '.ModalInfo .MuiTypography-body2': {
+              fontSize: '12px',
+              padding: '5px 8px',
+            },
+            '.ApplianceBoxRight': {
+              width: '100%',
+              paddingLeft: '0px',
+            },
+            '.ApplianceName': {
+              maxWidth: '100%',
+            },
+            '.parentApplianceContainer': {
+              maxWidth: '100%',
+            },
+            '.HeaderSectionThird .CabinetColorSection': {
+              marginBottom: '20px',
+              marginTop: '20px',
+            },
+            '.HeaderSectionThird .BackButton': {
+              marginBottom: '15px',
+            },
+            '.HeaderRightSide': {
+              display: 'grid',
+            },
+            '.CabinetColorSection': {
+              marginRight: '0',
+              marginBottom: '40px',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              display: 'grid',
+              textAlign: 'center',
+            },
+            '.FlooringStyleSection': {
+              marginRight: '0',
+              marginBottom: '20px',
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              display: 'grid',
+              textAlign: 'center',
+            },
+            '.HeaderSection': {
+              display: 'table',
+              margin: '0 auto',
+            },
+            '.HeaderLeftSide': {
+              textAlign: 'center',
+            },
+            '.CabinetColors': {
+              marginTop: '15px',
+            },
+            '.MainKitchenSection': {
+              display: 'grid',
+            },
+          },
       }}
     />
   );

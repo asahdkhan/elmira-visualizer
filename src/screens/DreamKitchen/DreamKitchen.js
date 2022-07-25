@@ -51,7 +51,7 @@ const DreamKitchen = () => {
 
       overallPricing += totalPricing || 0;
       render.push(
-        <Grid key={item.name} item xs={4} sm={4} md={4} lg={4} xl={4}>
+        <Grid key={item.name} item xs={12} sm={6} md={6} lg={4} xl={4}>
           <Box className="PricingBox">
             <Box
               className={`PricingHeaderBox ${
@@ -157,7 +157,7 @@ const DreamKitchen = () => {
           marginLeft="auto"
           marginRight="auto"
         >
-          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <Box className="PricingTotalInfo SkyBlueBg">
               <Typography variant="h3" textAlign="center">
                 {' '}
@@ -168,7 +168,7 @@ const DreamKitchen = () => {
               </Typography>
             </Box>
           </Grid>
-          <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+          <Grid item xs={12} sm={6} md={6} lg={6} xl={6}>
             <a>
               <Box className="PricingTotalInfo WaterBlueBg">
                 <Typography variant="h3" textAlign="center">
